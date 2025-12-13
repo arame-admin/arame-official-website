@@ -7,14 +7,19 @@ function arame_enqueue_scripts() {
     // Enqueue FontAwesome
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
+    wp_enqueue_style('googleFonts', "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
     // Enqueue main CSS - assuming it's in theme directory
     wp_enqueue_style('arame-main', get_template_directory_uri() . '/css/style.css');
 
     // Enqueue other CSS
     wp_enqueue_style('about-css', get_template_directory_uri() . '/assets/css/about.css');
+    wp_enqueue_style('about-css', get_template_directory_uri() . '/assets/css/about-details.css');
     wp_enqueue_style('global-css', get_template_directory_uri() . '/assets/css/global.css');
     wp_enqueue_style('home-css', get_template_directory_uri() . '/assets/css/home.css');
     wp_enqueue_style('navbar-css', get_template_directory_uri() . '/assets/css/navbar.css');
+    wp_enqueue_style('navbar-css', get_template_directory_uri() . '/assets/css/careers.css');
+    wp_enqueue_style('navbar-css', get_template_directory_uri() . '/assets/css/blog.css');
     wp_enqueue_style('services-css', get_template_directory_uri() . '/assets/css/services.css');
     wp_enqueue_style('skills-css', get_template_directory_uri() . '/assets/css/skills.css');
     wp_enqueue_style('tech-css', get_template_directory_uri() . '/assets/css/tech.css');
@@ -29,6 +34,34 @@ function arame_enqueue_scripts() {
     // Enqueue services-details CSS for the specific page
     if (is_page_template('page-services-details.php')) {
         wp_enqueue_style('services-details-css', get_template_directory_uri() . '/assets/css/services-details.css');
+    }
+
+    // Enqueue about-details CSS for the specific page
+    if (is_page_template('page-about-details.php')) {
+        wp_enqueue_style('about-details-css', get_template_directory_uri() . '/assets/css/about-details.css');
+    }
+
+    // Enqueue careers CSS for the specific page
+    if (is_page_template('page-careers.php')) {
+        wp_enqueue_style('careers-css', get_template_directory_uri() . '/assets/css/careers.css');
+    }
+
+    // Enqueue contact CSS for the specific page
+    if (is_page_template('page-contact.php')) {
+        wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css');
+    }
+
+    // Enqueue blog CSS for blog page
+    if (is_page('blog')) {
+        wp_enqueue_style('blog-css', get_template_directory_uri() . '/assets/css/blog.css');
+        wp_enqueue_script('blog-listing-js', get_template_directory_uri() . '/assets/js/blog-listing.js', array('jquery'), null, true);
+    }
+
+    // Enqueue single post CSS and JS for single posts
+    if (is_single()) {
+        wp_enqueue_style('single-post-css', get_template_directory_uri() . '/assets/css/single-post.css');
+        wp_enqueue_script('blog-data-js', get_template_directory_uri() . '/assets/js/blog-data.js', array('jquery'), null, true);
+        wp_enqueue_script('single-post-loader-js', get_template_directory_uri() . '/assets/js/single-post-loader.js', array('jquery'), null, true);
     }
 }
 add_action('wp_enqueue_scripts', 'arame_enqueue_scripts');
