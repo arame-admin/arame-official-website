@@ -119,8 +119,12 @@ get_header();
             <div class="filters mt-4">
                 <h6 class="fw-bold mb-3">Filter Articles</h6>
                 <form id="blog-filter-form">
-                    <div class="mb-3">
-                        <label class="form-label">Categories</label>
+
+                    <div class="mb-4">
+                        <div class="filter-section-header">
+                            <i class="fas fa-folder-open filter-icon"></i>
+                            <label class="form-label enhanced-label">Categories</label>
+                        </div>
                         <?php
                         $categories = get_categories();
                         foreach ($categories as $category) {
@@ -132,9 +136,13 @@ get_header();
                         }
                         ?>
                     </div>
+
                     <?php $tags = get_tags(); if (!empty($tags)) : ?>
-                    <div class="mb-3">
-                        <label class="form-label">Tags</label>
+                    <div class="mb-4">
+                        <div class="filter-section-header">
+                            <i class="fas fa-tags filter-icon"></i>
+                            <label class="form-label enhanced-label">Tags</label>
+                        </div>
                         <?php
                         foreach ($tags as $tag) {
                             $checked = (isset($_GET['tag']) && in_array($tag->term_id, $_GET['tag'])) ? 'checked' : '';
