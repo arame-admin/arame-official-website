@@ -82,14 +82,22 @@ get_header();
                 if ($query->have_posts()) :
                     while ($query->have_posts()) : $query->the_post();
                 ?>
+
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 post-card">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" class="card-img-top" alt="<?php the_title(); ?>">
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" class="post-image" alt="<?php the_title(); ?>">
+                        <?php else : ?>
+                            <div class="post-image-placeholder">
+                                <i class="fas fa-image placeholder-icon"></i>
+                                <div class="placeholder-overlay">
+                                    <span class="placeholder-text">Technology Article</span>
+                                </div>
+                            </div>
                         <?php endif; ?>
-                        <div class="card-body">
+                        <div class="card-body-custom">
                             <span class="badge bg-primary mb-2"><?php the_category(', '); ?></span>
-                            <h5 class="card-title"><a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_title(); ?></a></h5>
+                            <h4 class="card-title"><a href="<?php the_permalink(); ?>" class="read-more-link"><?php the_title(); ?></a></h4>
                             <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
                             <small class="text-muted"><?php echo get_the_date(); ?></small>
                         </div>

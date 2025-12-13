@@ -381,6 +381,7 @@ body {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
+
 .enhanced-label {
     font-size: 1.1rem !important;
     font-weight: 700 !important;
@@ -389,6 +390,85 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder Images */
+.post-image-placeholder {
+    width: 100%;
+    height: 240px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--primary-dark) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.post-image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    z-index: 1;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.placeholder-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+}
+
+.placeholder-text {
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Image Styling */
+.post-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: var(--transition);
+    border-radius: 0;
+}
+
+.post-card:hover .post-image {
+    transform: scale(1.05);
+}
+
+/* Related Post Images */
+.related-post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.related-post-card:hover .related-post-image {
+    transform: scale(1.05);
 }
 
 /* Enhanced Promo Block */

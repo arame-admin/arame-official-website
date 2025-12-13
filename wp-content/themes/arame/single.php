@@ -3,12 +3,41 @@
 
 <main class="container-xl my-5 py-lg-4">
     <div class="row">
-        <div class="col-lg-8">
-            <article class="single-post-container fade-in-up">
 
+        <div class="col-lg-8">
+            
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="<?php echo home_url(); ?>">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="<?php echo get_permalink(get_page_by_path('blog')); ?>">
+                            <i class="fas fa-blog"></i>
+                            Blog
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <?php echo wp_trim_words(get_the_title(), 8); ?>
+                    </li>
+                </ol>
+            </nav>
+
+            <article class="single-post-container fade-in-up">
                 <!-- Featured Image -->
                 <?php if (has_post_thumbnail()) : ?>
                     <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>" class="post-featured-image">
+                <?php else : ?>
+                    <div class="post-image-placeholder">
+                        <i class="fas fa-image placeholder-icon"></i>
+                        <div class="placeholder-overlay">
+                            <span class="placeholder-text">Technology Article</span>
+                        </div>
+                    </div>
                 <?php endif; ?>
 
                 <!-- Post Header -->
@@ -156,12 +185,8 @@
                 </div>
             </nav>
 
-            <!-- Back to Blog -->
-            <div class="text-center mt-4">
-                <a href="<?php echo get_permalink(get_page_by_path('blog')); ?>" class="btn btn-primary">
-                    <i class="fas fa-arrow-left me-2"></i>Back to All Articles
-                </a>
-            </div>
+
+
 
         </div>
 
