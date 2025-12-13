@@ -83,17 +83,24 @@ get_header();
                     while ($query->have_posts()) : $query->the_post();
                 ?>
 
+
                 <div class="col">
                     <div class="card h-100 post-card">
                         <?php if (has_post_thumbnail()) : ?>
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" class="post-image" alt="<?php the_title(); ?>">
                         <?php else : ?>
-                            <div class="post-image-placeholder">
-                                <i class="fas fa-image placeholder-icon"></i>
-                                <div class="placeholder-overlay">
-                                    <span class="placeholder-text">Technology Article</span>
+                            <?php 
+                            $default_image = get_post_meta(get_the_ID(), '_default_featured_image', true);
+                            if ($default_image) : ?>
+                                <img src="<?php echo esc_url($default_image); ?>" class="post-image" alt="<?php the_title(); ?>">
+                            <?php else : ?>
+                                <div class="post-image-placeholder">
+                                    <i class="fas fa-image placeholder-icon"></i>
+                                    <div class="placeholder-overlay">
+                                        <span class="placeholder-text">Technology Article</span>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endif; ?>
                         <?php endif; ?>
                         <div class="card-body-custom">
                             <span class="badge bg-primary mb-2"><?php the_category(', '); ?></span>

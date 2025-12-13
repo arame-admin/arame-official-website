@@ -192,17 +192,31 @@ function blog_filter_ajax_handler() {
 
     if ($query->have_posts()) {
         echo '<div class="row row-cols-1 row-cols-md-2 g-4">';
+
         while ($query->have_posts()) {
             $query->the_post();
             ?>
             <div class="col">
-                <div class="card h-100">
+                <div class="card h-100 post-card">
                     <?php if (has_post_thumbnail()) : ?>
-                        <img src="<?php the_post_thumbnail_url('medium'); ?>" class="card-img-top" alt="<?php the_title(); ?>">
+                        <img src="<?php the_post_thumbnail_url('medium'); ?>" class="post-image" alt="<?php the_title(); ?>">
+                    <?php else : ?>
+                        <?php 
+                        $default_image = get_post_meta(get_the_ID(), '_default_featured_image', true);
+                        if ($default_image) : ?>
+                            <img src="<?php echo esc_url($default_image); ?>" class="post-image" alt="<?php the_title(); ?>">
+                        <?php else : ?>
+                            <div class="post-image-placeholder">
+                                <i class="fas fa-image placeholder-icon"></i>
+                                <div class="placeholder-overlay">
+                                    <span class="placeholder-text">Technology Article</span>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                     <?php endif; ?>
-                    <div class="card-body">
+                    <div class="card-body-custom">
                         <span class="badge bg-primary mb-2"><?php the_category(', '); ?></span>
-                        <h5 class="card-title"><a href="<?php the_permalink(); ?>" class="text-decoration-none"><?php the_title(); ?></a></h5>
+                        <h4 class="card-title"><a href="<?php the_permalink(); ?>" class="read-more-link"><?php the_title(); ?></a></h4>
                         <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
                         <small class="text-muted"><?php echo get_the_date(); ?></small>
                     </div>
@@ -279,12 +293,62 @@ function arame_create_it_categories_and_tags() {
     }
 }
 
-
 // Hook to create categories and tags
 add_action('init', 'arame_create_it_categories_and_tags');
 add_action('after_switch_theme', 'arame_create_it_categories_and_tags');
 
-
 // Blog posts are now managed through WordPress admin only
 // No hard-coded sample posts - all content comes from database
+
+// Function to set default featured images for posts without them
+function arame_set_default_featured_images() {
+    // Check if this function has already run to avoid infinite loops
+    if (get_option('arame_default_images_set')) {
+        return;
+    }
+    
+    // Get all posts without featured images
+    $posts_without_images = get_posts(array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'meta_query' => array(
+            array(
+                'key' => '_thumbnail_id',
+                'compare' => 'NOT EXISTS'
+            )
+        )
+    ));
+    
+    // Default images for different categories
+    $default_images = array(
+        'cloud-computing-devops' => 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop',
+        'artificial-intelligence-ml' => 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop',
+        'cybersecurity-data-privacy' => 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&auto=format&fit=crop',
+        'emerging-technologies' => 'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=800&auto=format&fit=crop',
+        'default' => 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&auto=format&fit=crop'
+    );
+    
+    foreach ($posts_without_images as $post) {
+        $categories = get_the_category($post->ID);
+        $image_url = $default_images['default']; // Default fallback
+        
+        // Try to get category-specific image
+        foreach ($categories as $category) {
+            if (isset($default_images[$category->slug])) {
+                $image_url = $default_images[$category->slug];
+                break;
+            }
+        }
+        
+        // For now, we'll just add a custom field that the template can use
+        // In a real implementation, you'd download and attach the image
+        update_post_meta($post->ID, '_default_featured_image', $image_url);
+    }
+    
+    // Mark that we've set the default images
+    update_option('arame_default_images_set', true);
+}
+
+// Hook to set default images
+add_action('init', 'arame_set_default_featured_images');
 ?>

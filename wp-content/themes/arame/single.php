@@ -1,25 +1,20 @@
 
 <?php get_header(); ?>
 
+
 <main class="container-xl my-5 py-lg-4">
     <div class="row">
-
-        <div class="col-lg-8">
+        <div class="col-12">
             
+
             <!-- Breadcrumb Navigation -->
             <nav class="breadcrumb-nav" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="<?php echo home_url(); ?>">
-                            <i class="fas fa-home"></i>
-                            Home
-                        </a>
+                        <a href="<?php echo home_url(); ?>">Home</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="<?php echo get_permalink(get_page_by_path('blog')); ?>">
-                            <i class="fas fa-blog"></i>
-                            Blog
-                        </a>
+                        <a href="<?php echo get_permalink(get_page_by_path('blog')); ?>">Blog</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">
                         <?php echo wp_trim_words(get_the_title(), 8); ?>
@@ -28,16 +23,23 @@
             </nav>
 
             <article class="single-post-container fade-in-up">
+
                 <!-- Featured Image -->
                 <?php if (has_post_thumbnail()) : ?>
                     <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>" class="post-featured-image">
                 <?php else : ?>
-                    <div class="post-image-placeholder">
-                        <i class="fas fa-image placeholder-icon"></i>
-                        <div class="placeholder-overlay">
-                            <span class="placeholder-text">Technology Article</span>
+                    <?php 
+                    $default_image = get_post_meta(get_the_ID(), '_default_featured_image', true);
+                    if ($default_image) : ?>
+                        <img src="<?php echo esc_url($default_image); ?>" alt="<?php the_title(); ?>" class="post-featured-image">
+                    <?php else : ?>
+                        <div class="post-image-placeholder">
+                            <i class="fas fa-image placeholder-icon"></i>
+                            <div class="placeholder-overlay">
+                                <span class="placeholder-text">Technology Article</span>
+                            </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 <?php endif; ?>
 
                 <!-- Post Header -->
@@ -188,44 +190,6 @@
 
 
 
-        </div>
-
-        <!-- Sidebar -->
-        <div class="col-lg-4 mt-5 mt-lg-0">
-            
-            <!-- Category and Tag Filters -->
-            <div class="filters sidebar-item">
-                <h6 class="fw-bold mb-3">Filter Articles</h6>
-                <form method="GET" action="<?php echo get_permalink(get_page_by_path('blog')); ?>">
-                    <div class="mb-3">
-                        <label class="form-label">Categories</label>
-                        <?php
-                        $categories = get_categories();
-                        foreach ($categories as $category) {
-                            $checked = (isset($_GET['category']) && in_array($category->term_id, $_GET['category'])) ? 'checked' : '';
-                            echo '<div class="form-check">
-                                <input class="form-check-input filter-checkbox" type="checkbox" name="category[]" value="' . $category->term_id . '" ' . $checked . '>
-                                <label class="form-check-label">' . $category->name . '</label>
-                            </div>';
-                        }
-                        ?>
-                    </div>
-                    <?php $tags = get_tags(); if (!empty($tags)) : ?>
-                    <div class="mb-3">
-                        <label class="form-label">Tags</label>
-                        <?php
-                        foreach ($tags as $tag) {
-                            $checked = (isset($_GET['tag']) && in_array($tag->term_id, $_GET['tag'])) ? 'checked' : '';
-                            echo '<div class="form-check">
-                                <input class="form-check-input filter-checkbox" type="checkbox" name="tag[]" value="' . $tag->term_id . '" ' . $checked . '>
-                                <label class="form-check-label">' . $tag->name . '</label>
-                            </div>';
-                        }
-                        ?>
-                    </div>
-                    <?php endif; ?>
-                </form>
-            </div>
 
         </div>
     </div>
