@@ -145,8 +145,8 @@ get_header();
                         }
                         ?>
                     </div>
+
                     <?php endif; ?>
-                    <button type="button" id="clear-filters" class="btn btn-outline-secondary btn-sm">Clear Filters</button>
                 </form>
             </div>
 

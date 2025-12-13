@@ -1,4 +1,2 @@
-// Blog data - placeholder for static blog posts
-const blogPosts = [
-    // Add blog post data here if needed
-];
+// Blog data is loaded dynamically from WordPress database via AJAX
+// No hard-coded blog posts - all data comes from the database

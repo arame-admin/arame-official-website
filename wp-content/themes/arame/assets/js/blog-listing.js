@@ -1,4 +1,2 @@
-// Blog listing loader - placeholder for loading blog posts list
-document.addEventListener('DOMContentLoaded', function() {
-    // Code to load blog posts if needed
-});
+// Blog listing functionality is handled via AJAX and database queries
+// No separate listing functionality needed - data comes from WordPress database

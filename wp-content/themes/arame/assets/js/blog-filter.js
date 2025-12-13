@@ -63,15 +63,6 @@ jQuery(document).ready(function($) {
         history.pushState({}, '', newURL);
     }
 
-    // Clear filters
-    $('#clear-filters').click(function() {
-        // Uncheck all checkboxes
-        $('input.filter-checkbox').prop('checked', false);
-        // Load all posts
-        filterPosts();
-        // Update URL
-        history.pushState({}, '', window.location.pathname);
-    });
 
     // Trigger filter on checkbox change
     $(document).on('change', 'input.filter-checkbox', function() {
