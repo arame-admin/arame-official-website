@@ -123,10 +123,11 @@ get_header();
 
         <div class="col-lg-4 mt-5 mt-lg-0">
 
+
             <div class="promo-block">
                 <h5 class="fw-bold">Level up your skills.</h5>
                 <p class="mb-3">Subscribe to our newsletter for weekly tech deep dives and exclusive content.</p>
-                <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-primary w-100">Subscribe Now</a>
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#newsletterModal">Subscribe Now</button>
             </div>
 
 
@@ -174,7 +175,88 @@ get_header();
             </div>
 
         </div>
+
     </div>
 </main>
+
+<!-- Newsletter Subscription Modal -->
+<div class="modal fade newsletter-modal" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 position-relative">
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-header-content text-center w-100">
+                    <div class="modal-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h5 class="modal-title" id="newsletterModalLabel">Stay Ahead of the Tech Curve</h5>
+                    <p class="modal-subtitle">Get exclusive insights delivered to your inbox</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="newsletter-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Weekly tech deep dives</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Exclusive industry insights</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Early access to new content</span>
+                    </div>
+                </div>
+                
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group-custom">
+                        <div class="input-group-custom">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" class="form-control-custom" id="subscriberName" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="form-group-custom">
+                        <div class="input-group-custom">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" class="form-control-custom" id="subscriberEmail" placeholder="Your Email Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group-custom">
+                        <div class="form-check-custom">
+                            <input class="form-check-input-custom" type="checkbox" id="newsletterConsent" required>
+                            <label class="form-check-label-custom" for="newsletterConsent">
+                                I agree to receive newsletter emails and updates
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-subscribe w-100">
+                        <span class="btn-text">Subscribe Now</span>
+                        <span class="btn-loading d-none">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            Subscribing...
+                        </span>
+                    </button>
+                </form>
+                
+                <div class="success-message d-none" id="successMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h6>Welcome to the Community!</h6>
+                    <p>You've successfully subscribed to our newsletter. Get ready for amazing content!</p>
+                </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-center">
+                <small class="text-muted">
+                    <i class="fas fa-shield-alt"></i>
+                    We respect your privacy. Unsubscribe at any time.
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>

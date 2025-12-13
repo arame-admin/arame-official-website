@@ -52,10 +52,22 @@ function arame_enqueue_scripts() {
         wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css');
     }
 
+
+
+
+
     // Enqueue blog CSS for blog page
     if (is_page('blog')) {
         wp_enqueue_style('blog-css', get_template_directory_uri() . '/assets/css/blog.css');
+        wp_enqueue_style('newsletter-modal-css', get_template_directory_uri() . '/assets/css/newsletter-modal.css');
         wp_enqueue_script('blog-listing-js', get_template_directory_uri() . '/assets/js/blog-listing.js', array('jquery'), null, true);
+        wp_enqueue_script('newsletter-modal-js', get_template_directory_uri() . '/assets/js/newsletter-modal.js', array('jquery'), null, true);
+        
+        // Localize script for AJAX
+        wp_localize_script('newsletter-modal-js', 'newsletterAjax', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('newsletter_subscribe_nonce')
+        ));
     }
 
     // Enqueue single post CSS and JS for single posts
@@ -235,8 +247,69 @@ function blog_filter_ajax_handler() {
 }
 
 
+
 add_action('wp_ajax_blog_filter', 'blog_filter_ajax_handler');
 add_action('wp_ajax_nopriv_blog_filter', 'blog_filter_ajax_handler');
+
+// AJAX handler for newsletter subscription
+function newsletter_subscribe_ajax_handler() {
+    // Verify nonce
+    if (!wp_verify_nonce($_POST['nonce'], 'newsletter_subscribe_nonce')) {
+        wp_send_json_error('Invalid nonce');
+        return;
+    }
+    
+    // Get form data
+    $name = sanitize_text_field($_POST['name']);
+    $email = sanitize_email($_POST['email']);
+    
+    // Validate data
+    if (empty($name) || strlen($name) < 2) {
+        wp_send_json_error('Please provide a valid name');
+        return;
+    }
+    
+    if (empty($email) || !is_email($email)) {
+        wp_send_json_error('Please provide a valid email address');
+        return;
+    }
+    
+    // Check if email already exists (you can customize this logic)
+    $existing_subscriber = get_option('newsletter_subscribers', array());
+    if (in_array($email, $existing_subscriber)) {
+        wp_send_json_error('This email is already subscribed');
+        return;
+    }
+    
+    // Save subscriber (you can customize this storage method)
+    $subscriber_data = array(
+        'name' => $name,
+        'email' => $email,
+        'subscribe_date' => current_time('mysql'),
+        'ip_address' => $_SERVER['REMOTE_ADDR'],
+        'user_agent' => $_SERVER['HTTP_USER_AGENT']
+    );
+    
+    // Add to subscribers list
+    $existing_subscriber[] = $email;
+    update_option('newsletter_subscribers', $existing_subscriber);
+    
+    // You can also send a confirmation email here
+    // send_newsletter_confirmation_email($email, $name);
+    
+    // Log the subscription (for debugging)
+    error_log('Newsletter subscription: ' . print_r($subscriber_data, true));
+    
+    // Return success
+    wp_send_json_success(array(
+        'message' => 'Successfully subscribed to newsletter!',
+        'data' => $subscriber_data
+    ));
+}
+
+// Register AJAX actions for newsletter subscription
+add_action('wp_ajax_newsletter_subscribe', 'newsletter_subscribe_ajax_handler');
+add_action('wp_ajax_nopriv_newsletter_subscribe', 'newsletter_subscribe_ajax_handler');
 
 // Function to create IT categories and tags
 function arame_create_it_categories_and_tags() {
