@@ -9,12 +9,10 @@ get_header();
 <section id="service-hero">
   <div class="container-xl">
     <h1 class="hero-title">
-      High-Tailored IT Solutions and Dedicated Software Services
+      Professional Services, Accountable Delivery.
     </h1>
     <p class="hero-subtitle">
-      AraMe Global provides teams of dedicated software engineers who
-      know how to satisfy client testing requirements with efficient
-      management skills and software product engineering methodologies.
+      Our services are built on ownership, proven delivery frameworks, and quality-first execution. We support our clients with confidence, clarity, and long-term commitment.
     </p>
   </div>
 </section>

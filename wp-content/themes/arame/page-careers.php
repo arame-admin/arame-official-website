@@ -7,10 +7,9 @@ get_header();
 
     <section id="service-hero">
         <div class="container-xl">
-            <h1 class="hero-title">High-Tailored IT Solutions and Dedicated Software Services</h1>
+            <h1 class="hero-title">Where People and Purpose Matter</h1>
             <p class="hero-subtitle">
-                View Technologies provides teams of dedicated software engineers who know how to satisfy client testing
-                requirements with efficient management skills and software product engineering methodologies.
+                We foster a culture of respect, learning, and shared growth. At AraMe Global, we believe careers thrive when people feel valued, supported, and aligned with a greater purpose.
             </p>
         </div>
     </section>
@@ -93,31 +92,32 @@ get_header();
             </div>
         </section> -->
         <section class="job-section">
-            <h2 class="section-title">Popular Job Categories</h2>
+            <h2 class="section-title">Where People and Purpose Matter</h2>
+            <p>We foster a culture of respect, learning, and shared growth. At AraMe Global, we believe careers thrive when people feel valued, supported, and aligned with a greater purpose.</p>
 
             <div class="job-grid">
                 <!-- Card 1 -->
                 <div class="job-card"
-                    data-title="Construction Engineer"
-                    data-description="We are looking for experienced construction professionals to manage on-site activities."
-                    data-responsibilities="Site supervision,Team coordination,Quality control,Safety compliance"
-                    data-requirements="5+ years experience,Civil Engineering degree,Leadership skills"
-                    data-benefits="Competitive salary,Career growth,Accommodation provided"
-                    data-subject="Application for Construction Engineer">
+                    data-title="Full Stack Developer (Fresher / Intern)"
+                    data-description="We are looking for enthusiastic freshers or interns eager to learn and build real-world applications. You’ll work across frontend and backend technologies, collaborate with experienced developers, and gain hands-on exposure to live projects."
+                    data-responsibilities="Assist in developing web applications,Work on frontend and backend components,Follow coding standards and best practices,Learn through mentorship and real project work"
+                    data-requirements="Basic knowledge of HTML CSS JavaScript,Familiarity with any frontend or backend technology,Strong willingness to learn and grow"
+                    data-benefits="Real project experience,Structured learning and mentorship,Opportunity for full-time conversion based on performance"
+                    data-subject="Application for Full Stack Developer (Fresher / Intern)">
                     
-                        <div class="job-icon">
+                        <!-- <div class="job-icon">
                             <i class="fa-solid fa-code"></i>
-                        </div>
-                    <h4>Construction</h4>
-                    <p>2 Jobs</p>
-                                        <a class="more-info-btn" href="javascript:void(0)">
-                        More Info
-                        <span class="arrow">→</span>
+                        </div> -->
+                    <h4>Full Stack Developer (Fresher / Intern)</h4>
+                    <!-- <p>We are looking for enthusiastic freshers or interns eager to learn and build real-world applications. You’ll work across frontend and backend technologies, collaborate with experienced developers, and gain hands-on exposure to live projects</p> -->
+                        <!-- <a class="more-info-btn" href="javascript:void(0)">
+                        Apply Now
+                        <span class="arrow">→</span> -->
                     </a>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="job-card"
+                <!-- <div class="job-card"
                     data-title="Construction Engineer"
                     data-description="We are looking for experienced construction professionals to manage on-site activities."
                     data-responsibilities="Site supervision,Team coordination,Quality control,Safety compliance"
@@ -134,10 +134,10 @@ get_header();
                         More Info
                         <span class="arrow">→</span>
                     </a>
-                </div>
+                </div> -->
 
                 <!-- Card 3 -->
-                <div class="job-card"
+                <!-- <div class="job-card"
                     data-title="Construction Engineer"
                     data-description="We are looking for experienced construction professionals to manage on-site activities."
                     data-responsibilities="Site supervision,Team coordination,Quality control,Safety compliance"
@@ -154,10 +154,10 @@ get_header();
                         More Info
                         <span class="arrow">→</span>
                     </a>
-                </div>
+                </div> -->
 
                                 <!-- Card 3 -->
-                <div class="job-card"
+                <!-- <div class="job-card"
                     data-title="Construction Engineer"
                     data-description="We are looking for experienced construction professionals to manage on-site activities."
                     data-responsibilities="Site supervision,Team coordination,Quality control,Safety compliance"
@@ -174,7 +174,7 @@ get_header();
                         More Info
                         <span class="arrow">→</span>
                     </a>
-                </div>
+                </div> -->
             </div>
             </div>
             

@@ -30,7 +30,7 @@ body {
 }
 
 #about-hero h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--dark);
 }
@@ -164,11 +164,11 @@ body {
 }
 
 .hero-subtitle {
-  margin-top: 10px;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
+  color: rgb(255, 255, 255);
   max-width: 700px;
-  opacity: 0.9;
   margin: auto;
+  margin-top: 20px;
 }
 
 .team-grid-container {

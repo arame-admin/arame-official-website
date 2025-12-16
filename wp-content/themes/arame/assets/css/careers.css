@@ -18,6 +18,23 @@ body {
 	padding: 0 20px;
 }
 
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  color: rgb(255, 255, 255);
+  max-width: 700px;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .hero-section {
 	display: flex;
 	align-items: flex-start;
@@ -303,6 +320,7 @@ body {
 }
 
 .job-card h4 {
+	text-align: start;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 6px;
@@ -494,10 +512,10 @@ body {
 }
 
 .job-icon {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     margin: 0 auto 18px;
-    background: rgba(79, 110, 247, 0.12);
+    background: rgba(172, 181, 223, 0.12);
     border-radius: 50%;
     display: flex;
     align-items: center;

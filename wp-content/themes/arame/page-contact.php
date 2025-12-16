@@ -31,11 +31,10 @@ get_header();
 <main>
     <section id="service-hero">
         <h1 class="hero-title">
-            High-Tailored IT Solutions & Dedicated Software Services
+            Ownership-Driven Technology Services
         </h1>
         <p class="hero-subtitle">
-            Our expert engineering teams provide world-class software solutions with
-            efficient workflows and scalable architecture.
+            We don’t just deliver services — we take responsibility. Backed by structured processes, disciplined execution, and high quality standards, we partner with you to strengthen outcomes and elevate performance.
         </p>
     </section>
 
@@ -46,7 +45,7 @@ get_header();
         <div class="form-section">
             <div class="form-header">
                 <h2>Get In Touch</h2>
-                <p>We’re here for you! Let us know how we can help.</p>
+                <p>We’re here for you! Reach out to discuss your ideas, projects, or any questions — we’d love to collaborate.</p>
             </div>
 
             <form method="post">
@@ -61,7 +60,7 @@ get_header();
                 </div>
 
                 <div class="input-group">
-                    <textarea name="message" class="custom-input" placeholder="Go ahead, we are listening..." required></textarea>
+                    <textarea name="message" class="custom-input" placeholder="Type You'r messages and project details...." required></textarea>
                 </div>
 
                 <button type="submit" name="contact_submit" class="submit-button">
@@ -75,7 +74,7 @@ get_header();
             <div class="illustration-area"></div>
 
             <ul class="contact-details">
-                <li><i class="fas fa-map-marker-alt"></i> Arame Global Technologies Private Limited,<br> Dotspace Business Center TC 24/3088/2 <br> Ushasandya Building, Kowdiar Trivandrum - 695003</li>
+                <li><i class="fas fa-map-marker-alt"></i> Arame Global Technologies Private Limited,<br> Dotspace Business Center, <br> Kowdiar Trivandrum - 695003</li>
                 <li><i class="fas fa-phone-alt"></i> +919847847135</li>
                 <li><i class="fas fa-envelope"></i>  info@arameglobal.com</li>
             </ul>
@@ -83,8 +82,6 @@ get_header();
 
         <!-- FLOATING SOCIAL BAR -->
         <div class="social-sidebar">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/company/arameglobal/posts/?feedView=all">
                 <i class="fab fa-linkedin-in"></i>
             </a>

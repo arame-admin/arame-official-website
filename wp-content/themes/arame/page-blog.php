@@ -8,11 +8,9 @@ get_header();
 <section id="blog-hero">
     <div class="container-xl">
         <div class="hero-content">
-            <h1 class="hero-title">Technology Insights & Industry Trends</h1>
+            <h1 class="hero-title">Building Better Digital Experiences</h1>
             <p class="hero-text">
-                Stay ahead with expert insights on Cloud Computing, AI & Machine Learning, 
-                Cybersecurity, and Emerging Technologies. Learn from our experienced team 
-                about the latest trends shaping the digital future.
+                A space where we share lessons, experiments, and ideas on scaling, growth, and designing impactful digital solutions.
             </p>
             <div class="row mt-4">
                 <div class="col-md-3 col-6 mb-3">

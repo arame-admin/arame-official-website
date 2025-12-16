@@ -25,7 +25,7 @@ body {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 0.5rem;
@@ -34,10 +34,11 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.35rem;
+  color: rgb(255, 255, 255);
   max-width: 700px;
   margin: auto;
+  margin-top: 20px;
 }
 
 #core-services {

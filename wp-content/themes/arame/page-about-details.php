@@ -9,12 +9,10 @@ get_header();
   <section id="service-hero">
     <div class="container-xl">
       <h1 class="hero-title">
-        High-Tailored IT Solutions and Dedicated Software Services
+        Raising the Bar in Technology Delivery
       </h1>
       <p class="hero-subtitle">
-        View Technologies provides teams of dedicated software engineers who
-        know how to satisfy client testing requirements with efficient
-        management skills and software product engineering methodologies.
+        We take ownership, execute with professionalism, and deliver with uncompromising quality. AraMe Global partners with organizations to build technology solutions they can trust.
       </p>
     </div>
   </section>
@@ -28,9 +26,7 @@ get_header();
         <div class="col-lg-6">
           <h1>We Build Future-Ready IT Solutions</h1>
           <p>
-            OptiTech delivers cutting-edge technology services that help
-            businesses grow, innovate, and stay ahead in an ever-evolving
-            digital landscape.
+            We design, build, and deliver technology solutions that are secure, scalable, and built to evolve. Backed by strong processes, cloud-first thinking, and uncompromising quality, our solutions are designed to support long-term growth and confident decision-making.
           </p>
         </div>
         <div class="col-lg-6 about-img">
@@ -51,16 +47,13 @@ get_header();
         <div class="col-lg-6">
           <h2 class="section-title mb-3">Who We Are</h2>
           <p class="mb-4">
-            We are a team of passionate developers, designers, engineers, and
-            strategists committed to building technology that makes an impact.
+              AraMe Global is a technology partner that believes in ownership, professionalism, and quality-led delivery. We work closely with our clients to understand their needs, guide the right decisions, and deliver solutions they can rely on.
           </p>
 
           <ul class="info-list list-unstyled">
-            <li><i class="fa-solid fa-check"></i> 1+ Years of Experience</li>
-            <li>
-              <i class="fa-solid fa-check"></i> 1+ Successful Projects
-              Delivered
-            </li>
+            <li><i class="fa-solid fa-check"></i> Cloud-first and technology-agnostic approach</li>
+            <li><i class="fa-solid fa-check"></i> Process-driven delivery with Agile practices</li>
+            <li><i class="fa-solid fa-check"></i> Strong focus on security, privacy, and compliance</li>
           </ul>
         </div>
       </div>
@@ -109,39 +102,41 @@ get_header();
       <div class="text-center mb-5">
         <h2 class="section-title">Why Choose Us?</h2>
         <p class="text-muted">
-          We bring innovation, reliability, and expertise to every project.
+          We take responsibility for what we deliver and stand by our work. Our consultative mindset and disciplined execution help clients raise their standards and achieve reliable outcomes.
         </p>
       </div>
 
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="why-card">
-            <i class="fa-solid fa-lightbulb"></i>
-            <h4>Innovative Solutions</h4>
-            <p>We create smart digital products that solve real problems.</p>
+            <i class="fa-solid fa-shield-halved"></i>
+            <h4>Excellence</h4>
+            <p>We deliver high-quality solutions through deep expertise, disciplined processes, and professional execution.</p>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="why-card">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h4>Trusted & Secure</h4>
-            <p>We follow industry-best practices to ensure security.</p>
+            <i class="fa-solid fa-lightbulb"></i>
+            <h4>Innovation</h4>
+            <p>We design future-ready solutions that balance creativity, practicality, and long-term business value.</p>
           </div>
         </div>
 
         <div class="col-lg-4">
           <div class="why-card">
             <i class="fa-solid fa-people-group"></i>
-            <h4>Expert Team</h4>
-            <p>Skilled professionals dedicated to your success.</p>
+            <h4>Accountability</h4>
+            <p>We take ownership of delivery with transparency, responsibility, and a commitment to outcomes.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="executive-leadership">
+  <!-- Hiding for future purpose -->
+
+  <!-- <section id="executive-leadership">
       <div class="leadership-content-wrapper">
           <h2 class="section-heading">Executive Leadership</h2>
           <div class="leader-area">
@@ -193,10 +188,10 @@ get_header();
               <img src="https://static.vecteezy.com/system/resources/thumbnails/054/654/909/small/a-professional-young-man-with-neatly-styled-hair-wearing-a-light-blue-shirt-standing-with-arms-crossed-and-smiling-warmly-isolated-on-transparent-background-png.png" alt="Pradeep Kumar Portrait" class="leader-portrait">
           </div>
       </div>
-  </section>  
+  </section>   -->
 
   <!-- Team -->
-  <div class="text-center mb-5">
+  <!-- <div class="text-center mb-5">
     <h2 class="section-title">Meet Our Team</h2>
   </div>
 
@@ -214,9 +209,6 @@ get_header();
         glavrid from dolor amet iquam bibendum
       </p>
       <div class="member-social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
@@ -231,9 +223,6 @@ get_header();
         glavrid from dolor amet iquam bibendum
       </p>
       <div class="member-social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
@@ -248,16 +237,13 @@ get_header();
         glavrid from dolor amet iquam bibendum
       </p>
       <div class="member-social-links">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- TEAM -->
-  <section class="py-5 bg-light">
+  <!-- <section class="py-5 bg-light">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Meet Our Team</h2>
@@ -297,7 +283,7 @@ get_header();
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </main>
 
 <?php get_footer(); ?>

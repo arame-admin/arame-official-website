@@ -11,8 +11,7 @@
         <!-- Left -->
         <div class="col-lg-8 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
           <div>
-            <p class="h4 fw-semibold mb-1">Guiding You to the</p>
-            <h3 class="display-6 fw-bold">Right Technology Decisions</h3>
+            <h4 class="display-6 fw-bold">Going the Extra Mile, Always Raising the Bar</h4>
           </div>
         </div>
 

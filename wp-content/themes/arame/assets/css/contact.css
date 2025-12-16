@@ -28,7 +28,7 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(1.8rem, 3.2vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 3rem);
     font-weight: 800;
     max-width: 850px;
     line-height: 1.25;
@@ -36,11 +36,11 @@ body {
 }
 
 .hero-subtitle {
-    margin-top: 12px;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: 1.35rem;
+    color: rgb(255, 255, 255);
     max-width: 700px;
-    opacity: 0.9;
     margin: auto;
+    margin-top: 20px;
 }
 
 /*   CONTACT CARD MAIN*/
@@ -161,7 +161,7 @@ body {
 .social-sidebar {
     position: absolute;
     top: 50%;
-    right: -28px;
+    right: -12px;
     transform: translateY(-50%);
     background: var(--primary-purple);
     border-radius: 8px;
