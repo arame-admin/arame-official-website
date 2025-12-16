@@ -1,8 +1,8 @@
 :root {
-  --opti-blue: #1c7ed6;
+  --opti-blue: #3695e9;
   --opti-dark: #1a1a2e;
   --opti-light-gray: #ffffff;
-  --opti-accent: #ffb703;
+  --opti-accent: #038eff;
   --transition-duration: 0.55s;
 }
 
@@ -61,7 +61,7 @@
   height: 80%;
   top: 15%;
   left: 15%;
-  background-color: var(--opti-blue);
+  background-color:#038eff;
   border-radius: 40% 60% 70% 30% / 50% 50% 50% 50%;
   z-index: 1;
 }

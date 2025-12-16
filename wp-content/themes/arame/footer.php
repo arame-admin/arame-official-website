@@ -11,14 +11,14 @@
         <!-- Left -->
         <div class="col-lg-8 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
           <div>
-            <p class="h4 fw-semibold mb-1">We're Delivering the best</p>
-            <h3 class="display-6 fw-bold">customer Experience</h3>
+            <p class="h4 fw-semibold mb-1">Guiding You to the</p>
+            <h3 class="display-6 fw-bold">Right Technology Decisions</h3>
           </div>
         </div>
 
         <!-- Right Button -->
         <div class="col-lg-4 text-center text-lg-end">
-          <a href="mailto:info@arameglobal.com" class="btn btn-light fw-bold px-4 py-3 rounded-pill">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@arameglobal.com" target="_blank" class="btn btn-light fw-bold px-4 py-3 rounded-pill">
             info@arameglobal.com
           </a>
         </div>
@@ -35,10 +35,10 @@
         <p class="text-muted">Clarity in Purpose, Precision in Code.</p>
 
         <div class="d-flex gap-3 mt-3">
-          <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+          <!-- <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a> -->
+          <!-- <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a> -->
           <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+          <!-- <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a> -->
         </div>
       </div>
 
@@ -59,11 +59,11 @@
       <div class="col-lg-3 col-md-6">
         <h5 class="fw-semibold text-white mb-3">Industries</h5>
         <ul class="footer-list">
-          <li><a href="#">Healthcare</a></li>
-          <li><a href="#">Finance</a></li>
-          <li><a href="#">Retail</a></li>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Manufacturing</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">PMS</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">CMS</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Appointments</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Finance</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Cultural Historic, Legacy & Cultural Programs</a></li>
         </ul>
       </div>
 

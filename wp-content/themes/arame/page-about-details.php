@@ -67,8 +67,9 @@ get_header();
     </div>
   </section>
 
+  <!-- Hiding this section for future purpose -->
   <!-- STATS -->
-  <section class="py-5 bg-light">
+  <!-- <section class="py-5 bg-light">
     <div class="container">
       <div class="row text-center">
         <div class="col-lg-3 col-6 mb-4">
@@ -100,7 +101,7 @@ get_header();
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- WHY CHOOSE US -->
   <section class="py-5">
@@ -139,6 +140,60 @@ get_header();
       </div>
     </div>
   </section>
+
+  <section id="executive-leadership">
+      <div class="leadership-content-wrapper">
+          <h2 class="section-heading">Executive Leadership</h2>
+          <div class="leader-area">
+              
+              <div class="quote-card">
+                  <blockquote class="quote-text">
+                      &ldquo;arame is driven by sheer engineering passion and profound expertise to build enduring software solutions. We always uphold customer interests and honor their rights.&rdquo;
+                  </blockquote>
+                  <div class="leader-signature">
+                      <p class="leader-name">Pradeep</p>
+                      <p class="leader-title">Co-Founder, Chairman & MD</p>
+                  </div>
+              </div>
+
+              <img src="https://png.pngtree.com/png-vector/20240612/ourmid/pngtree-young-businessman-pointing-finger-to-the-side-png-image_12721964.png" alt="Pradeep Kumar Portrait" class="leader-portrait">
+          </div>
+      </div>
+
+      <div class="leadership-content-wrapper">
+          <div class="leader-area">
+              
+              <div class="quote-card">
+                  <blockquote class="quote-text">
+                      &ldquo;arame is driven by sheer engineering passion and profound expertise to build enduring software solutions. We always uphold customer interests and honor their rights.&rdquo;
+                  </blockquote>
+                  <div class="leader-signature">
+                      <p class="leader-name">Pradeep</p>
+                      <p class="leader-title">Co-Founder, Chairman & MD</p>
+                  </div>
+              </div>
+
+              <img src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-man-in-shirt-smiles-and-gives-thumbs-up-to-show-approval-png-image_13146336.png" alt="Pradeep Kumar Portrait" class="leader-portrait">
+          </div>
+      </div>
+
+      <div class="leadership-content-wrapper">
+          <div class="leader-area">
+              
+              <div class="quote-card">
+                  <blockquote class="quote-text">
+                      &ldquo;arame is driven by sheer engineering passion and profound expertise to build enduring software solutions. We always uphold customer interests and honor their rights.&rdquo;
+                  </blockquote>
+                  <div class="leader-signature">
+                      <p class="leader-name">Pradeep</p>
+                      <p class="leader-title">Co-Founder, Chairman & MD</p>
+                  </div>
+              </div>
+
+              <img src="https://static.vecteezy.com/system/resources/thumbnails/054/654/909/small/a-professional-young-man-with-neatly-styled-hair-wearing-a-light-blue-shirt-standing-with-arms-crossed-and-smiling-warmly-isolated-on-transparent-background-png.png" alt="Pradeep Kumar Portrait" class="leader-portrait">
+          </div>
+      </div>
+  </section>  
 
   <!-- Team -->
   <div class="text-center mb-5">

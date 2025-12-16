@@ -50,65 +50,6 @@ get_header();
   </div>
 </section>
 
-<hr class="my-5" />
-
-<section id="core-services" class="container-xl">
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-8">
-      <h2 class="text-center fw-bolder text-dark mb-2">
-        FOR YOUR VERY SPECIFIC INDUSTRY
-      </h2>
-      <h3 class="text-center fw-bolder text-primary mb-5">
-        WE HAVE HIGH-TAILORED IT SOLUTIONS
-      </h3>
-    </div>
-  </div>
-
-  <div class="row g-4">
-    <div class="col-md-6 col-lg-3">
-      <div class="core-card">
-        <i class="fas fa-search-dollar core-icon"></i>
-        <h5>Technology-Agnostic Decisions</h5>
-        <p>
-          We are not tied to tools or vendors. Every technology choice is guided by what best serves your business goals, risk profile, and long-term sustainability
-        </p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="core-card">
-        <i class="fas fa-code core-icon"></i>
-        <h5>Process, Quality & Delivery Excellence</h5>
-        <p>
-
-          Strong processes, clear standards, and disciplined execution define how we work. Quality and reliability are embedded into every phase — from planning to post-delivery support.
-
-        </p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="core-card">
-        <i class="fas fa-screwdriver-wrench core-icon"></i>
-        <h5>Cloud-First by Design</h5>
-        <p>
-        
-          We architect solutions with cloud scalability, resilience, and performance at the core. Our cloud-first approach ensures your systems are future-ready, cost-efficient, and easy to evolve.
-
-        </p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="core-card">
-        <i class="fas fa-hands-helping core-icon"></i>
-        <h5>Security, Privacy & Compliance-Led</h5>
-        <p>
-
-          Data security, privacy, and regulatory compliance are built in by design, not added later. We help you operate with confidence in trust-critical and regulated environments.
-
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <hr class="my-5" />
 

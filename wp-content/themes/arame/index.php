@@ -92,7 +92,7 @@
 
             <div class="row">
 
-                <!--QA & TESTING -->
+                <!--   -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
                     <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#qa-testing" class="service-card-link">
                         <div class="service-card" style="
@@ -100,17 +100,18 @@
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-magnifying-glass-chart service-icon"></i>
-                                <h4>QA & Testing</h4>
+                                <h4>Product Engineering & Platform Development</h4>
                                 <p>
-                                    Expert engineers ensuring software quality and seamless
-                                    testing.
+                                    We design, build, and scale digital products with strong foundations and long-term vision. <br>
+                                    Product strategy · MVPs · SaaS platforms · Continuous evolution
+
                                 </p>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <!-- DEVELOPMENT -->
+                <!--  -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
                     <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#development" class="service-card-link">
                         <div class="service-card" style="
@@ -118,17 +119,18 @@
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-code service-icon"></i>
-                                <h4>Development</h4>
+                                <h4>Collaborative Development & Dedicated Teams</h4>
                                 <p>
-                                    Custom software designed for high performance and
-                                    scalability.
+                                    We work as an accountable extension of your team, sharing ownership and delivery responsibility. <br>
+                                    Co-development models · Dedicated teams · Agile delivery
+
                                 </p>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <!--IT SUPPORT -->
+                <!--    -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
                     <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#it-support" class="service-card-link">
                         <div class="service-card" style="
@@ -136,17 +138,19 @@
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
-                                <h4>IT Support</h4>
+                                <h4>Custom Software & Enterprise Solutions</h4>
                                 <p>
-                                    Reliable support designed to keep your business running
-                                    24/7.
+                                   
+                                    Tailored applications aligned with your workflows, users, and business objectives.<br>
+                                    Web & mobile apps · Enterprise systems · Integrations
+
                                 </p>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <!--PROFESSIONAL SERVICES -->
+                <!--    -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
                     <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#professional-services" class="service-card-link">
                         <div class="service-card" style="
@@ -154,10 +158,12 @@
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-handshake service-icon"></i>
-                                <h4>Professional Services</h4>
+                                <h4>Cloud, DevOps & Technology Migration</h4>
                                 <p>
-                                    Dedicated teams providing tailor-made IT & consulting
-                                    solutions.
+                                    
+                                    Cloud-first transformation covering infrastructure, applications, and data — delivered with minimal disruption.<br>
+                                    Cloud migration · Legacy modernization · DevOps · Performance & cost optimization
+
                                 </p>
                             </div>
                         </div>
@@ -172,8 +178,13 @@
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-chart-line service-icon"></i>
-                                <h4>Tech Migration</h4>
-                                <p>Seamless migration to modern stacks with zero downtime.</p>
+                                <h4>Transformation Consulting, Change & Compliance</h4>
+                                <p>
+                                    
+                                    Guiding clients through technology decisions, organizational change, and regulatory alignment.<br>
+                                    Technology consulting · Architecture reviews · Change management · Data privacy · Compliance
+
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -187,8 +198,13 @@
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-shield-halved service-icon"></i>
-                                <h4>Security & Compliance</h4>
-                                <p>Strong cybersecurity ensuring complete data protection.</p>
+                                <h4>Digital Marketing & Growth Enablement</h4>
+                                <p>
+                                    
+                                    Process-driven, measurable digital marketing aligned with products, platforms, and business outcomes.<br>
+                                    SEO · Paid media · Social strategy · Content · Funnels & analytics
+
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -207,15 +223,13 @@
                 <!-- LEFT SIDE CONTENT -->
                 <div class="col-lg-6">
                     <h1 class="title">
-                        Empowering Your Future<br />
-                        with <span>Next-Gen IT Solutions</span>
+                        Empowering Your Future —<br />
+                        One  <span>Right Decision at a Time</span>
                     </h1>
 
                     <p class="desc">
-                        Our mission is to deliver world-class innovation with next-level
-                        technology solutions. From infrastructure management to
-                        cybersecurity and IT consulting — we ensure your business stays
-                        ahead of competition.
+                        Technology is powerful only when it serves people and purpose.
+                        At AraMe Global, we design, build, and transform digital solutions with clarity, accountability, and care — helping organizations grow securely, compliantly, and sustainably.
                     </p>
 
                     <div class="experience-card">
@@ -258,64 +272,67 @@
 
     <!-- Tech Section -->
 
-    <section id="tech-section">
-        <div class="container position-relative" style="z-index: 5">
-            <!-- Title & Subtitle -->
-            <div class="row">
-                <div class="col-md-8">
-                    <h2 class="section-title">Our Core Technologies</h2>
-                    <p class="section-intro">
-                        Powering innovation with modern tools and technologies to scale
-                        your success.
-                    </p>
-                </div>
+    <section id="tech-stack">
+        <div class="container">
+
+            <h2 class="tech-title">Technologies We Use</h2>
+            <p class="tech-subtitle">
+            As a trusted digital transformation services company, we use the latest AI
+            frameworks, cloud platforms, and big data tools.
+            </p>
+
+            <!-- CATEGORY TABS -->
+            <div class="tech-tabs">
+            <button class="tab-btn active" data-category="ai">Data & AI</button>
+            <button class="tab-btn" data-category="bi">Business Intelligence</button>
+            <button class="tab-btn" data-category="ecommerce">E-commerce Platform</button>
+            <button class="tab-btn" data-category="mobile">Mobile Solution</button>
+            <button class="tab-btn" data-category="product">Product Engineering</button>
             </div>
 
-            <!-- Auto Slider -->
-            <div class="slider-container" id="slider">
-                <div class="slider-track" id="track">
-                    <!-- Technology Cards -->
-                    <div class="tech-card">
-                        <i class="fab fa-react tech-icon"></i>
-                        <h5>React JS</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-python tech-icon"></i>
-                        <h5>Python</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-aws tech-icon"></i>
-                        <h5>AWS Cloud</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-docker tech-icon"></i>
-                        <h5>Docker</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fas fa-cubes tech-icon"></i>
-                        <h5>Kubernetes</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-node-js tech-icon"></i>
-                        <h5>Node.js</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-php tech-icon"></i>
-                        <h5>PHP</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fas fa-database tech-icon"></i>
-                        <h5>SQL / NoSQL</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-figma tech-icon"></i>
-                        <h5>Figma</h5>
-                    </div>
-                    <div class="tech-card">
-                        <i class="fab fa-vuejs tech-icon"></i>
-                        <h5>Vue JS</h5>
-                    </div>
-                </div>
+            <!-- TECH GRID -->
+            <div class="tech-grid">
+
+            <!-- DATA & AI -->
+            <div class="tech-item ai show">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                <p>Python</p>
+            </div>
+
+            <div class="tech-item ai show">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+                <p>Java</p>
+            </div>
+
+            <!-- BI -->
+            <div class="tech-item bi">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
+                <p>PostgreSQL</p>
+            </div>
+
+            <!-- ECOMMERCE -->
+            <div class="tech-item ecommerce">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg">
+                <p>Magento</p>
+            </div>
+
+            <div class="tech-item ecommerce">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg">
+                <p>WordPress</p>
+            </div>
+
+            <!-- MOBILE -->
+            <div class="tech-item mobile">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+                <p>React Native</p>
+            </div>
+
+            <!-- PRODUCT -->
+            <div class="tech-item product">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+                <p>Node JS</p>
+            </div>
+
             </div>
         </div>
     </section>

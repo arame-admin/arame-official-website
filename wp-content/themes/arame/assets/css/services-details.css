@@ -360,3 +360,121 @@ body {
     font-size: 1.15rem;
   }
 }
+
+#service-navigation {
+  padding: 60px 15px; 
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.service-nav-wrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 0; 
+  max-width: 1400px;
+  width: 100%;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; 
+  overflow-x: hidden;
+  white-space: normal;
+}
+
+.service-nav-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.12);
+}
+
+.service-nav-wrapper h4 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 30px;
+  padding: 0 25px; 
+}
+
+.service-buttons-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto; 
+  overflow-y: hidden;
+  padding: 0 25px 10px 25px; 
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+/* Buttons */
+#service-navigation .btn {
+  flex: 0 0 auto; 
+  white-space: nowrap; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  background: #ffffff;
+  color: #2563eb;
+  transition: all 0.3s ease;
+  min-width: 130px; 
+}
+
+/* Hover Effect and Active/Focus (No change needed) */
+#service-navigation .btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+#service-navigation .btn:active,
+#service-navigation .btn:focus {
+  color: #ffffff;
+  background: #1e40af;
+  border-color: #1e40af;
+}
+
+/* Scrollbar styling */
+.service-buttons-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.service-buttons-container::-webkit-scrollbar-thumb {
+  background-color: rgba(37, 99, 235, 0.6);
+  border-radius: 3px;
+}
+
+.service-buttons-container::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  #service-navigation .btn {
+    min-width: 120px;
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-nav-wrapper h4 {
+    padding: 0 15px;
+  }
+
+  .service-buttons-container {
+    padding: 0 15px 10px 15px;
+  }
+  
+  #service-navigation .btn {
+    min-width: 100px;
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}

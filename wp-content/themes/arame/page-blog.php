@@ -18,29 +18,21 @@ get_header();
                 <div class="col-md-3 col-6 mb-3">
                     <div class="tech-category-card text-center p-3 bg-primary text-white rounded">
                         <i class="fas fa-cloud fa-2x mb-2"></i>
-                        <h6>Cloud & DevOps</h6>
-                        <small>AWS, Docker, Kubernetes</small>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 mb-3">
                     <div class="tech-category-card text-center p-3 bg-success text-white rounded">
                         <i class="fas fa-brain fa-2x mb-2"></i>
-                        <h6>AI & ML</h6>
-                        <small>Machine Learning, Deep Learning</small>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 mb-3">
                     <div class="tech-category-card text-center p-3 bg-danger text-white rounded">
                         <i class="fas fa-shield-alt fa-2x mb-2"></i>
-                        <h6>Security</h6>
-                        <small>Cybersecurity, Privacy, GDPR</small>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 mb-3">
                     <div class="tech-category-card text-center p-3 bg-info text-white rounded">
                         <i class="fas fa-rocket fa-2x mb-2"></i>
-                        <h6>Emerging Tech</h6>
-                        <small>Blockchain, IoT, Innovation</small>
                     </div>
                 </div>
             </div>

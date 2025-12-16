@@ -25,6 +25,7 @@ function arame_enqueue_scripts() {
     wp_enqueue_style('skills-css', get_template_directory_uri() . '/assets/css/skills.css');
     wp_enqueue_style('tech-css', get_template_directory_uri() . '/assets/css/tech.css');
     wp_enqueue_style('footer-css', get_template_directory_uri() . '/assets/css/footer.css');
+    wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css');
 
     // Enqueue Bootstrap JS
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', array('jquery'), null, true);
@@ -43,7 +44,7 @@ function arame_enqueue_scripts() {
     }
 
     // Enqueue careers CSS for the specific page
-    if (is_page_template('page-careers.php')) {
+    if ( is_page('careers') ) {
         wp_enqueue_style('careers-css', get_template_directory_uri() . '/assets/css/careers.css');
     }
 
@@ -51,10 +52,6 @@ function arame_enqueue_scripts() {
     if (is_page_template('page-contact.php')) {
         wp_enqueue_style('contact-css', get_template_directory_uri() . '/assets/css/contact.css');
     }
-
-
-
-
 
     // Enqueue blog CSS for blog page
     if (is_page('blog')) {
@@ -85,6 +82,26 @@ function arame_enqueue_scripts() {
             'nonce' => wp_create_nonce('blog_filter_nonce')
         ));
     }
+
+    // Enqueue Tech Tabs JS (Homepage)
+if (is_front_page() || is_home()) {
+    wp_enqueue_script(
+        'tech-tabs-js',
+        get_template_directory_uri() . '/assets/js/tech-tabs.js',
+        array(),
+        null,
+        true
+    );
+}
+
+    wp_enqueue_script(
+        'job-popup-js',
+        get_template_directory_uri() . '/assets/js/job-popup.js',
+        array('bootstrap-js'),
+        null,
+        true
+    );
+
 }
 add_action('wp_enqueue_scripts', 'arame_enqueue_scripts');
 
@@ -425,3 +442,5 @@ function arame_set_default_featured_images() {
 // Hook to set default images
 add_action('init', 'arame_set_default_featured_images');
 ?>
+
+
