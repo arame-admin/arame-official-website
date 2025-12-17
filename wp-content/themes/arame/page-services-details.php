@@ -152,7 +152,7 @@ get_header();
         <li>Reduce risk through phased, well-governed execution</li>
         <li>Design for scale, security, and compliance from day one</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">ENSURE QUALITY &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
   </div>
 
@@ -177,7 +177,7 @@ get_header();
         <li>High accountability and clear ownership</li>
         <li>Seamless collaboration with your internal stakeholders</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">GET A HARD WORKING WEBSITE &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">
@@ -214,7 +214,7 @@ get_header();
         <li>Improved efficiency and operational clarity</li>
         <li>Secure, maintainable, and scalable systems</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">GET RELIABLE SUPPORT &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
   </div>
 
@@ -239,7 +239,7 @@ get_header();
         <li>Improved scalability and resilience</li>
         <li>Better cost control and operational efficiency</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">GET A STRATEGY THAT CONVERTS &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">
@@ -276,7 +276,7 @@ get_header();
         <li>Smoother transitions with higher adoption</li>
         <li>Compliance-ready systems and processes</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">MODERNIZE YOUR SYSTEMS &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
   </div>
 
@@ -301,7 +301,7 @@ get_header();
         <li>Marketing aligned with product and platform goals</li>
         <li>Transparent metrics and continuous optimization</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">SECURE YOUR BUSINESS &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">

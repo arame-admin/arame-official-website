@@ -18,10 +18,9 @@ get_header();
 
         <section class="hero-section">
             <div class="hero-content">
-                <h1>We're looking for skilled people.</h1>
+                <h1>Build Your Future With AraMe Global</h1>
                 <p>
-                    Created fourth third without female evening earth above make multiply sixth fly, created gathering
-                    creature firmament.
+                    Join AraMe Global and be part of a team shaping meaningful solutions worldwide
                 </p>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@arameglobal.com" target="_blank" class="apply-button">Apply Now</a>
             </div>
@@ -38,30 +37,26 @@ get_header();
 
                 <div class="benefit-item">
                     <div class="icon-wrapper unlimited"></div>
-                    <h3>Unlimited Benefits</h3>
-                    <p>Bring that from man said god, his appear yielding upon signs fowl a bo deep with some meanings.
-                    </p>
+                    <h3>A Culture of Growth</h3>
+                    <p>We believe in curiosity, continuous learning, and unlocking your full potential.</p>
                 </div>
 
                 <div class="benefit-item">
                     <div class="icon-wrapper creative"></div>
-                    <h3>Creative People</h3>
-                    <p>Bring that from man said god, his appear yielding upon signs fowl a bo deep with some meanings.
-                    </p>
+                    <h3>Freedom to Work Anywhere</h3>
+                    <p>Embrace flexibility with a remote-first approach that lets you do your best work, wherever you are.</p>
                 </div>
 
                 <div class="benefit-item">
                     <div class="icon-wrapper remotely"></div>
-                    <h3>Work Remotely</h3>
-                    <p>Bring that from man said god, his appear yielding upon signs fowl a bo deep with some meanings.
-                    </p>
+                    <h3>Balance That Truly Matters</h3>
+                    <p>We support harmony between work and life, so you can thrive both professionally and personally.</p>
                 </div>
 
                 <div class="benefit-item">
                     <div class="icon-wrapper vision"></div>
-                    <h3>One Vision</h3>
-                    <p>Bring that from man said god, his appear yielding upon signs fowl a bo deep with some meanings.
-                    </p>
+                    <h3>Work With Purpose</h3>
+                    <p>Join AraMe Global and help shape meaningful solutions that make a real impact worldwide.</p>
                 </div>
 
             </div>
@@ -95,9 +90,9 @@ get_header();
         <section class="job-openings">
 
             <div class="job-header">
-                <span class="section-tag">Job Openings</span>
-                <h2>Explore your passion. Create your world</h2>
-                <p>We welcome dreamers, optimists and believers to this adventure.</p>
+                <span class="section-tag">Build more than a career</span>
+                <h2>Careers That Make an Impact</h2>
+                <p>This is your chance to do meaningful work, grow without limits, and create change that reaches far beyond borders.</p>
             </div>
 
             <!-- Filters (UI only for now)
@@ -111,24 +106,74 @@ get_header();
             </div> -->
 
             <!-- CATEGORY -->
-            <h3 class="job-category-title">Management</h3>
+            <h3 class="job-category-title">Technical</h3>
 
             <div class="job-row job-card"
-                data-title="Junior Technical PM"
-                data-description="Spirecorn Technology is a global software development firm aiming to impact the world through technology positively."
-                data-experience="2+ Years"
-                data-location="Anywhere in India"
-                data-type="Part Time">
+                data-title="Solution Architect"
+                data-description="AraMe Global Technology is a global software development firm aiming to impact the world through technology positively."
+                data-experience="Experienced"
+                data-location="Remote"
+                data-type=" Full Time / Consultant">
 
                 <div class="job-left">
                 <div class="job-icon">⚙️</div>
                 <div>
-                    <h4>Junior Technical PM</h4>
-                    <p>Spirecorn Technology is a global software development firm aiming to impact the world through technology positively…</p>
+                    <h4>Solution Architect</h4>
+                    <p>AraMe Global Technology software development firm aiming to impact the world through technology positively…</p>
 
                     <div class="job-meta">
-                    <span>2+ Years</span>
-                    <span>Anywhere in India</span>
+                    <span>Experienced</span>
+                    <span>Remote</span>
+                    <span>Full Time / Consultant</span>
+                    </div>
+                </div>
+                </div>
+
+                <button class="apply-btn">Apply Now ↗</button>
+            </div>
+
+            <div class="job-row job-card"
+                data-title="Full stack developer"
+                data-description="Spirecorn Technology is a global software development firm aiming to impact the world through technology positively."
+                data-experience="Fresher / Experienced"
+                data-location="Remote"
+                data-type="Full Time">
+
+                <div class="job-left">
+                <div class="job-icon">⚙️</div>
+                <div>
+                    <h4>Full stack developer</h4>
+                    <p>  global software development firm aiming to impact the world through technology positively…</p>
+
+                    <div class="job-meta">
+                    <span>Fresher / Experienced</span>
+                    <span>Remote</span>
+                    <span>Full Time</span>
+                    </div>
+                </div>
+                </div>
+
+                <button class="apply-btn">Apply Now ↗</button>
+            </div>
+
+            <h3 class="job-category-title">Digital Marketing / Design</h3>
+
+            <div class="job-row job-card"
+                data-title="Design Consultant"
+                data-description="We are seeking a Design Consultant to build scalable, high-performance web applications."
+                data-experience="Fresher / Experienced"
+                data-location="Remote"
+                data-type="Part Time">
+
+                <div class="job-left">
+                <div class="job-icon">💻</div>
+                <div>
+                    <h4>Design Consultant</h4>
+                    <p>We are seeking a highly skilled Design Consultant to lead scalable applications…</p>
+
+                    <div class="job-meta">
+                    <span>Fresher / Experienced</span>
+                    <span>Remote</span>
                     <span>Part Time</span>
                     </div>
                 </div>
@@ -138,72 +183,22 @@ get_header();
             </div>
 
                         <div class="job-row job-card"
-                data-title="Junior Technical "
-                data-description="Spirecorn Technology is a global software development firm aiming to impact the world through technology positively."
+                data-title="Digital Marketing Intern"
+                data-description="We are seeking a Digital Marketing Intern to build scalable, high-performance web applications."
                 data-experience="Fresher"
-                data-location="Anywhere in India"
-                data-type="Part Time">
+                data-location="Remote"
+                data-type="Full Time">
 
                 <div class="job-left">
-                <div class="job-icon">⚙️</div>
+                <div class="job-icon">💻</div>
                 <div>
-                    <h4>Junior Technical </h4>
-                    <p>Spirecorn Technology is a global software development firm aiming to impact the world through technology positively…</p>
+                    <h4>Digital Marketing Intern</h4>
+                    <p>We are seeking a highly skilled Digital Marketing Intern to lead scalable applications…</p>
 
                     <div class="job-meta">
                     <span>Fresher</span>
-                    <span>Anywhere in India</span>
-                    <span>Part Time</span>
-                    </div>
-                </div>
-                </div>
-
-                <button class="apply-btn">Apply Now ↗</button>
-            </div>
-
-            <h3 class="job-category-title">Programmers</h3>
-
-            <div class="job-row job-card"
-                data-title="Senior Next.js Developer"
-                data-description="We are seeking a Senior Next.js Developer to build scalable, high-performance web applications."
-                data-experience="3+ Years"
-                data-location="Trivandrum, Kerala"
-                data-type="Part Time">
-
-                <div class="job-left">
-                <div class="job-icon">💻</div>
-                <div>
-                    <h4>Senior Next.js Developer</h4>
-                    <p>We are seeking a highly skilled Senior Next.js Developer to lead scalable applications…</p>
-
-                    <div class="job-meta">
-                    <span>3+ Years</span>
-                    <span>Trivandrum, Kerala</span>
-                    <span>Part Time</span>
-                    </div>
-                </div>
-                </div>
-
-                <button class="apply-btn">Apply Now ↗</button>
-            </div>
-
-                        <div class="job-row job-card"
-                data-title="Senior Next.js Developer"
-                data-description="We are seeking a Senior Next.js Developer to build scalable, high-performance web applications."
-                data-experience="3+ Years"
-                data-location="Trivandrum, Kerala"
-                data-type="Part Time">
-
-                <div class="job-left">
-                <div class="job-icon">💻</div>
-                <div>
-                    <h4>Senior Next.js Developer</h4>
-                    <p>We are seeking a highly skilled Senior Next.js Developer to lead scalable applications…</p>
-
-                    <div class="job-meta">
-                    <span>3+ Years</span>
-                    <span>Trivandrum, Kerala</span>
-                    <span>Part Time</span>
+                    <span>Remote</span>
+                    <span>Full Time</span>
                     </div>
                 </div>
                 </div>

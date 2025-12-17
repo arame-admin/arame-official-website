@@ -60,7 +60,7 @@ get_header();
                 </div>
 
                 <div class="input-group">
-                    <textarea name="message" class="custom-input" placeholder="Type You'r messages and project details...." required></textarea>
+                    <textarea name="message" class="custom-input" placeholder="Type your message or project details" required></textarea>
                 </div>
 
                 <button type="submit" name="contact_submit" class="submit-button">

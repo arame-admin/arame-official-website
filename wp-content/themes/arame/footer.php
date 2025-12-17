@@ -33,7 +33,7 @@
         <h3 class="fw-bold mb-3 text-white">AraMe Global</h3>
         <p class="text-muted">Clarity in Purpose, Precision in Code.</p>
 
-        <div class="d-flex gap-3 mt-3">
+        <div class="d-flex gap-3 mt-3 ms-5">
           <!-- <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a> -->
           <!-- <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a> -->
           <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
@@ -90,9 +90,9 @@
         </ul>
       </div>
     </div>
-  </div>Developer@arame.123
+  </div>
 
-  <div class="text-center py-3 text-muted small">
+  <div class="text-center py-3 text-muted small text-white">
     © Copyrights 2025 AraMe Global All rights reserved.
   </div>
 </footer>
