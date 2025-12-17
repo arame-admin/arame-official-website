@@ -1,52 +1,75 @@
-const modal = document.getElementById("jobModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDescription");
-const responsibilitiesList = document.getElementById("modalResponsibilities");
-const requirementsList = document.getElementById("modalRequirements");
-const benefitsList = document.getElementById("modalBenefits");
-const applyBtn = document.getElementById("applyBtn");
-const closeBtn = document.querySelector(".close-btn");
+document.addEventListener("DOMContentLoaded", () => {
 
-document.querySelectorAll(".job-card").forEach(card => {
+  const jobCards = document.querySelectorAll(".job-card");
+  const jobModal = document.getElementById("jobModal");
+  const applyModal = document.getElementById("applyModal");
+
+  const jobTitle = document.getElementById("jobTitle");
+  const jobDescription = document.getElementById("jobDescription");
+  const jobExperience = document.getElementById("jobExperience");
+  const jobLocation = document.getElementById("jobLocation");
+  const jobDepartment = document.getElementById("jobDepartment");
+  const jobType = document.getElementById("jobType");
+  const jobTypeInfo = document.getElementById("jobTypeInfo");
+
+  const jobResponsibilities = document.getElementById("jobResponsibilities");
+  const jobRequirements = document.getElementById("jobRequirements");
+
+  const applyFromDetails = document.getElementById("applyFromDetails");
+  const applyJobTitle = document.getElementById("applyJobTitle");
+
+  let currentJob = "";
+
+  jobCards.forEach(card => {
     card.addEventListener("click", () => {
 
-        const title = card.dataset.title;
-        const desc = card.dataset.description;
-        const responsibilities = card.dataset.responsibilities.split(",");
-        const requirements = card.dataset.requirements.split(",");
-        const benefits = card.dataset.benefits.split(",");
-        const subject = card.dataset.subject;
+      currentJob = card.dataset.title;
 
-        modalTitle.textContent = title;
-        modalDesc.textContent = desc;
+      jobTitle.textContent = card.dataset.title;
+      jobDescription.textContent = card.dataset.description;
+      jobExperience.textContent = card.dataset.experience;
+      jobLocation.textContent = card.dataset.location;
+      jobDepartment.textContent = card.dataset.department || "—";
+      jobType.textContent = card.dataset.type;
+      jobTypeInfo.textContent = card.dataset.type;
 
-        // Clear old data
-        responsibilitiesList.innerHTML = "";
-        requirementsList.innerHTML = "";
-        benefitsList.innerHTML = "";
+      fillList(jobResponsibilities, card.dataset.responsibilities);
+      fillList(jobRequirements, card.dataset.requirements);
 
-        // Populate lists
-        responsibilities.forEach(item => {
-            responsibilitiesList.innerHTML += `<li>${item}</li>`;
-        });
-
-        requirements.forEach(item => {
-            requirementsList.innerHTML += `<li>${item}</li>`;
-        });
-
-        benefits.forEach(item => {
-            benefitsList.innerHTML += `<li>${item}</li>`;
-        });
-
-        applyBtn.href =
-            `https://mail.google.com/mail/?view=cm&fs=1&to=careers@arameglobal.com&su=${encodeURIComponent(subject)}`;
-
-        modal.style.display = "block";
+      jobModal.classList.add("show");
     });
+
+    card.querySelector(".apply-btn").addEventListener("click", e => {
+      e.stopPropagation();
+      openApply(card.dataset.title);
+    });
+  });
+
+  applyFromDetails.addEventListener("click", () => {
+    jobModal.classList.remove("show");
+    openApply(currentJob);
+  });
+
+  function openApply(title) {
+    applyJobTitle.value = title;
+    applyModal.classList.add("show");
+  }
+
+  function fillList(container, data) {
+    container.innerHTML = "";
+    if (!data) return;
+    data.split(",").forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item.trim();
+      container.appendChild(li);
+    });
+  }
+
+  document.querySelectorAll(".modal-close").forEach(btn => {
+    btn.addEventListener("click", () => {
+      jobModal.classList.remove("show");
+      applyModal.classList.remove("show");
+    });
+  });
+
 });
-
-
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => {
-    if (e.target === modal) modal.style.display = "none";
-};

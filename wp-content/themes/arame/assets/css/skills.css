@@ -30,6 +30,10 @@ body {
   line-height: 1.6;
 }
 
+.learn-more {
+  color: #007bff;
+}
+
 /* EXPERIENCE CARD */
 .experience-card {
   background: linear-gradient(135deg, #007bff, #13b7ff);

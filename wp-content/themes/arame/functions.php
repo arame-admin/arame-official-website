@@ -94,6 +94,7 @@ if (is_front_page() || is_home()) {
     );
 }
 
+if ( is_page('careers') ) {
     wp_enqueue_script(
         'job-popup-js',
         get_template_directory_uri() . '/assets/js/job-popup.js',
@@ -101,6 +102,7 @@ if (is_front_page() || is_home()) {
         null,
         true
     );
+}
 
 }
 add_action('wp_enqueue_scripts', 'arame_enqueue_scripts');

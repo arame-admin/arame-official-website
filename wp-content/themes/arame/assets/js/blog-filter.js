@@ -1,6 +1,3 @@
-
-
-// Blog filtering functionality with AJAX
 jQuery(document).ready(function($) {
     const $container = $('#blog-posts-container');
     const $loader = $('<div class="text-center my-4"><div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div></div>');

@@ -11,7 +11,7 @@
         <!-- Left -->
         <div class="col-lg-8 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
           <div>
-            <h4 class="display-6 fw-bold">Going the Extra Mile, Always Raising the Bar</h4>
+            <h3 class=" fw-bold">Building with Purpose. Delivering with Ownership.</h3>
           </div>
         </div>
 
@@ -58,11 +58,11 @@
       <div class="col-lg-3 col-md-6">
         <h5 class="fw-semibold text-white mb-3">Industries</h5>
         <ul class="footer-list">
-          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">PMS</a></li>
-          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">CMS</a></li>
-          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Appointments</a></li>
-          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Finance</a></li>
-          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Cultural Historic, Legacy & Cultural Programs</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Property Management Systems</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Financial Systems</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Content Management Systems</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Wellness Platforms</a></li>
+          <li><a href="<?php echo get_permalink(get_page_by_path('footer-details')); ?>">Heritage and Cultural Programs</a></li>
         </ul>
       </div>
 
@@ -82,18 +82,15 @@
           <li class="d-flex">
             <i class="fa fa-map-marker-alt me-2 text-primary"></i>
             <span>
-              Arame Global Technologies Private Limited,
-              Dotspace Business Center
-              TC 24/3088/2
-              Ushasandya Building,
-              Kowdiar - Devasom Board Road
-              Kowdiar Trivandrum - 695003
+              Arame Global Technologies Pvt Ltd, 
+              Dotspace Business Center,
+              Kowdiar, Trivandrum - 695003
             </span>
           </li>
         </ul>
       </div>
     </div>
-  </div>
+  </div>Developer@arame.123
 
   <div class="text-center py-3 text-muted small">
     © Copyrights 2025 AraMe Global All rights reserved.

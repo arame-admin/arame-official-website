@@ -8,7 +8,7 @@
                 <!-- LEFT CONTENT -->
                 <div class="col-lg-6">
                     <h6 class="text-uppercase text-muted fw-bold mb-3 hero-upper-letters">
-                        Grow With Your Business
+                        Growth, Engineered Right
                     </h6>
 
                     <h1 class="display-4 fw-bold mb-4 hero-title">
@@ -233,8 +233,7 @@
                     </p>
 
                     <div class="experience-card">
-                        <h1>1+</h1>
-                        <small>Years of Excellence</small>
+                        <p>Built to Scale</p>
                     </div>
 
                     <a href="<?php echo get_permalink(get_page_by_path('about')); ?>" class="learn-more">Discover More →</a>

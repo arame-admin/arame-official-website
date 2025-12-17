@@ -91,132 +91,199 @@ get_header();
                 </p>
             </div>
         </section> -->
-        <section class="job-section">
-            <h2 class="section-title">Where People and Purpose Matter</h2>
-            <p>We foster a culture of respect, learning, and shared growth. At AraMe Global, we believe careers thrive when people feel valued, supported, and aligned with a greater purpose.</p>
 
-            <div class="job-grid">
-                <!-- Card 1 -->
-                <div class="job-card"
-                    data-title="Full Stack Developer (Fresher / Intern)"
-                    data-description="We are looking for enthusiastic freshers or interns eager to learn and build real-world applications. You’ll work across frontend and backend technologies, collaborate with experienced developers, and gain hands-on exposure to live projects."
-                    data-responsibilities="Assist in developing web applications,Work on frontend and backend components,Follow coding standards and best practices,Learn through mentorship and real project work"
-                    data-requirements="Basic knowledge of HTML CSS JavaScript,Familiarity with any frontend or backend technology,Strong willingness to learn and grow"
-                    data-benefits="Real project experience,Structured learning and mentorship,Opportunity for full-time conversion based on performance"
-                    data-subject="Application for Full Stack Developer (Fresher / Intern)">
-                    
-                        <!-- <div class="job-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div> -->
-                    <h4>Full Stack Developer (Fresher / Intern)</h4>
-                    <!-- <p>We are looking for enthusiastic freshers or interns eager to learn and build real-world applications. You’ll work across frontend and backend technologies, collaborate with experienced developers, and gain hands-on exposure to live projects</p> -->
-                        <!-- <a class="more-info-btn" href="javascript:void(0)">
-                        Apply Now
-                        <span class="arrow">→</span> -->
-                    </a>
+        <section class="job-openings">
+
+            <div class="job-header">
+                <span class="section-tag">Job Openings</span>
+                <h2>Explore your passion. Create your world</h2>
+                <p>We welcome dreamers, optimists and believers to this adventure.</p>
+            </div>
+
+            <!-- Filters (UI only for now)
+            <div class="job-filters">
+                <input type="text" placeholder="Search" class="job-search">
+                <select class="job-department">
+                <option>Select Department</option>
+                <option>Management</option>
+                <option>Programmers</option>
+                </select>
+            </div> -->
+
+            <!-- CATEGORY -->
+            <h3 class="job-category-title">Management</h3>
+
+            <div class="job-row job-card"
+                data-title="Junior Technical PM"
+                data-description="Spirecorn Technology is a global software development firm aiming to impact the world through technology positively."
+                data-experience="2+ Years"
+                data-location="Anywhere in India"
+                data-type="Part Time">
+
+                <div class="job-left">
+                <div class="job-icon">⚙️</div>
+                <div>
+                    <h4>Junior Technical PM</h4>
+                    <p>Spirecorn Technology is a global software development firm aiming to impact the world through technology positively…</p>
+
+                    <div class="job-meta">
+                    <span>2+ Years</span>
+                    <span>Anywhere in India</span>
+                    <span>Part Time</span>
+                    </div>
+                </div>
                 </div>
 
-                <!-- Card 2 -->
-                <!-- <div class="job-card"
-                    data-title="Construction Engineer"
-                    data-description="We are looking for experienced construction professionals to manage on-site activities."
-                    data-responsibilities="Site supervision,Team coordination,Quality control,Safety compliance"
-                    data-requirements="5+ years experience,Civil Engineering degree,Leadership skills"
-                    data-benefits="Competitive salary,Career growth,Accommodation provided"
-                    data-subject="Application for Construction Engineer">
-                    
-                        <div class="job-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                    <h4>Construction</h4>
-                    <p>2 Jobs</p>
-                                        <a class="more-info-btn" href="javascript:void(0)">
-                        More Info
-                        <span class="arrow">→</span>
-                    </a>
-                </div> -->
-
-                <!-- Card 3 -->
-                <!-- <div class="job-card"
-                    data-title="Construction Engineer"
-                    data-description="We are looking for experienced construction professionals to manage on-site activities."
-                    data-responsibilities="Site supervision,Team coordination,Quality control,Safety compliance"
-                    data-requirements="5+ years experience,Civil Engineering degree,Leadership skills"
-                    data-benefits="Competitive salary,Career growth,Accommodation provided"
-                    data-subject="Application for Construction Engineer">
-                    
-                        <div class="job-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                    <h4>Construction</h4>
-                    <p>We are looking for experienced construction professionals to manage on-site activities</p>
-                    <a class="more-info-btn" href="javascript:void(0)">
-                        More Info
-                        <span class="arrow">→</span>
-                    </a>
-                </div> -->
-
-                                <!-- Card 3 -->
-                <!-- <div class="job-card"
-                    data-title="Construction Engineer"
-                    data-description="We are looking for experienced construction professionals to manage on-site activities."
-                    data-responsibilities="Site supervision,Team coordination,Quality control,Safety compliance"
-                    data-requirements="5+ years experience,Civil Engineering degree,Leadership skills"
-                    data-benefits="Competitive salary,Career growth,Accommodation provided"
-                    data-subject="Application for Construction Engineer">
-                    
-                        <div class="job-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                    <h4>Construction</h4>
-                    <p>We are looking for experienced construction professionals to manage on-site activities</p>
-                    <a class="more-info-btn" href="javascript:void(0)">
-                        More Info
-                        <span class="arrow">→</span>
-                    </a>
-                </div> -->
+                <button class="apply-btn">Apply Now ↗</button>
             </div>
+
+                        <div class="job-row job-card"
+                data-title="Junior Technical "
+                data-description="Spirecorn Technology is a global software development firm aiming to impact the world through technology positively."
+                data-experience="Fresher"
+                data-location="Anywhere in India"
+                data-type="Part Time">
+
+                <div class="job-left">
+                <div class="job-icon">⚙️</div>
+                <div>
+                    <h4>Junior Technical </h4>
+                    <p>Spirecorn Technology is a global software development firm aiming to impact the world through technology positively…</p>
+
+                    <div class="job-meta">
+                    <span>Fresher</span>
+                    <span>Anywhere in India</span>
+                    <span>Part Time</span>
+                    </div>
+                </div>
+                </div>
+
+                <button class="apply-btn">Apply Now ↗</button>
             </div>
-            
+
+            <h3 class="job-category-title">Programmers</h3>
+
+            <div class="job-row job-card"
+                data-title="Senior Next.js Developer"
+                data-description="We are seeking a Senior Next.js Developer to build scalable, high-performance web applications."
+                data-experience="3+ Years"
+                data-location="Trivandrum, Kerala"
+                data-type="Part Time">
+
+                <div class="job-left">
+                <div class="job-icon">💻</div>
+                <div>
+                    <h4>Senior Next.js Developer</h4>
+                    <p>We are seeking a highly skilled Senior Next.js Developer to lead scalable applications…</p>
+
+                    <div class="job-meta">
+                    <span>3+ Years</span>
+                    <span>Trivandrum, Kerala</span>
+                    <span>Part Time</span>
+                    </div>
+                </div>
+                </div>
+
+                <button class="apply-btn">Apply Now ↗</button>
+            </div>
+
+                        <div class="job-row job-card"
+                data-title="Senior Next.js Developer"
+                data-description="We are seeking a Senior Next.js Developer to build scalable, high-performance web applications."
+                data-experience="3+ Years"
+                data-location="Trivandrum, Kerala"
+                data-type="Part Time">
+
+                <div class="job-left">
+                <div class="job-icon">💻</div>
+                <div>
+                    <h4>Senior Next.js Developer</h4>
+                    <p>We are seeking a highly skilled Senior Next.js Developer to lead scalable applications…</p>
+
+                    <div class="job-meta">
+                    <span>3+ Years</span>
+                    <span>Trivandrum, Kerala</span>
+                    <span>Part Time</span>
+                    </div>
+                </div>
+                </div>
+
+                <button class="apply-btn">Apply Now ↗</button>
+            </div>
+
         </section>
 
-        <div class="job-modal" id="jobModal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
+           <!-- JOB DETAILS MODAL -->
+        <div class="modal-overlay" id="jobModal">
+        <div class="modal-box modal-large">
+            <button class="modal-close">×</button>
 
-                <div class="modal-header">
-                    <h3 id="modalTitle"></h3>
-                </div>
+            <div class="modal-header">
+            <h2 id="jobTitle"></h2>
+            <span class="job-badge" id="jobType"></span>
+            </div>
 
-                <div class="modal-body">
+            <p class="modal-desc" id="jobDescription"></p>
 
-                    <div class="modal-section">
-                        <h5>Job Overview</h5>
-                        <p id="modalDescription"></p>
-                    </div>
+            <div class="info-grid">
+            <div><strong>Experience</strong><span id="jobExperience"></span></div>
+            <div><strong>Location</strong><span id="jobLocation"></span></div>
+            <div><strong>Department</strong><span id="jobDepartment"></span></div>
+            <div><strong>Job Type</strong><span id="jobTypeInfo"></span></div>
+            </div>
 
-                    <div class="modal-section">
-                        <h5>Responsibilities</h5>
-                        <ul id="modalResponsibilities"></ul>
-                    </div>
+            <div class="section-block">
+            <h4>Responsibilities</h4>
+            <ul id="jobResponsibilities"></ul>
+            </div>
 
-                    <div class="modal-section">
-                        <h5>Requirements</h5>
-                        <ul id="modalRequirements"></ul>
-                    </div>
+            <div class="section-block">
+            <h4>Requirements</h4>
+            <ul id="jobRequirements"></ul>
+            </div>
 
-                    <div class="modal-section">
-                        <h5>Benefits</h5>
-                        <ul id="modalBenefits"></ul>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer">
-                    <a id="applyBtn" class="apply-btn" target="_blank">Apply Now</a>
-                </div>
+            <div class="modal-actions">
+            <button class="primary-btn" id="applyFromDetails">Apply for this job</button>
             </div>
         </div>
+        </div>
+
+
+            <!-- APPLY MODAL -->
+        <div class="modal-overlay" id="applyModal">
+        <div class="modal-box modal-medium">
+            <button class="modal-close">×</button>
+
+            <h2>Job Application</h2>
+
+            <form class="apply-form">
+            <label>Job Title</label>
+            <input type="text" id="applyJobTitle" readonly>
+
+            <label>Full Name</label>
+            <input type="text" required>
+
+            <label>Email Address</label>
+            <input type="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel">
+
+            <label>Upload Resume</label>
+            <input type="file">
+
+            <label>Why should we hire you?</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit" class="primary-btn full-btn">
+                Submit Application
+            </button>
+            </form>
+        </div>
+        </div>
+
+
+
 
     </div>
 
