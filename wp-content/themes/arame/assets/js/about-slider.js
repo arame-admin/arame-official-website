@@ -32,7 +32,7 @@ function initAboutSlider() {
   function renderSlide(i) {
     const slide = slides[i];
     slideContentInner.innerHTML = `
-            <p class="text-opti-blue fw-bold mb-2">${slide.subtitle}</p>
+            <p class="text-primary fw-bold mb-2">${slide.subtitle}</p>
             <h2 class="display-4 fw-bold mb-4">${slide.title}</h2>
             <p class="fs-5 text-secondary">${slide.text}</p>
         `;

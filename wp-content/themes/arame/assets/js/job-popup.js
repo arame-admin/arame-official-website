@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const jobResponsibilities = document.getElementById("jobResponsibilities");
   const jobRequirements = document.getElementById("jobRequirements");
+  const whatYouWillGain = document.getElementById("Whatyouwillgain");
 
   const applyFromDetails = document.getElementById("applyFromDetails");
   const applyJobTitle = document.getElementById("applyJobTitle");
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       fillList(jobResponsibilities, card.dataset.responsibilities);
       fillList(jobRequirements, card.dataset.requirements);
+      fillList(whatYouWillGain, card.dataset.whatYouWillGain);
 
       jobModal.classList.add("show");
     });
@@ -58,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function fillList(container, data) {
     container.innerHTML = "";
     if (!data) return;
+
     data.split(",").forEach(item => {
       const li = document.createElement("li");
       li.textContent = item.trim();

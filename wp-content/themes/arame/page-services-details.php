@@ -125,12 +125,12 @@ get_header();
   <div id="qa-testing" class="row service-block align-items-center">
     <div class="col-lg-5">
         <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=800&auto=format&fit=crop"
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
                 class="service-image" alt="QA & Testing" />
         </div>
     </div>
     <div class="col-lg-7 text-content">
-      <span class="badge bg-warning mb-3">Service Focus</span>
+      <span class="badge mb-3" style="background: #48a6e4ff;">Service Focus</span>
       <h2>Product Engineering & Platform Development</h2>
       <p>
        We partner with organizations to design, build, and scale digital products that are secure, scalable, and future-ready. From early-stage ideas to mature platforms, we bring structure, clarity, and engineering excellence to every phase of the product lifecycle.
@@ -196,7 +196,7 @@ get_header();
       </div>
     </div>
     <div class="col-lg-7 text-content">
-      <span class="badge bg-secondary mb-3">Service Focus</span>
+      <span class="badge mb-3" style="background: #488ce4ff;">Service Focus</span>
       <h2>Custom Software & Enterprise Solutions</h2>
       <p>
        We build tailored software solutions aligned with your workflows, users, and operational realities. No one-size-fits-all systems — only solutions designed around your business.
@@ -221,7 +221,7 @@ get_header();
   <!--   4   -->
   <div id="professional-services" class="row service-block align-items-center">
     <div class="col-lg-7 text-content order-lg-1 order-2">
-      <span class="badge bg-info mb-3">Service Focus</span>
+      <span class="badge mb-3" style="background: #48cae4;">Service Focus</span>
       <h2>Cloud, DevOps & Technology Migration</h2>
       <p>
         As a cloud-first organization, we help clients modernize infrastructure, migrate legacy systems, and adopt DevOps practices with minimal disruption.
@@ -243,7 +243,7 @@ get_header();
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1588102377317-03b9b47814b3?q=80&w=1932&auto=format&fit=crop"
+        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
           class="service-image" alt="Professional Services & Digital Marketing" />
       </div>
     </div>
@@ -253,12 +253,12 @@ get_header();
   <div id="tech-migration" class="row service-block align-items-center">
     <div class="col-lg-5">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=800&auto=format&fit=crop"
+        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
           class="service-image" alt="Tech Migration" />
       </div>
     </div>
     <div class="col-lg-7 text-content">
-      <span class="badge bg-success mb-3">Service Focus</span>
+      <span class="badge mb-3" style="background: #14a1ffff;">Service Focus</span>
       <h2>Digital Marketing & Growth Enablement</h2>
       <p>
         Technology transformation is as much about people and processes as it is about systems. We guide organizations through informed decision-making, change adoption, and compliance alignment.
@@ -283,7 +283,7 @@ get_header();
   <!-- Security & Compliance Section -->
   <div id="security-compliance" class="row service-block align-items-center">
     <div class="col-lg-7 text-content order-lg-1 order-2">
-      <span class="badge bg-danger mb-3">Service Focus</span>
+      <span class="badge mb-3" style="background: #72b8e7ff;">Service Focus</span>
       <h2>Digital Marketing & Growth Enablement</h2>
       <p>
        Our digital marketing services are designed to enable sustainable growth and measurable outcomes, tightly aligned with your technology platforms and business goals.
@@ -305,7 +305,7 @@ get_header();
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=800&auto=format&fit=crop"
+        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
           class="service-image" alt="Security & Compliance" />
       </div>
     </div>

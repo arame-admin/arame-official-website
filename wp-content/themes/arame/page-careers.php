@@ -110,16 +110,21 @@ get_header();
 
             <div class="job-row job-card"
                 data-title="Solution Architect"
-                data-description="AraMe Global Technology is a global software development firm aiming to impact the world through technology positively."
+                data-description="We are looking for a Solution Architect Consultant who can work closely with clients and internal teams to design secure, scalable, and cloud-first technology solutions. This role focuses on understanding business needs and translating them into clear, well-governed technical architectures."
                 data-experience="Experienced"
                 data-location="Remote"
-                data-type=" Full Time / Consultant">
+                data-type=" Full Time / Consultant"
+                data-department="Technical"
+                data-responsibilities="Understand client requirements and business objectives,Design end-to-end solution architectures,Recommend technology-agnostic, cloud-first solutions,Guide development teams on architecture and standards,Ensure security, scalability, and compliance considerations"
+                data-requirements="Experience in solution or technical architecture,Strong understanding of cloud platforms and system design,Ability to communicate clearly with both technical and non-technical stakeholders"
+                data-what-you-will-gain="Opportunity to work on diverse, meaningful projects,High-impact consultative role,Long-term engagement opportunities"
+                >
 
                 <div class="job-left">
                 <div class="job-icon">⚙️</div>
                 <div>
                     <h4>Solution Architect</h4>
-                    <p>AraMe Global Technology software development firm aiming to impact the world through technology positively…</p>
+                    <p>We are looking for a Solution Architect Consultant who can work closely with clients and internal teams to design secure, scalable, and cloud-first technology solutions. This role focuses on understanding business needs and translating them into clear, well-governed technical architectures.</p>
 
                     <div class="job-meta">
                     <span>Experienced</span>
@@ -134,17 +139,21 @@ get_header();
 
             <div class="job-row job-card"
                 data-title="Full stack developer"
-                data-description="Spirecorn Technology is a global software development firm aiming to impact the world through technology positively."
+                data-description="We are looking for enthusiastic freshers or interns eager to learn and build real-world applications. You’ll work across frontend and backend technologies, collaborate with experienced developers, and gain hands-on exposure to live projects."
                 data-experience="Fresher / Experienced"
                 data-location="Remote"
-                data-type="Full Time">
+                data-type="Full Time"
+                data-department="Technical"
+                data-responsibilities="Assist in developing web applications,Work on frontend and backend components,Follow coding standards and best practices,Learn through mentorship and real project work"
+                data-requirements="Basic knowledge of HTML, CSS, JavaScript,Familiarity with any frontend or backend technology,Strong willingness to learn and grow"
+                data-what-you-will-gain="Real project experience,Structured learning and mentorship,Opportunity for full-time conversion based on performance"
+                >
 
                 <div class="job-left">
                 <div class="job-icon">⚙️</div>
                 <div>
                     <h4>Full stack developer</h4>
-                    <p>  global software development firm aiming to impact the world through technology positively…</p>
-
+                    <p>We are looking for enthusiastic freshers or interns eager to learn and build real-world applications. You’ll work across frontend and backend technologies, collaborate with experienced developers, and gain hands-on exposure to live projects.</p>
                     <div class="job-meta">
                     <span>Fresher / Experienced</span>
                     <span>Remote</span>
@@ -160,17 +169,21 @@ get_header();
 
             <div class="job-row job-card"
                 data-title="Design Consultant"
-                data-description="We are seeking a Design Consultant to build scalable, high-performance web applications."
+                data-description="We are looking for creative and thoughtful Designer / Consultant interns or freshers who can combine design thinking with problem-solving. You’ll work closely with clients and internal teams to translate ideas into clear, user-focused digital experiences."
                 data-experience="Fresher / Experienced"
                 data-location="Remote"
-                data-type="Part Time">
+                data-type="Part Time"
+                data-department="Digital Marketing / Design"
+                data-responsibilities="Assist in UI/UX design and design research,Support requirement understanding and solution design,Create wireframes mockups and design documentation,Collaborate with developers and stakeholders"
+                data-requirements="Basic knowledge of UI/UX or graphic design tools (Figma Adobe etc.),Interest in user research and design thinking,Good communication and willingness to learn"
+                data-what-you-will-gain="Exposure to real client projects,Mentorship and structured learning,Opportunity for full-time conversion based on performance"
+                >
 
                 <div class="job-left">
                 <div class="job-icon">💻</div>
                 <div>
                     <h4>Design Consultant</h4>
-                    <p>We are seeking a highly skilled Design Consultant to lead scalable applications…</p>
-
+                    <p>We are looking for creative and thoughtful Designer / Consultant interns or freshers who can combine design thinking with problem-solving. You’ll work closely with clients and internal teams to translate ideas into clear, user-focused digital experiences.</p>
                     <div class="job-meta">
                     <span>Fresher / Experienced</span>
                     <span>Remote</span>
@@ -182,19 +195,23 @@ get_header();
                 <button class="apply-btn">Apply Now ↗</button>
             </div>
 
-                        <div class="job-row job-card"
+            <div class="job-row job-card"
                 data-title="Digital Marketing Intern"
-                data-description="We are seeking a Digital Marketing Intern to build scalable, high-performance web applications."
+                data-description="We are looking for motivated Digital Marketing Interns or Consultants who are interested in building and executing meaningful digital marketing strategies. You’ll work on organic and performance marketing initiatives aligned with business and product goals."
                 data-experience="Fresher"
                 data-location="Remote"
-                data-type="Full Time">
+                data-type="Full Time"
+                data-department="Digital Marketing / Design"
+                data-responsibilities="Support organic digital marketing (SEO, content, social media),Assist in planning and executing digital campaigns,Contribute to content creation and basic performance tracking,Collaborate with teams to align marketing with business objectives"
+                data-requirements="Interest or experience in digital marketing,Good communication and content sense,Willingness to learn, adapt, and take ownership"
+                data-what-you-will-gain="Exposure to real client and product projects,Mentorship and structured guidance,Opportunity for long-term association based on performance"
+                >
 
                 <div class="job-left">
                 <div class="job-icon">💻</div>
                 <div>
                     <h4>Digital Marketing Intern</h4>
-                    <p>We are seeking a highly skilled Digital Marketing Intern to lead scalable applications…</p>
-
+                    <p>We are looking for motivated Digital Marketing Interns or Consultants who are interested in building and executing meaningful digital marketing strategies. You’ll work on organic and performance marketing initiatives aligned with business and product goals.</p>
                     <div class="job-meta">
                     <span>Fresher</span>
                     <span>Remote</span>
@@ -228,13 +245,18 @@ get_header();
             </div>
 
             <div class="section-block">
-            <h4>Responsibilities</h4>
+            <h4>What you’ll do</h4>
             <ul id="jobResponsibilities"></ul>
             </div>
 
             <div class="section-block">
-            <h4>Requirements</h4>
+            <h4>What we’re looking for</h4>
             <ul id="jobRequirements"></ul>
+            </div>
+
+            <div class="section-block">
+            <h4>What you’ll gain</h4>
+            <ul id="Whatyouwillgain"></ul>
             </div>
 
             <div class="modal-actions">

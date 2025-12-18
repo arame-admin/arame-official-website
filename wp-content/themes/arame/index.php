@@ -54,7 +54,7 @@
                                 <div id="slide-content-inner"></div>
                             </div>
 
-                            <div id="slide-dots" class="mt-4 d-flex"></div>
+                            <div id="slide-dots" class="mt-4 d-flex "></div>
                         </div>
                     </div>
 

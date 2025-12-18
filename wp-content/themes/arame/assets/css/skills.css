@@ -32,17 +32,18 @@ body {
 
 .learn-more {
   color: #007bff;
+  margin-left:2%;
 }
 
 /* EXPERIENCE CARD */
 .experience-card {
   background: linear-gradient(135deg, #007bff, #13b7ff);
-  padding: clamp(16px, 2vw, 28px);
-  border-radius: 16px;
+  padding: clamp(12px, 1vw, 15px);
+  border-radius: 12px;
   color: #fff;
-  width: clamp(150px, 18vw, 220px);
+  width: clamp(80px, 10vw, 150px);
   text-align: center;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .experience-card h1 {
