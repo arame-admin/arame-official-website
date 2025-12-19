@@ -18,35 +18,20 @@ get_header();
 </section>
 
 <!-- Service Navigation -->
-<section id="service-navigation" class="container-xl mb-5">
-  <div class="row">
-    <div class="col-12">
-      <div class="service-nav-wrapper bg-light rounded-3 p-4">
-        <h4 class="text-center mb-3 fw-bold">Quick Navigation</h4>
-        <div class="row text-center">
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#qa-testing" class="btn btn-outline-primary btn-sm w-100">QA & Testing</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#development" class="btn btn-outline-primary btn-sm w-100">Development</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#it-support" class="btn btn-outline-primary btn-sm w-100">IT Support</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#professional-services" class="btn btn-outline-primary btn-sm w-100">Professional Services</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#tech-migration" class="btn btn-outline-primary btn-sm w-100">Tech Migration</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#security-compliance" class="btn btn-outline-primary btn-sm w-100">Security & Compliance</a>
-          </div>
-        </div>
-      </div>
+<section id="service-navigation" class="service-navigation-wrapper mb-5">
+  <div class="service-nav-wrapper bg-light rounded-3 p-4">
+    <h4 class="text-center mb-4 fw-bold">Quick Navigation</h4>
+    <div class="service-buttons d-flex flex-wrap justify-content-center gap-2">
+      <a href="#qa-testing" class="btn btn-primary">Product Engineering</a>
+      <a href="#development" class="btn btn-primary">Collaborative Development</a>
+      <a href="#it-support" class="btn btn-primary">Technology Consulting</a>
+      <a href="#professional-services" class="btn btn-primary">Cloud & Migration</a>
+      <a href="#tech-migration" class="btn btn-primary">Digital Marketing</a>
+      <a href="#security-compliance" class="btn btn-primary">Security & Compliance</a>
     </div>
   </div>
 </section>
+
 
 <hr class="my-5" />
 

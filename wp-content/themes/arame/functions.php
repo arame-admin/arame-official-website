@@ -10,9 +10,6 @@ function arame_enqueue_scripts() {
 
     wp_enqueue_style('googleFonts', "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
-    // Enqueue main CSS - assuming it's in theme directory
-    wp_enqueue_style('arame-main', get_template_directory_uri() . '/css/style.css');
-
     // Enqueue other CSS
     wp_enqueue_style('about-css', get_template_directory_uri() . '/assets/css/about.css');
     wp_enqueue_style('about-css', get_template_directory_uri() . '/assets/css/about-details.css');
@@ -103,6 +100,17 @@ if ( is_page('careers') ) {
         true
     );
 }
+
+if (is_front_page()) {
+    wp_enqueue_script(
+        'about-slider-js',
+        get_template_directory_uri() . '/assets/js/about-slider.js',
+        array(),
+        null,
+        true
+    );
+}
+
 
 }
 add_action('wp_enqueue_scripts', 'arame_enqueue_scripts');

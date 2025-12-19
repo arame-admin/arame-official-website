@@ -408,74 +408,61 @@ body {
 }
 
 
-/* Buttons */
-#service-navigation .btn {
-  flex: 0 0 auto; 
-  white-space: nowrap; 
-  display: inline-flex;
-  align-items: center;
+.service-navigation-wrapper {
+  width: 100vw;
+  padding: 20px 10px;
+  background: #f8f9fa;
+}
+
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
+}
+
+.service-buttons .btn {
+  flex: 1 1 180px;
+  max-width: 250px;
+  white-space: normal;
+  text-align: center;
   font-weight: 600;
   font-size: 14px;
-  padding: 10px 10px;
+  padding: 10px 15px;
   border-radius: 10px;
-  border: 2px solid #ffffff;
+  border: 2px solid #2563eb;
   background: #ffffff;
   color: #2563eb;
   transition: all 0.3s ease;
-  min-width: 130px; 
 }
 
-/* Hover Effect and Active/Focus (No change needed) */
-#service-navigation .btn:hover {
+.service-buttons .btn:hover {
   background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: #ffffff;
+  color: #fff;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
 }
 
-#service-navigation .btn:active,
-#service-navigation .btn:focus {
-  color: #ffffff;
+.service-buttons .btn:active,
+.service-buttons .btn:focus {
+  color: #fff;
   background: #1e40af;
   border-color: #1e40af;
 }
 
-/* Scrollbar styling */
-.service-buttons-container::-webkit-scrollbar {
-  height: 6px;
-}
-
-.service-buttons-container::-webkit-scrollbar-thumb {
-  background-color: rgba(37, 99, 235, 0.6);
-  border-radius: 3px;
-}
-
-.service-buttons-container::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Responsive Adjustments */
+/* Responsive adjustments */
 @media (max-width: 992px) {
-  #service-navigation .btn {
-    min-width: 120px;
+  .service-buttons .btn {
+    flex: 1 1 140px;
     font-size: 13px;
-    padding: 9px 16px;
+    padding: 8px 12px;
   }
 }
 
 @media (max-width: 576px) {
-  .service-nav-wrapper h4 {
-    padding: 0 15px;
-  }
-
-  .service-buttons-container {
-    padding: 0 15px 10px 15px;
-  }
-  
-  #service-navigation .btn {
-    min-width: 100px;
+  .service-buttons .btn {
+    flex: 1 1 100%;
     font-size: 12px;
-    padding: 8px 14px;
+    padding: 8px 10px;
   }
 }

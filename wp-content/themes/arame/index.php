@@ -272,69 +272,67 @@
     <!-- Tech Section -->
 
     <section id="tech-stack">
-        <div class="container">
+  <div class="container">
+    <h2 class="tech-title">Technologies We Use</h2>
+    <p class="tech-subtitle">
+      As a trusted digital transformation services company, we use the latest AI
+      frameworks, cloud platforms, and big data tools.
+    </p>
 
-            <h2 class="tech-title">Technologies We Use</h2>
-            <p class="tech-subtitle">
-            As a trusted digital transformation services company, we use the latest AI
-            frameworks, cloud platforms, and big data tools.
-            </p>
+    <!-- CATEGORY TABS -->
+    <div class="tech-tabs">
+      <button class="tab-btn active" data-category="ai">Data & AI</button>
+      <button class="tab-btn" data-category="bi">Business Intelligence</button>
+      <button class="tab-btn" data-category="ecommerce">E-commerce Platform</button>
+      <button class="tab-btn" data-category="mobile">Mobile Solution</button>
+      <button class="tab-btn" data-category="product">Product Engineering</button>
+    </div>
 
-            <!-- CATEGORY TABS -->
-            <div class="tech-tabs">
-            <button class="tab-btn active" data-category="ai">Data & AI</button>
-            <button class="tab-btn" data-category="bi">Business Intelligence</button>
-            <button class="tab-btn" data-category="ecommerce">E-commerce Platform</button>
-            <button class="tab-btn" data-category="mobile">Mobile Solution</button>
-            <button class="tab-btn" data-category="product">Product Engineering</button>
-            </div>
+    <!-- TECH GRID -->
+    <div class="tech-grid">
 
-            <!-- TECH GRID -->
-            <div class="tech-grid">
+      <!-- DATA & AI -->
+      <div class="tech-item ai show">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="tech-item ai show">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+        <p>Java</p>
+      </div>
 
-            <!-- DATA & AI -->
-            <div class="tech-item ai show">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-                <p>Python</p>
-            </div>
+      <!-- BI -->
+      <div class="tech-item bi">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+        <p>PostgreSQL</p>
+      </div>
 
-            <div class="tech-item ai show">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-                <p>Java</p>
-            </div>
+      <!-- ECOMMERCE -->
+      <div class="tech-item ecommerce">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg" alt="Magento">
+        <p>Magento</p>
+      </div>
+      <div class="tech-item ecommerce">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" alt="WordPress">
+        <p>WordPress</p>
+      </div>
 
-            <!-- BI -->
-            <div class="tech-item bi">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
-                <p>PostgreSQL</p>
-            </div>
+      <!-- MOBILE -->
+      <div class="tech-item mobile">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native">
+        <p>React Native</p>
+      </div>
 
-            <!-- ECOMMERCE -->
-            <div class="tech-item ecommerce">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/magento/magento-original.svg">
-                <p>Magento</p>
-            </div>
+      <!-- PRODUCT -->
+      <div class="tech-item product">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        <p>Node JS</p>
+      </div>
 
-            <div class="tech-item ecommerce">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg">
-                <p>WordPress</p>
-            </div>
+    </div>
+  </div>
+</section>
 
-            <!-- MOBILE -->
-            <div class="tech-item mobile">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-                <p>React Native</p>
-            </div>
-
-            <!-- PRODUCT -->
-            <div class="tech-item product">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
-                <p>Node JS</p>
-            </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- End of Tech Section -->
 </main>

@@ -35,21 +35,23 @@ body {
   margin-left:2%;
 }
 
-/* EXPERIENCE CARD */
 .experience-card {
   background: linear-gradient(135deg, #007bff, #13b7ff);
-  padding: clamp(12px, 1vw, 15px);
-  border-radius: 12px;
+  padding: 15px;
+  border-radius: 15px;
   color: #fff;
   width: clamp(80px, 10vw, 150px);
-  text-align: center;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.experience-card h1 {
-  font-size: clamp(40px, 7vw, 70px);
-  font-weight: 700;
-  margin-bottom: -10px;
+.experience-card p {
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* RIGHT SIDE COLLAGE*/

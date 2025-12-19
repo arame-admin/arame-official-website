@@ -302,7 +302,9 @@ body {
 .job-openings { max-width: 1100px; margin: auto; }
 
 .job-header { text-align: center; margin-bottom: 40px; }
-.job-header h2 { font-size: 2.2rem; font-weight: 700; color: #2588fa; }
+.job-header h2 { font-size: 2.2rem; font-weight: 800; color: #2588fa; }
+.job-header p { color: #0051ff; font-weight: 200;}
+.job-header span { color: #002066; font-weight: 200;}
 
 .job-filters {
   display: flex;
