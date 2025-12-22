@@ -82,7 +82,7 @@ get_header();
 
         <!-- FLOATING SOCIAL BAR -->
         <div class="social-sidebar">
-            <a href="https://www.linkedin.com/company/arameglobal/posts/?feedView=all">
+            <a href="https://www.linkedin.com/company/arameglobal">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
