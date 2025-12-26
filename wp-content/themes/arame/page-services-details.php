@@ -244,7 +244,7 @@ get_header();
     </div>
     <div class="col-lg-7 text-content">
       <span class="badge mb-3" style="background: #14a1ffff;">Service Focus</span>
-      <h2>Digital Marketing & Growth Enablement</h2>
+      <h2>Transformation Consulting, Change & Compliance</h2>
       <p>
         Technology transformation is as much about people and processes as it is about systems. We guide organizations through informed decision-making, change adoption, and compliance alignment.
       </p>
