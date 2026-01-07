@@ -22,12 +22,12 @@ get_header();
   <div class="service-nav-wrapper bg-light rounded-3 p-4">
     <h4 class="text-center mb-4 fw-bold">Quick Navigation</h4>
     <div class="service-buttons d-flex flex-wrap justify-content-center gap-2">
-      <a href="#qa-testing" class="btn btn-primary">Product Engineering</a>
-      <a href="#development" class="btn btn-primary">Collaborative Development</a>
-      <a href="#it-support" class="btn btn-primary">Technology Consulting</a>
-      <a href="#professional-services" class="btn btn-primary">Cloud & Migration</a>
-      <a href="#tech-migration" class="btn btn-primary">Digital Marketing</a>
-      <a href="#security-compliance" class="btn btn-primary">Security & Compliance</a>
+      <a href="#Product-Engineering" class="btn btn-primary">Product Engineering</a>
+      <a href="#Collaborative-Development" class="btn btn-primary">Collaborative Development</a>
+      <a href="#Custom-Software" class="btn btn-primary">Technology Consulting</a>
+      <a href="#Cloud" class="btn btn-primary">Cloud & Migration</a>
+      <a href="#Transformation-Consulting" class="btn btn-primary">Security & Compliance</a>
+      <a href="#Digital-Marketing" class="btn btn-primary">Digital Marketing</a>
     </div>
   </div>
 </section>
@@ -96,7 +96,7 @@ get_header();
 <hr class="my-5" />
 
 <section id="detail-blocks" class="container-xl">
-  <div class="text-center mb-5">
+  <div class="text-center mb-2">
     <h2 class="fw-bolder display-6 text-dark">
       Our Process and Detailed Offerings
     </h2>
@@ -107,11 +107,10 @@ get_header();
   </div>
 
   <!--   1  -->
-  <div id="qa-testing" class="row service-block align-items-center">
+  <div id="Product-Engineering" class="row service-block align-items-center">
     <div class="col-lg-5">
         <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
-                class="service-image" alt="QA & Testing" />
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/producteng.png" class="service-image"  alt="QA & Testing" />
         </div>
     </div>
     <div class="col-lg-7 text-content">
@@ -142,7 +141,7 @@ get_header();
   </div>
 
   <!--   2   -->
-  <div id="development" class="row service-block align-items-center">
+  <div id="Collaborative-Development" class="row service-block align-items-center">
     <div class="col-lg-7 text-content order-lg-1 order-2">
       <span class="badge bg-primary mb-3">Service Focus</span>
       <h2> Collaborative Development & Dedicated Teams</h2>
@@ -166,18 +165,16 @@ get_header();
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
-          class="service-image" alt="Development & Web Design" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/collaborative.png" class="service-image"  alt="Collaborative Development" />
       </div>
     </div>
   </div>
 
   <!--  3   -->
-  <div id="it-support" class="row service-block align-items-center">
+  <div id="Custom-Software" class="row service-block align-items-center">
     <div class="col-lg-5">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800&auto=format&fit=crop"
-          class="service-image" alt="IT Support" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/CustomSoftware.png" class="service-image"  alt="Collaborative Development" />
       </div>
     </div>
     <div class="col-lg-7 text-content">
@@ -204,7 +201,7 @@ get_header();
   </div>
 
   <!--   4   -->
-  <div id="professional-services" class="row service-block align-items-center">
+  <div id="Cloud" class="row service-block align-items-center">
     <div class="col-lg-7 text-content order-lg-1 order-2">
       <span class="badge mb-3" style="background: #48cae4;">Service Focus</span>
       <h2>Cloud, DevOps & Technology Migration</h2>
@@ -228,18 +225,16 @@ get_header();
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
-          class="service-image" alt="Professional Services & Digital Marketing" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Cloud.jpg" class="service-image"  alt="Cloud, DevOps" />
       </div>
     </div>
   </div>
 
   <!--    5    -->
-  <div id="tech-migration" class="row service-block align-items-center">
+  <div id="Transformation-Consulting" class="row service-block align-items-center">
     <div class="col-lg-5">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
-          class="service-image" alt="Tech Migration" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Transformation.png" class="service-image"  alt="Transformation.png" />
       </div>
     </div>
     <div class="col-lg-7 text-content">
@@ -265,8 +260,8 @@ get_header();
     </div>
   </div>
 
-  <!-- Security & Compliance Section -->
-  <div id="security-compliance" class="row service-block align-items-center">
+  <!-- 6 -->
+  <div id="Digital-Marketing" class="row service-block align-items-center">
     <div class="col-lg-7 text-content order-lg-1 order-2">
       <span class="badge mb-3" style="background: #72b8e7ff;">Service Focus</span>
       <h2>Digital Marketing & Growth Enablement</h2>
@@ -290,8 +285,7 @@ get_header();
     </div>
     <div class="col-lg-5 order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
-          class="service-image" alt="Security & Compliance" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Digital-Marketing.png" class="service-image"  alt="Transformation.png" />
       </div>
     </div>
   </div>

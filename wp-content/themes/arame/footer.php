@@ -17,7 +17,7 @@
 
         <!-- Right Button -->
         <div class="col-lg-4 text-center text-lg-end">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@arameglobal.com" target="_blank" class="btn btn-light fw-bold px-4 py-3 rounded-pill">
+          <a href="mailto:info@arameglobal.com" class="btn btn-light fw-bold px-4 py-3 rounded-pill">
             info@arameglobal.com
           </a>
         </div>
@@ -36,7 +36,7 @@
         <div class="d-flex gap-3 mt-3 ms-5">
           <!-- <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a> -->
           <!-- <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a> -->
-          <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/company/arameglobal" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
           <!-- <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a> -->
         </div>
       </div>
@@ -73,7 +73,7 @@
         <ul class="footer-contact">
           <li>
             <i class="fa fa-phone me-2 text-primary"></i>
-            <a href="tel:+919847847135">+919847847135</a>
+            <a href="tel:+919847847135">+91 9746047135</a>
           </li>
           <li>
             <i class="fa fa-envelope me-2 text-primary"></i>
@@ -154,28 +154,22 @@
       title: "Visionary Strategy",
       subtitle: "We define the future.",
       text: "We begin every project by deeply understanding your goals, crafting a clear, long-term strategic vision that ensures maximum relevance and impact for your business in the evolving digital landscape.",
-      mainImage:
-        "https://images.unsplash.com/photo-1542744196-18a72982d61b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      secondaryImage:
-        "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      mainImage:"/wp-content/themes/arame/assets/images/about/future1.webp",
+      secondaryImage:"/wp-content/themes/arame/assets/images/about/future2.avif",
     },
     {
       title: "Precision Engineering",
       subtitle: "Code that delivers.",
       text: "Our dedicated engineers follow rigorous quality standards, ensuring every line of code is optimized for performance, security, and scalability. We build solutions that last.",
-      mainImage:
-        "https://images.unsplash.com/photo-1542831371-29b0f74f945e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      secondaryImage:
-        "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      mainImage:"/wp-content/themes/arame/assets/images/about/Precision1.jpg",
+      secondaryImage:"/wp-content/themes/arame/assets/images/about/Precision2.webp",
     },
     {
       title: "Client Partnership",
       subtitle: "Success is shared.",
       text: "We believe in transparent, collaborative partnership. From initial concept to final deployment and maintenance, we work side-by-side with you to ensure your vision is realized exactly as planned.",
-      mainImage:
-        "https://images.unsplash.com/photo-1550525811-e5869dd03032?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      secondaryImage:
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      mainImage:"/wp-content/themes/arame/assets/images/about/Partnership1.webp",
+      secondaryImage:"/wp-content/themes/arame/assets/images/about/Partnership2.jpg",
     },
   ];
 
@@ -191,7 +185,7 @@
 
   //HTML Template for Content
   const getContentHTML = (slide) => `
-        <p class="text-opti-blue fw-bold mb-2 text-uppercase" style="letter-spacing: 0.1em;">${slide.subtitle}</p>
+        <p class="fw-bold mb-2 text-uppercase" style="letter-spacing: 0.1em; color: #3B82F6;">${slide.subtitle}</p>
         <h2 class="display-4 fw-bold mb-4 text-gray-800">${slide.title}</h2>
         <p class="fs-5 text-secondary">${slide.text}</p>
         <a href="<?php echo get_permalink(get_page_by_path('about')); ?>" class="btn btn-opti-blue mt-4 py-3 px-5 fw-bold" style="border-radius: 0.3rem;">Read Our Story <i class="fas fa-arrow-right ms-2"></i></a>

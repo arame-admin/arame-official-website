@@ -268,35 +268,35 @@ get_header();
 
             <!-- APPLY MODAL -->
         <div class="modal-overlay" id="applyModal">
-        <div class="modal-box modal-medium">
-            <button class="modal-close">×</button>
+            <div class="modal-box modal-medium">
+                <button class="modal-close">×</button>
 
-            <h2>Job Application</h2>
+                <h2>Job Application</h2>
 
-            <form class="apply-form">
-            <label>Job Title</label>
-            <input type="text" id="applyJobTitle" readonly>
+                <form class="apply-form" id="applyForm">
+                    <label>Job Title</label>
+                    <input type="text" id="applyJobTitle" readonly>
 
-            <label>Full Name</label>
-            <input type="text" required>
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" required>
 
-            <label>Email Address</label>
-            <input type="email" required>
+                    <label>Email Address</label>
+                    <input type="email" id="email" required>
 
-            <label>Phone Number</label>
-            <input type="tel">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone">
 
-            <label>Upload Resume</label>
-            <input type="file">
+                    <label>Upload Resume</label>
+                    <input type="file" id="resume" accept=".pdf,.doc,.docx">
 
-            <label>Why should we hire you?</label>
-            <textarea rows="4"></textarea>
+                    <label>Why should we hire you?</label>
+                    <textarea rows="4" id="message"></textarea>
 
-            <button type="submit" class="primary-btn full-btn">
-                Submit Application
-            </button>
-            </form>
-        </div>
+                    <button type="submit" class="primary-btn full-btn">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
         </div>
 
 

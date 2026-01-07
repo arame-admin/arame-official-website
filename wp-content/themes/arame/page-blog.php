@@ -19,6 +19,66 @@ get_header();
 
 <main class="container-xl mb-5">
     <div class="row">
+
+                <div class="col-lg-4 mt-5 mt-lg-0">
+            <div class="sidebar-sticky">
+                <!-- Hiding this part for future use -->
+                <!-- <div class="promo-block mb-4">
+                    <h5 class="fw-bold">Level up your skills.</h5>
+                    <p class="mb-3 small">Subscribe to our newsletter for weekly tech deep dives.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#newsletterModal">Subscribe Now</button>
+                </div> -->
+
+                <div class="sidebar-item">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-filter me-2"></i>Filter Articles</h6>
+                    <form id="blog-filter-form" method="GET" action="<?php echo esc_url(get_permalink()); ?>">
+                        
+                        <div class="mb-4">
+                            <label class="fw-bold small text-uppercase mb-2 d-block">Categories</label>
+                            <?php
+                            $cats = get_categories();
+                            foreach ($cats as $cat) :
+                                $checked = (isset($_GET['category']) && in_array($cat->term_id, (array)$_GET['category'])) ? 'checked' : '';
+                            ?>
+                                <div class="form-check custom-checkbox">
+                                    <input class="form-check-input filter-checkbox" type="checkbox" name="category[]" 
+                                           value="<?php echo $cat->term_id; ?>" id="cat-<?php echo $cat->term_id; ?>" <?php echo $checked; ?>>
+                                    <label class="form-check-label small" for="cat-<?php echo $cat->term_id; ?>">
+                                        <?php echo $cat->name; ?> (<?php echo $cat->count; ?>)
+                                    </label>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <?php $tags = get_tags(); if ($tags) : ?>
+                        <div class="mb-3">
+                            <label class="fw-bold small text-uppercase mb-2 d-block">Tags</label>
+                            <div class="d-flex flex-wrap gap-2">
+                                <?php foreach ($tags as $tag) : 
+                                     $active_tag = (isset($_GET['tag']) && in_array($tag->term_id, (array)$_GET['tag'])) ? 'active-tag' : '';
+                                ?>
+                                    <div class="tag-filter-item">
+                                        <input type="checkbox" name="tag[]" value="<?php echo $tag->term_id; ?>" 
+                                               id="tag-<?php echo $tag->term_id; ?>" class="d-none filter-checkbox" 
+                                               <?php echo (isset($_GET['tag']) && in_array($tag->term_id, (array)$_GET['tag'])) ? 'checked' : ''; ?>>
+                                        <label for="tag-<?php echo $tag->term_id; ?>" class="badge border text-dark <?php echo $active_tag; ?> pointer">
+                                            #<?php echo $tag->name; ?>
+                                        </label>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                        
+                        <button type="submit" class="btn btn-outline-primary btn-sm w-100 mt-2">Apply Filters</button>
+                        <?php if(isset($_GET['category']) || isset($_GET['tag'])): ?>
+                            <a href="<?php echo get_permalink(); ?>" class="btn btn-link btn-sm w-100 text-muted mt-1">Clear All</a>
+                        <?php endif; ?>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="col-lg-8" id="recent-articles">
             <h3 class="fw-bold mb-4 text-dark">Recent Articles</h3>
 
@@ -101,65 +161,6 @@ get_header();
                     echo '<div class="col-12"><p class="alert alert-info">No articles match your selection.</p></div>';
                 endif;
                 ?>
-            </div>
-        </div>
-
-        <div class="col-lg-4 mt-5 mt-lg-0">
-            <div class="sidebar-sticky">
-                <!-- Hiding this part for future use -->
-                <!-- <div class="promo-block mb-4">
-                    <h5 class="fw-bold">Level up your skills.</h5>
-                    <p class="mb-3 small">Subscribe to our newsletter for weekly tech deep dives.</p>
-                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#newsletterModal">Subscribe Now</button>
-                </div> -->
-
-                <div class="sidebar-item">
-                    <h6 class="fw-bold mb-3"><i class="fas fa-filter me-2"></i>Filter Articles</h6>
-                    <form id="blog-filter-form" method="GET" action="<?php echo esc_url(get_permalink()); ?>">
-                        
-                        <div class="mb-4">
-                            <label class="fw-bold small text-uppercase mb-2 d-block">Categories</label>
-                            <?php
-                            $cats = get_categories();
-                            foreach ($cats as $cat) :
-                                $checked = (isset($_GET['category']) && in_array($cat->term_id, (array)$_GET['category'])) ? 'checked' : '';
-                            ?>
-                                <div class="form-check custom-checkbox">
-                                    <input class="form-check-input filter-checkbox" type="checkbox" name="category[]" 
-                                           value="<?php echo $cat->term_id; ?>" id="cat-<?php echo $cat->term_id; ?>" <?php echo $checked; ?>>
-                                    <label class="form-check-label small" for="cat-<?php echo $cat->term_id; ?>">
-                                        <?php echo $cat->name; ?> (<?php echo $cat->count; ?>)
-                                    </label>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-
-                        <?php $tags = get_tags(); if ($tags) : ?>
-                        <div class="mb-3">
-                            <label class="fw-bold small text-uppercase mb-2 d-block">Tags</label>
-                            <div class="d-flex flex-wrap gap-2">
-                                <?php foreach ($tags as $tag) : 
-                                     $active_tag = (isset($_GET['tag']) && in_array($tag->term_id, (array)$_GET['tag'])) ? 'active-tag' : '';
-                                ?>
-                                    <div class="tag-filter-item">
-                                        <input type="checkbox" name="tag[]" value="<?php echo $tag->term_id; ?>" 
-                                               id="tag-<?php echo $tag->term_id; ?>" class="d-none filter-checkbox" 
-                                               <?php echo (isset($_GET['tag']) && in_array($tag->term_id, (array)$_GET['tag'])) ? 'checked' : ''; ?>>
-                                        <label for="tag-<?php echo $tag->term_id; ?>" class="badge border text-dark <?php echo $active_tag; ?> pointer">
-                                            #<?php echo $tag->name; ?>
-                                        </label>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        
-                        <button type="submit" class="btn btn-outline-primary btn-sm w-100 mt-2">Apply Filters</button>
-                        <?php if(isset($_GET['category']) || isset($_GET['tag'])): ?>
-                            <a href="<?php echo get_permalink(); ?>" class="btn btn-link btn-sm w-100 text-muted mt-1">Clear All</a>
-                        <?php endif; ?>
-                    </form>
-                </div>
             </div>
         </div>
     </div>

@@ -75,7 +75,7 @@ get_header();
 
             <ul class="contact-details">
                 <li><i class="fas fa-map-marker-alt"></i> Arame Global Technologies Private Limited,<br> Dotspace Business Center, <br> Kowdiar Trivandrum - 695003</li>
-                <li><i class="fas fa-phone-alt"></i> +919847847135</li>
+                <li><i class="fas fa-phone-alt"></i> +91 9746047135</li>
                 <li><i class="fas fa-envelope"></i>  info@arameglobal.com</li>
             </ul>
         </div>

@@ -7,28 +7,32 @@
             <div class="row align-items-center">
                 <!-- LEFT CONTENT -->
                 <div class="col-lg-6">
-                    <h6 class="text-uppercase text-muted fw-bold mb-3 hero-upper-letters">
-                        Growth, Engineered Right
-                    </h6>
+                    <div class="hero-text-wrapper">
+                        <h6 class="text-uppercase text-muted fw-bold mb-3 hero-upper-letters text-blue">
+                            Growth, Engineered Right
+                        </h6>
 
-                    <h1 class="display-4 fw-bold mb-4 hero-title">
-                        Clarity in Purpose, <br />
-                        Precision in Code.
-                    </h1>
+                        <h1 class="display-4 fw-bold mb-4 hero-title">
+                            Clarity in Purpose, <br />
+                            Precision in Code.
+                        </h1>
 
-                    <p class="text-muted mb-4 hero-para">
-                        We prioritize Clarity in Purpose by first defining the strategic
-                        vision, ethical responsibility, and impact we aim for. This
-                        clear focus then ensures Precision in Code, guaranteeing every
-                        solution we build is of uncompromising quality, highly
-                        efficient, and delivers maximum sustainable value.
-                    </p>
+                        <p class="text-muted mb-4 hero-para">
+                            We prioritize Clarity in Purpose by first defining the strategic
+                            vision, ethical responsibility, and impact we aim for. This
+                            clear focus then ensures Precision in Code, guaranteeing every
+                            solution we build is of uncompromising quality, highly
+                            efficient, and delivers maximum sustainable value.
+                        </p>
 
-                    <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-primary px-4 py-2"> Get Started → </a>
+                        <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-primary px-4 py-2">
+                            Get Started →
+                        </a>
+                    </div>
                 </div>
 
                 <!-- RIGHT IMAGE AREA -->
-                <div class="col-lg-6 position-relative ">
+                <div class="col-lg-6 position-relative">
                     <div class="hero-image-wrapper">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero/hero01.jpg" class="img-fluid main-img" alt="Team Image" />
                     </div>
@@ -271,7 +275,7 @@
 
     <!-- Tech Section -->
 
-    <section id="tech-stack">
+<section id="tech-stack">
   <div class="container">
     <h2 class="tech-title">Technologies We Use</h2>
     <p class="tech-subtitle">
