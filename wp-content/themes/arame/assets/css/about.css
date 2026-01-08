@@ -6,9 +6,7 @@
   --transition-duration: 0.55s;
 }
 
-/* =====================
-   UTILITY
-===================== */
+/* UTILITY*/
 .text-opti-blue {
   color: var(--opti-blue) !important;
 }
@@ -21,18 +19,14 @@
   background-color: var(--opti-blue) !important;
 }
 
-/* =====================
-   MAIN WRAPPER
-===================== */
+/* MAIN WRAPPER*/
 .same-layout-wrapper {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-/* =====================
-   ABOUT SECTION
-===================== */
+/* ABOUT SECTION*/
 .about-section {
   position: relative;
   background: #f5fbff;
@@ -51,9 +45,7 @@
   flex: 0 0 50% !important;
 }
 
-/* =====================
-   IMAGE AREA
-===================== */
+/* IMAGE AREA*/
 .image-wrapper {
   position: relative;
   height: 650px;
@@ -108,9 +100,7 @@
   z-index: 3;
 }
 
-/* =====================
-   TEXT CONTENT
-===================== */
+/* TEXT CONTENT*/
 #slide-content-inner {
   width: 100%;
   max-width: 500px;
@@ -131,9 +121,7 @@
   margin-bottom: 1rem;
 }
 
-/* =====================
-   ANIMATIONS
-===================== */
+/* ANIMATIONS*/
 .slide-center {
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -159,9 +147,7 @@
   transform: scale(1) !important;
 }
 
-/* =====================
-   DOTS
-===================== */
+/* DOTS*/
 .slide-dot {
   width: 12px;
   height: 12px;
@@ -178,9 +164,7 @@
   border-radius: 6px;
 }
 
-/* =====================
-   BUTTON
-===================== */
+/* BUTTON*/
 .btn-opti-blue {
   background-color: rgb(0, 140, 255);
   border-color: rgb(0, 140, 255);
@@ -197,9 +181,7 @@
   border-color: #1664b4;
 }
 
-/* =====================================================
-   RESPONSIVE – TABLET & MOBILE (PROFESSIONAL CLEANUP)
-===================================================== */
+/* RESPONSIVE – TABLET & MOBILE */
 
 @media (max-width: 992px) {
   .image-wrapper {
@@ -207,9 +189,7 @@
   }
 }
 
-/* =====================
-   MOBILE DESIGN RESET
-===================== */
+/* MOBILE DESIGN RESET*/
 @media (max-width: 768px) {
 
   .about-section {
@@ -269,9 +249,7 @@
   }
 }
 
-/* =====================
-   EXTRA SMALL DEVICES
-===================== */
+/* EXTRA SMALL DEVICES*/
 @media (max-width: 420px) {
 
   .about-section {

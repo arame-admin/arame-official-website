@@ -18,33 +18,33 @@ get_header();
   </section>
 
   <!-- HERO -->
-  <section id="about-hero">
+  <section id="about-hero" class="animate-hero animate-section">
     <div class="blob"></div>
 
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 content-animate">
           <h1>We Build Future-Ready IT Solutions</h1>
           <p>
             We design, build, and deliver technology solutions that are secure, scalable, and built to evolve. Backed by strong processes, cloud-first thinking, and uncompromising quality, our solutions are designed to support long-term growth and confident decision-making.
           </p>
         </div>
-        <div class="col-lg-6 about-img">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Team Photo" />
+        <div class="col-lg-6 about-img image-animate">
+          <img class="service-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/about/about1.jpg" alt="Team Photo" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- WHO WE ARE -->
-  <section class="py-5">
+  <section class="py-5 animate-hero animate-section">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 mb-4">
-          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" class="img-fluid rounded" alt="" />
+        <div class="col-lg-6 mb-4 image-animate">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/about/about2.jpg" class="img-fluid rounded" alt="" />
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 content-animate">
           <h2 class="section-title mb-3">Who We Are</h2>
           <p class="mb-4">
               AraMe Global is a technology partner that believes in ownership, professionalism, and quality-led delivery. We work closely with our clients to understand their needs, guide the right decisions, and deliver solutions they can rely on.

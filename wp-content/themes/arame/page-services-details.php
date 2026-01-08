@@ -107,13 +107,13 @@ get_header();
   </div>
 
   <!--   1  -->
-  <div id="Product-Engineering" class="row service-block align-items-center">
-    <div class="col-lg-5">
+  <div id="Product-Engineering" class="row service-block align-items-center animate-section">
+    <div class="col-lg-5 image-animate">
         <div class="image-container">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/producteng.png" class="service-image"  alt="QA & Testing" />
         </div>
     </div>
-    <div class="col-lg-7 text-content">
+    <div class="col-lg-7 text-content content-animate ">
       <span class="badge mb-3" style="background: #48a6e4ff;">Service Focus</span>
       <h2>Product Engineering & Platform Development</h2>
       <p>
@@ -141,8 +141,8 @@ get_header();
   </div>
 
   <!--   2   -->
-  <div id="Collaborative-Development" class="row service-block align-items-center">
-    <div class="col-lg-7 text-content order-lg-1 order-2">
+  <div id="Collaborative-Development" class="row service-block align-items-center animate-section">
+    <div class="col-lg-7 text-content content-animate order-lg-1 order-2">
       <span class="badge bg-primary mb-3">Service Focus</span>
       <h2> Collaborative Development & Dedicated Teams</h2>
       <p>
@@ -163,7 +163,7 @@ get_header();
       </ul>
       <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
-    <div class="col-lg-5 order-lg-2 order-1">
+    <div class="col-lg-5 image-animate order-lg-2 order-1">
       <div class="image-container">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/collaborative.png" class="service-image"  alt="Collaborative Development" />
       </div>
@@ -171,13 +171,13 @@ get_header();
   </div>
 
   <!--  3   -->
-  <div id="Custom-Software" class="row service-block align-items-center">
-    <div class="col-lg-5">
+  <div id="Custom-Software" class="row service-block align-items-center animate-section">
+    <div class="col-lg-5 image-animate">
       <div class="image-container">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/CustomSoftware.png" class="service-image"  alt="Collaborative Development" />
       </div>
     </div>
-    <div class="col-lg-7 text-content">
+    <div class="col-lg-7 text-content content-animate">
       <span class="badge mb-3" style="background: #488ce4ff;">Service Focus</span>
       <h2>Custom Software & Enterprise Solutions</h2>
       <p>
@@ -201,8 +201,8 @@ get_header();
   </div>
 
   <!--   4   -->
-  <div id="Cloud" class="row service-block align-items-center">
-    <div class="col-lg-7 text-content order-lg-1 order-2">
+  <div id="Cloud" class="row service-block align-items-center animate-section">
+    <div class="col-lg-7 text-content content-animate order-lg-1 order-2">
       <span class="badge mb-3" style="background: #48cae4;">Service Focus</span>
       <h2>Cloud, DevOps & Technology Migration</h2>
       <p>
@@ -223,7 +223,7 @@ get_header();
       </ul>
       <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
-    <div class="col-lg-5 order-lg-2 order-1">
+    <div class="col-lg-5 image-animate order-lg-2 order-1">
       <div class="image-container">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Cloud.jpg" class="service-image"  alt="Cloud, DevOps" />
       </div>
@@ -231,13 +231,13 @@ get_header();
   </div>
 
   <!--    5    -->
-  <div id="Transformation-Consulting" class="row service-block align-items-center">
-    <div class="col-lg-5">
+  <div id="Transformation-Consulting" class="row service-block align-items-center animate-section">
+    <div class="col-lg-5 image-animate">
       <div class="image-container">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Transformation.png" class="service-image"  alt="Transformation.png" />
       </div>
     </div>
-    <div class="col-lg-7 text-content">
+    <div class="col-lg-7 text-content content-animate">
       <span class="badge mb-3" style="background: #14a1ffff;">Service Focus</span>
       <h2>Transformation Consulting, Change & Compliance</h2>
       <p>
@@ -261,8 +261,8 @@ get_header();
   </div>
 
   <!-- 6 -->
-  <div id="Digital-Marketing" class="row service-block align-items-center">
-    <div class="col-lg-7 text-content order-lg-1 order-2">
+  <div id="Digital-Marketing" class="row service-block align-items-center animate-section">
+    <div class="col-lg-7 text-content content-animate order-lg-1 order-2">
       <span class="badge mb-3" style="background: #72b8e7ff;">Service Focus</span>
       <h2>Digital Marketing & Growth Enablement</h2>
       <p>
@@ -283,7 +283,7 @@ get_header();
       </ul>
       <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
-    <div class="col-lg-5 order-lg-2 order-1">
+    <div class="col-lg-5 image-animate order-lg-2 order-1">
       <div class="image-container">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Digital-Marketing.png" class="service-image"  alt="Transformation.png" />
       </div>

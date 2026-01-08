@@ -534,3 +534,44 @@ body {
     padding-top: 80px;
   }
 }
+
+/* ABOUT ANIMATION */
+.animate-hero {
+  overflow: hidden;
+}
+
+/* Initial state */
+.content-animate {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0) scale(0.98);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: transform, opacity;
+}
+
+.image-animate {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  will-change: transform, opacity;
+}
+
+/* Active state */
+.animate-hero.animate-in .content-animate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.animate-hero.animate-in .image-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Optional: soft image settle */
+.service-image {
+  transform: scale(1.04);
+  transition: transform 1.4s ease;
+}
+
+.animate-hero.animate-in .service-image {
+  transform: scale(1);
+}

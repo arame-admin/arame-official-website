@@ -1,4 +1,3 @@
-/* ============================= */
 /* BASE RESET */
 body {
   font-family: "Poppins", sans-serif;
@@ -18,6 +17,7 @@ body {
   font-weight: 700;
   color: #0d224a;
   line-height: 1.3;
+  font-family: 'Oswald', sans-serif;
 }
 
 .title span {
@@ -134,15 +134,15 @@ body {
   }
 
   .collage-img {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
   }
 
-  .img1 { top: 10px; left: 40px; }
-  .img2 { top: 80px; left: 150px; }
-  .img3 { top: 170px; left: 60px; }
-  .img4 { top: 20px; left: 220px; }
-  .img5 { top: 190px; left: 190px; }
+  .img1 { top: 10px; left: 160px; }
+  .img2 { top: 80px; left: 270px; }
+  .img3 { top: 170px; left: 180px; }
+  .img4 { top: 20px; left: 340px; }
+  .img5 { top: 190px; left: 310px; }
 }
 
 /* MOBILE RESPONSIVE */
@@ -170,15 +170,15 @@ body {
   }
 
   .collage-img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 
-  .img1 { top: 10px; left: 20px; }
+  .img1 { top: 10px; left: 40px; }
   .img2 { top: 50px; left: 120px; }
-  .img3 { top: 120px; left: 40px; }
-  .img4 { top: 20px; left: 180px; }
-  .img5 { top: 140px; left: 140px; }
+  .img3 { top: 120px; left: 60px; }
+  .img4 { top: 20px; left: 200px; }
+  .img5 { top: 140px; left: 160px; }
 }
 
 /* VERY SMALL DEVICES */
@@ -188,7 +188,7 @@ body {
   }
 
   .collage-img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 }

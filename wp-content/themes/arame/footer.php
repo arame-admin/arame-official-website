@@ -11,7 +11,7 @@
         <!-- Left -->
         <div class="col-lg-8 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
           <div>
-            <h3 class=" fw-bold">Building with Purpose. Delivering with Ownership.</h3>
+            <h3 class=" fw-bold" style="   font-family: 'Oswald', sans-serif; letter-spacing: 1px;">Building with Purpose. Delivering with Ownership.</h3>
           </div>
         </div>
 
@@ -186,9 +186,9 @@
   //HTML Template for Content
   const getContentHTML = (slide) => `
         <p class="fw-bold mb-2 text-uppercase" style="letter-spacing: 0.1em; color: #3B82F6;">${slide.subtitle}</p>
-        <h2 class="display-4 fw-bold mb-4 text-gray-800">${slide.title}</h2>
+        <h2 class="display-4 fw-bold mb-4 text-gray-800" style="   font-family: 'Oswald', sans-serif; letter-spacing: 1px;">${slide.title}</h2>
         <p class="fs-5 text-secondary">${slide.text}</p>
-        <a href="<?php echo get_permalink(get_page_by_path('about')); ?>" class="btn btn-opti-blue mt-4 py-3 px-5 fw-bold" style="border-radius: 0.3rem;">Read Our Story <i class="fas fa-arrow-right ms-2"></i></a>
+        <a href="<?php echo get_permalink(get_page_by_path('about')); ?>" class="btn btn-opti-blue mt-4 py-3 px-5 fw-bold" style="border-radius: 2rem;">Read Our Story <i class="fas fa-arrow-right ms-2"></i></a>
     `;
 
   //Animation Logic
@@ -251,5 +251,67 @@
     }, 7000);
   });
 </script>
+
+<script>
+  const cards = document.querySelectorAll(".animate-card");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  cards.forEach((card) => observer.observe(card));
+</script>
+
+<!-- service-details page animation -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const sections = document.querySelectorAll(".animate-section");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  sections.forEach(section => observer.observe(section));
+
+});
+</script>
+
 </body>
 </html>
+
+<!-- about-details page animation -->
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".animate-hero");
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => hero.classList.add("animate-in"), 50); // 50ms delay
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.4 }
+  );
+
+  observer.observe(hero);
+});
+</script>

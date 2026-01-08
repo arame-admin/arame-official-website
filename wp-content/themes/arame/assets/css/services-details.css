@@ -383,7 +383,7 @@ html, body {
 
   .image-container {
     border-radius: 12px;
-    overflow: hidden; /* prevent image overflow */
+    overflow: hidden;
   }
 
   .service-image {
@@ -446,17 +446,17 @@ html, body {
 @media (max-width: 576px) {
   .service-buttons {
     display: flex;
-    flex-wrap: nowrap; /* keep in one row */
-    overflow-x: auto; /* horizontal scroll */
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 10px;
     padding-bottom: 5px;
   }
 
   .service-buttons .btn {
-    flex: 0 0 auto; /* prevent shrinking */
+    flex: 0 0 auto;
     font-size: 13px;
     padding: 10px 14px;
-    white-space: nowrap; /* prevent text wrap */
+    white-space: nowrap;
   }
 
   /* optional: hide scrollbar nicely */
@@ -489,8 +489,44 @@ html, body {
   }
 
   /* Extra padding for tiny phones */
-  body, #service-hero, .service-block, .text-content, .core-card, .service-nav-wrapper {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+     .core-card {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
   }
 }
+
+/* SERVICE DETAIL ANIMATION */
+/* Initial state */
+.animate-section .image-animate,
+.animate-section .content-animate {
+  opacity: 0;
+  transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Image animation */
+.animate-section .image-animate {
+  transform: translateX(-60px);
+}
+
+/* Text animation */
+.animate-section .content-animate {
+  transform: translateX(40px);
+}
+
+/* Active state */
+.animate-section.animate-in .image-animate,
+.animate-section.animate-in .content-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Subtle image zoom */
+.animate-section .service-image {
+  transform: scale(1.06);
+  transition: transform 1.6s ease;
+}
+
+.animate-section.animate-in .service-image {
+  transform: scale(1);
+}
+

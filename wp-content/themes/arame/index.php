@@ -96,11 +96,11 @@
 
             <div class="row">
 
-                <!--   -->
+                <!-- 1  -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
-                    <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#qa-testing" class="service-card-link">
-                        <div class="service-card" style="
-                              background-image: url('https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=800');
+                    <a href="<?php echo get_permalink(get_page_by_path('services')); ?>#Product-Engineering" class="service-card-link">
+                        <div class="service-card animate-card" style="
+                              background-image: url('/wp-content/themes/arame/assets/images/servicepage/h1.jpg');
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-magnifying-glass-chart service-icon"></i>
@@ -115,14 +115,14 @@
                     </a>
                 </div>
 
-                <!--  -->
+                <!-- 2 -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
-                    <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#development" class="service-card-link">
-                        <div class="service-card" style="
-                              background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800');
+                    <a href="<?php echo get_permalink(get_page_by_path('services')); ?>#Collaborative-Development" class="service-card-link">
+                        <div class="service-card animate-card" style="
+                              background-image: url('/wp-content/themes/arame/assets/images/servicepage/h2.jpg');
                             ">
                             <div class="content">
-                                <i class="fa-solid fa-code service-icon"></i>
+                                <i class="fa-solid fa-handshake service-icon"></i>
                                 <h4>Collaborative Development & Dedicated Teams</h4>
                                 <p>
                                     We work as an accountable extension of your team, sharing ownership and delivery responsibility. <br>
@@ -134,11 +134,11 @@
                     </a>
                 </div>
 
-                <!--    -->
+                <!--  3  -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
-                    <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#it-support" class="service-card-link">
-                        <div class="service-card" style="
-                              background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800');
+                    <a href="<?php echo get_permalink(get_page_by_path('services')); ?>#Custom-Software" class="service-card-link">
+                        <div class="service-card animate-card" style="
+                              background-image: url('/wp-content/themes/arame/assets/images/servicepage/h3.jpg');
                             ">
                             <div class="content">
                                 <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
@@ -154,14 +154,14 @@
                     </a>
                 </div>
 
-                <!--    -->
+                <!--  4  -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
-                    <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#professional-services" class="service-card-link">
-                        <div class="service-card" style="
-                              background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800');
+                    <a href="<?php echo get_permalink(get_page_by_path('services')); ?>#Cloud" class="service-card-link">
+                        <div class="service-card animate-card" style="
+                              background-image: url('/wp-content/themes/arame/assets/images/servicepage/h4.jpg');
                             ">
                             <div class="content">
-                                <i class="fa-solid fa-handshake service-icon"></i>
+                                <i class="fa-solid fa-code service-icon"></i>
                                 <h4>Cloud, DevOps & Technology Migration</h4>
                                 <p>
                                     
@@ -174,14 +174,14 @@
                     </a>
                 </div>
 
-                <!--TECH MIGRATION -->
+                <!-- 5 -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
-                    <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#tech-migration" class="service-card-link">
-                        <div class="service-card" style="
-                              background-image: url('https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=800');
+                    <a href="<?php echo get_permalink(get_page_by_path('services')); ?>#Transformation-Consulting" class="service-card-link">
+                        <div class="service-card animate-card" style="
+                              background-image: url('/wp-content/themes/arame/assets/images/servicepage/h5.jpg');
                             ">
                             <div class="content">
-                                <i class="fa-solid fa-chart-line service-icon"></i>
+                                <i class="fa-solid fa-shield-halved service-icon"></i>
                                 <h4>Transformation Consulting, Change & Compliance</h4>
                                 <p>
                                     
@@ -194,14 +194,14 @@
                     </a>
                 </div>
 
-                <!--SECURITY -->
+                <!-- 6 -->
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
-                    <a href="<?php echo get_permalink(get_page_by_path('services-details')); ?>#security-compliance" class="service-card-link">
-                        <div class="service-card" style="
-                              background-image: url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800');
+                    <a href="<?php echo get_permalink(get_page_by_path('services')); ?>#Digital-Marketing" class="service-card-link">
+                        <div class="service-card animate-card" style="
+                              background-image: url('/wp-content/themes/arame/assets/images/servicepage/h6.jpg');
                             ">
                             <div class="content">
-                                <i class="fa-solid fa-shield-halved service-icon"></i>
+                                <i class="fa-solid fa-chart-line service-icon"></i>
                                 <h4>Digital Marketing & Growth Enablement</h4>
                                 <p>
                                     
@@ -250,21 +250,11 @@
                         <div class="blue-bg-shape"></div>
 
                         <!-- Random arranged images -->
-                        <img
-                            src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041859.jpg?semt=ais_hybrid&w=740&q=80"
-                            class="collage-img img1" />
-                        <img
-                            src="https://media.gettyimages.com/id/616902766/photo/dedicated-to-software-development.jpg?s=612x612&w=gi&k=20&c=q18dzhCMnNty-rORThY4yFIf7s6LWBRh5fXT6Wytaqc="
-                            class="collage-img img2" />
-                        <img
-                            src="https://www.shutterstock.com/image-photo/indian-man-developer-presentation-about-260nw-2449261997.jpg"
-                            class="collage-img img3" />
-                        <img
-                            src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041859.jpg?semt=ais_hybrid&w=740&q=80"
-                            class="collage-img img4" />
-                        <img
-                            src="https://media.gettyimages.com/id/616902766/photo/dedicated-to-software-development.jpg?s=612x612&w=gi&k=20&c=q18dzhCMnNty-rORThY4yFIf7s6LWBRh5fXT6Wytaqc="
-                            class="collage-img img5" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/skill/skill1.jpg" class="collage-img img1" alt="Image" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/skill/skill2.jpg" class="collage-img img2" alt="Image" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/skill/skill3.jpg" class="collage-img img3" alt="Image" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/skill/skill4.jpg" class="collage-img img4" alt="Image" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/skill/skill5.jpg" class="collage-img img5" alt="Image" />
                     </div>
                 </div>
             </div>
