@@ -60,7 +60,7 @@ get_header();
                 </div>
 
                 <div class="input-group">
-                    <textarea name="message" class="custom-input" placeholder="Type You'r messages and project details...." required></textarea>
+                    <textarea name="message" class="custom-input" placeholder="Type your message or project details" required></textarea>
                 </div>
 
                 <button type="submit" name="contact_submit" class="submit-button">
@@ -75,14 +75,14 @@ get_header();
 
             <ul class="contact-details">
                 <li><i class="fas fa-map-marker-alt"></i> Arame Global Technologies Private Limited,<br> Dotspace Business Center, <br> Kowdiar Trivandrum - 695003</li>
-                <li><i class="fas fa-phone-alt"></i> +919847847135</li>
+                <li><i class="fas fa-phone-alt"></i> +91 9746047135</li>
                 <li><i class="fas fa-envelope"></i>  info@arameglobal.com</li>
             </ul>
         </div>
 
         <!-- FLOATING SOCIAL BAR -->
         <div class="social-sidebar">
-            <a href="https://www.linkedin.com/company/arameglobal/posts/?feedView=all">
+            <a href="https://www.linkedin.com/company/arameglobal">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>

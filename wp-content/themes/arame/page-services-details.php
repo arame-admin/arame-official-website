@@ -18,35 +18,20 @@ get_header();
 </section>
 
 <!-- Service Navigation -->
-<section id="service-navigation" class="container-xl mb-5">
-  <div class="row">
-    <div class="col-12">
-      <div class="service-nav-wrapper bg-light rounded-3 p-4">
-        <h4 class="text-center mb-3 fw-bold">Quick Navigation</h4>
-        <div class="row text-center">
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#qa-testing" class="btn btn-outline-primary btn-sm w-100">QA & Testing</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#development" class="btn btn-outline-primary btn-sm w-100">Development</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#it-support" class="btn btn-outline-primary btn-sm w-100">IT Support</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#professional-services" class="btn btn-outline-primary btn-sm w-100">Professional Services</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#tech-migration" class="btn btn-outline-primary btn-sm w-100">Tech Migration</a>
-          </div>
-          <div class="col-md-2 col-6 mb-2">
-            <a href="#security-compliance" class="btn btn-outline-primary btn-sm w-100">Security & Compliance</a>
-          </div>
-        </div>
-      </div>
+<section id="service-navigation" class="service-navigation-wrapper mb-5">
+  <div class="service-nav-wrapper bg-light rounded-3 p-4">
+    <h4 class="text-center mb-4 fw-bold">Quick Navigation</h4>
+    <div class="service-buttons d-flex flex-wrap justify-content-center gap-2">
+      <a href="#Product-Engineering" class="btn btn-primary">Product Engineering</a>
+      <a href="#Collaborative-Development" class="btn btn-primary">Collaborative Development</a>
+      <a href="#Custom-Software" class="btn btn-primary">Technology Consulting</a>
+      <a href="#Cloud" class="btn btn-primary">Cloud & Migration</a>
+      <a href="#Transformation-Consulting" class="btn btn-primary">Security & Compliance</a>
+      <a href="#Digital-Marketing" class="btn btn-primary">Digital Marketing</a>
     </div>
   </div>
 </section>
+
 
 <hr class="my-5" />
 
@@ -111,7 +96,7 @@ get_header();
 <hr class="my-5" />
 
 <section id="detail-blocks" class="container-xl">
-  <div class="text-center mb-5">
+  <div class="text-center mb-2">
     <h2 class="fw-bolder display-6 text-dark">
       Our Process and Detailed Offerings
     </h2>
@@ -122,15 +107,14 @@ get_header();
   </div>
 
   <!--   1  -->
-  <div id="qa-testing" class="row service-block align-items-center">
-    <div class="col-lg-5">
+  <div id="Product-Engineering" class="row service-block align-items-center animate-section">
+    <div class="col-lg-5 image-animate">
         <div class="image-container">
-            <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=800&auto=format&fit=crop"
-                class="service-image" alt="QA & Testing" />
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/producteng.png" class="service-image"  alt="QA & Testing" />
         </div>
     </div>
-    <div class="col-lg-7 text-content">
-      <span class="badge bg-warning mb-3">Service Focus</span>
+    <div class="col-lg-7 text-content content-animate ">
+      <span class="badge mb-3" style="background: #48a6e4ff;">Service Focus</span>
       <h2>Product Engineering & Platform Development</h2>
       <p>
        We partner with organizations to design, build, and scale digital products that are secure, scalable, and future-ready. From early-stage ideas to mature platforms, we bring structure, clarity, and engineering excellence to every phase of the product lifecycle.
@@ -152,13 +136,13 @@ get_header();
         <li>Reduce risk through phased, well-governed execution</li>
         <li>Design for scale, security, and compliance from day one</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">ENSURE QUALITY &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
   </div>
 
   <!--   2   -->
-  <div id="development" class="row service-block align-items-center">
-    <div class="col-lg-7 text-content order-lg-1 order-2">
+  <div id="Collaborative-Development" class="row service-block align-items-center animate-section">
+    <div class="col-lg-7 text-content content-animate order-lg-1 order-2">
       <span class="badge bg-primary mb-3">Service Focus</span>
       <h2> Collaborative Development & Dedicated Teams</h2>
       <p>
@@ -177,26 +161,24 @@ get_header();
         <li>High accountability and clear ownership</li>
         <li>Seamless collaboration with your internal stakeholders</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">GET A HARD WORKING WEBSITE &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
-    <div class="col-lg-5 order-lg-2 order-1">
+    <div class="col-lg-5 image-animate order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2070&auto=format&fit=crop"
-          class="service-image" alt="Development & Web Design" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/collaborative.png" class="service-image"  alt="Collaborative Development" />
       </div>
     </div>
   </div>
 
   <!--  3   -->
-  <div id="it-support" class="row service-block align-items-center">
-    <div class="col-lg-5">
+  <div id="Custom-Software" class="row service-block align-items-center animate-section">
+    <div class="col-lg-5 image-animate">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800&auto=format&fit=crop"
-          class="service-image" alt="IT Support" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/CustomSoftware.png" class="service-image"  alt="Collaborative Development" />
       </div>
     </div>
-    <div class="col-lg-7 text-content">
-      <span class="badge bg-secondary mb-3">Service Focus</span>
+    <div class="col-lg-7 text-content content-animate">
+      <span class="badge mb-3" style="background: #488ce4ff;">Service Focus</span>
       <h2>Custom Software & Enterprise Solutions</h2>
       <p>
        We build tailored software solutions aligned with your workflows, users, and operational realities. No one-size-fits-all systems — only solutions designed around your business.
@@ -214,14 +196,14 @@ get_header();
         <li>Improved efficiency and operational clarity</li>
         <li>Secure, maintainable, and scalable systems</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">GET RELIABLE SUPPORT &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
   </div>
 
   <!--   4   -->
-  <div id="professional-services" class="row service-block align-items-center">
-    <div class="col-lg-7 text-content order-lg-1 order-2">
-      <span class="badge bg-info mb-3">Service Focus</span>
+  <div id="Cloud" class="row service-block align-items-center animate-section">
+    <div class="col-lg-7 text-content content-animate order-lg-1 order-2">
+      <span class="badge mb-3" style="background: #48cae4;">Service Focus</span>
       <h2>Cloud, DevOps & Technology Migration</h2>
       <p>
         As a cloud-first organization, we help clients modernize infrastructure, migrate legacy systems, and adopt DevOps practices with minimal disruption.
@@ -239,27 +221,25 @@ get_header();
         <li>Improved scalability and resilience</li>
         <li>Better cost control and operational efficiency</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">GET A STRATEGY THAT CONVERTS &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
-    <div class="col-lg-5 order-lg-2 order-1">
+    <div class="col-lg-5 image-animate order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1588102377317-03b9b47814b3?q=80&w=1932&auto=format&fit=crop"
-          class="service-image" alt="Professional Services & Digital Marketing" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Cloud.jpg" class="service-image"  alt="Cloud, DevOps" />
       </div>
     </div>
   </div>
 
   <!--    5    -->
-  <div id="tech-migration" class="row service-block align-items-center">
-    <div class="col-lg-5">
+  <div id="Transformation-Consulting" class="row service-block align-items-center animate-section">
+    <div class="col-lg-5 image-animate">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=800&auto=format&fit=crop"
-          class="service-image" alt="Tech Migration" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Transformation.png" class="service-image"  alt="Transformation.png" />
       </div>
     </div>
-    <div class="col-lg-7 text-content">
-      <span class="badge bg-success mb-3">Service Focus</span>
-      <h2>Digital Marketing & Growth Enablement</h2>
+    <div class="col-lg-7 text-content content-animate">
+      <span class="badge mb-3" style="background: #14a1ffff;">Service Focus</span>
+      <h2>Transformation Consulting, Change & Compliance</h2>
       <p>
         Technology transformation is as much about people and processes as it is about systems. We guide organizations through informed decision-making, change adoption, and compliance alignment.
       </p>
@@ -276,14 +256,14 @@ get_header();
         <li>Smoother transitions with higher adoption</li>
         <li>Compliance-ready systems and processes</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">MODERNIZE YOUR SYSTEMS &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
   </div>
 
-  <!-- Security & Compliance Section -->
-  <div id="security-compliance" class="row service-block align-items-center">
-    <div class="col-lg-7 text-content order-lg-1 order-2">
-      <span class="badge bg-danger mb-3">Service Focus</span>
+  <!-- 6 -->
+  <div id="Digital-Marketing" class="row service-block align-items-center animate-section">
+    <div class="col-lg-7 text-content content-animate order-lg-1 order-2">
+      <span class="badge mb-3" style="background: #72b8e7ff;">Service Focus</span>
       <h2>Digital Marketing & Growth Enablement</h2>
       <p>
        Our digital marketing services are designed to enable sustainable growth and measurable outcomes, tightly aligned with your technology platforms and business goals.
@@ -301,12 +281,11 @@ get_header();
         <li>Marketing aligned with product and platform goals</li>
         <li>Transparent metrics and continuous optimization</li>
       </ul>
-      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">SECURE YOUR BUSINESS &rarr;</a>
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="action-button btn-primary-action">Get In Touch &rarr;</a>
     </div>
-    <div class="col-lg-5 order-lg-2 order-1">
+    <div class="col-lg-5 image-animate order-lg-2 order-1">
       <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=800&auto=format&fit=crop"
-          class="service-image" alt="Security & Compliance" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/servicepage/Digital-Marketing.png" class="service-image"  alt="Transformation.png" />
       </div>
     </div>
   </div>

@@ -33,6 +33,7 @@ body {
   color: var(--primary-color);
   display: flex;
   align-items: center;
+  font-family: 'Playfair Display', serif;
 }
 
 .brand-logo {
@@ -125,5 +126,4 @@ body {
 /*  Body padding if navbar is fixed  */
 body.fixed-navbar-padding {
   padding-top: 80px;
-  /* adjust to navbar height */
 }

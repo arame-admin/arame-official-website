@@ -8,33 +8,11 @@ get_header();
 <section id="blog-hero">
     <div class="container-xl">
         <div class="hero-content">
-            <h1 class="hero-title">Building Better Digital Experiences</h1>
+            <h1 class="hero-title">A Blog for Passionate People and Website Lovers</h1>
             <p class="hero-text">
-                A space where we share lessons, experiments, and ideas on scaling, growth, and designing impactful digital solutions.
+                We'll share everything we learn about growth, scaling, and the inner workings of building
+                amazing digital experiences.
             </p>
-            <div class="row mt-4">
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="tech-category-card text-center p-3 bg-primary text-white rounded">
-                        <i class="fas fa-cloud fa-2x mb-2"></i>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="tech-category-card text-center p-3 bg-success text-white rounded">
-                        <i class="fas fa-brain fa-2x mb-2"></i>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="tech-category-card text-center p-3 bg-danger text-white rounded">
-                        <i class="fas fa-shield-alt fa-2x mb-2"></i>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="tech-category-card text-center p-3 bg-info text-white rounded">
-                        <i class="fas fa-rocket fa-2x mb-2"></i>
-                    </div>
-                </div>
-            </div>
-            <a href="#recent-articles" class="btn btn-primary btn-lg fw-bold">Explore Articles</a>
         </div>
     </div>
 </section>
@@ -42,211 +20,158 @@ get_header();
 <main class="container-xl mb-5">
     <div class="row">
 
+                <div class="col-lg-4 mt-5 mt-lg-0">
+            <div class="sidebar-sticky">
+                <!-- Hiding this part for future use -->
+                <!-- <div class="promo-block mb-4">
+                    <h5 class="fw-bold">Level up your skills.</h5>
+                    <p class="mb-3 small">Subscribe to our newsletter for weekly tech deep dives.</p>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#newsletterModal">Subscribe Now</button>
+                </div> -->
+
+                <div class="sidebar-item">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-filter me-2"></i>Filter Articles</h6>
+                    <form id="blog-filter-form" method="GET" action="<?php echo esc_url(get_permalink()); ?>">
+                        
+                        <div class="mb-4">
+                            <label class="fw-bold small text-uppercase mb-2 d-block">Categories</label>
+                            <?php
+                            $cats = get_categories();
+                            foreach ($cats as $cat) :
+                                $checked = (isset($_GET['category']) && in_array($cat->term_id, (array)$_GET['category'])) ? 'checked' : '';
+                            ?>
+                                <div class="form-check custom-checkbox">
+                                    <input class="form-check-input filter-checkbox" type="checkbox" name="category[]" 
+                                           value="<?php echo $cat->term_id; ?>" id="cat-<?php echo $cat->term_id; ?>" <?php echo $checked; ?>>
+                                    <label class="form-check-label small" for="cat-<?php echo $cat->term_id; ?>">
+                                        <?php echo $cat->name; ?> (<?php echo $cat->count; ?>)
+                                    </label>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <?php $tags = get_tags(); if ($tags) : ?>
+                        <div class="mb-3">
+                            <label class="fw-bold small text-uppercase mb-2 d-block">Tags</label>
+                            <div class="d-flex flex-wrap gap-2">
+                                <?php foreach ($tags as $tag) : 
+                                     $active_tag = (isset($_GET['tag']) && in_array($tag->term_id, (array)$_GET['tag'])) ? 'active-tag' : '';
+                                ?>
+                                    <div class="tag-filter-item">
+                                        <input type="checkbox" name="tag[]" value="<?php echo $tag->term_id; ?>" 
+                                               id="tag-<?php echo $tag->term_id; ?>" class="d-none filter-checkbox" 
+                                               <?php echo (isset($_GET['tag']) && in_array($tag->term_id, (array)$_GET['tag'])) ? 'checked' : ''; ?>>
+                                        <label for="tag-<?php echo $tag->term_id; ?>" class="badge border text-dark <?php echo $active_tag; ?> pointer">
+                                            #<?php echo $tag->name; ?>
+                                        </label>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                        
+                        <button type="submit" class="btn btn-outline-primary btn-sm w-100 mt-2">Apply Filters</button>
+                        <?php if(isset($_GET['category']) || isset($_GET['tag'])): ?>
+                            <a href="<?php echo get_permalink(); ?>" class="btn btn-link btn-sm w-100 text-muted mt-1">Clear All</a>
+                        <?php endif; ?>
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <div class="col-lg-8" id="recent-articles">
-
             <h3 class="fw-bold mb-4 text-dark">Recent Articles</h3>
-
 
             <div id="blog-posts-container" class="row row-cols-1 row-cols-md-2 g-4">
                 <?php
-                // Get initial posts
+                // Build Query Arguments
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
-                    'post_type' => 'post',
+                    'post_type'      => 'post',
                     'posts_per_page' => 10,
+                    'paged'          => $paged
                 );
-                
-                // Check for category filtering from URL parameters
+
+                // Filter by Category
                 if (isset($_GET['category']) && !empty($_GET['category'])) {
-                    $category_ids = is_array($_GET['category']) ? $_GET['category'] : array($_GET['category']);
-                    $args['category__in'] = array_map('intval', $category_ids);
+                    $args['category__in'] = array_map('intval', (array)$_GET['category']);
                 }
-                
-                // Check for tag filtering from URL parameters
+
+                // Filter by Tag
                 if (isset($_GET['tag']) && !empty($_GET['tag'])) {
-                    $tag_ids = is_array($_GET['tag']) ? $_GET['tag'] : array($_GET['tag']);
-                    $args['tag__in'] = array_map('intval', $tag_ids);
+                    $args['tag__in'] = array_map('intval', (array)$_GET['tag']);
                 }
-                
+
                 $query = new WP_Query($args);
+
                 if ($query->have_posts()) :
                     while ($query->have_posts()) : $query->the_post();
                 ?>
-
-
-                <div class="col">
-                    <div class="card h-100 post-card">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" class="post-image" alt="<?php the_title(); ?>">
-                        <?php else : ?>
-                            <?php 
-                            $default_image = get_post_meta(get_the_ID(), '_default_featured_image', true);
-                            if ($default_image) : ?>
-                                <img src="<?php echo esc_url($default_image); ?>" class="post-image" alt="<?php the_title(); ?>">
+                    <div class="col">
+                        <div class="card h-100 post-card">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail('large', [
+                                        'class' => 'post-featured-image img-fluid',
+                                        'alt'   => get_the_title()
+                                    ]); ?>
+                                </a>
                             <?php else : ?>
-                                <div class="post-image-placeholder">
-                                    <i class="fas fa-image placeholder-icon"></i>
-                                    <div class="placeholder-overlay">
-                                        <span class="placeholder-text">Technology Article</span>
+                                <?php 
+                                $default_image = get_post_meta(get_the_ID(), '_default_featured_image', true);
+                                if ($default_image) : ?>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <img src="<?php echo esc_url($default_image); ?>" alt="<?php the_title(); ?>" class="post-featured-image img-fluid">
+                                    </a>
+                                <?php else : ?>
+                                    <div class="post-image-placeholder">
+                                        <i class="fas fa-image placeholder-icon"></i>
+                                        <div class="placeholder-overlay">
+                                            <span class="placeholder-text">Technology Article</span>
+                                        </div>
                                     </div>
-                                </div>
+                                <?php endif; ?>
                             <?php endif; ?>
-                        <?php endif; ?>
-                        <div class="card-body-custom">
-                            <span class="badge bg-primary mb-2"><?php the_category(', '); ?></span>
-                            <h4 class="card-title"><a href="<?php the_permalink(); ?>" class="read-more-link"><?php the_title(); ?></a></h4>
-                            <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                            <small class="text-muted"><?php echo get_the_date(); ?></small>
+                            
+                            <div class="card-body-custom">
+                                <div class="mb-2">
+                                    <?php 
+                                    $categories = get_the_category();
+                                    if (!empty($categories)) {
+                                        echo '<span class="badge bg-primary">' . esc_html($categories[0]->name) . '</span>';
+                                    }
+                                    ?>
+                                </div>
+                                <h4 class="card-title">
+                                    <a href="<?php the_permalink(); ?>" class="read-more-link text-decoration-none text-dark">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </h4>
+                                <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 18); ?></p>
+                                <div class="mt-auto">
+                                    <small class="text-muted"><?php echo get_the_date(); ?></small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php
                     endwhile;
                     wp_reset_postdata();
                 else :
-                    echo '<p>No posts found.</p>';
+                    echo '<div class="col-12"><p class="alert alert-info">No articles match your selection.</p></div>';
                 endif;
                 ?>
             </div>
-
         </div>
-
-        <div class="col-lg-4 mt-5 mt-lg-0">
-
-
-            <div class="promo-block">
-                <h5 class="fw-bold">Level up your skills.</h5>
-                <p class="mb-3">Subscribe to our newsletter for weekly tech deep dives and exclusive content.</p>
-                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#newsletterModal">Subscribe Now</button>
-            </div>
-
-
-            <!-- Category and Tag Filters -->
-            <div class="filters mt-4">
-                <h6 class="fw-bold mb-3">Filter Articles</h6>
-                <form id="blog-filter-form">
-
-                    <div class="mb-4">
-                        <div class="filter-section-header">
-                            <i class="fas fa-folder-open filter-icon"></i>
-                            <label class="form-label enhanced-label">Categories</label>
-                        </div>
-                        <?php
-                        $categories = get_categories();
-                        foreach ($categories as $category) {
-                            $checked = (isset($_GET['category']) && in_array($category->term_id, $_GET['category'])) ? 'checked' : '';
-                            echo '<div class="form-check">
-                                <input class="form-check-input filter-checkbox" type="checkbox" name="category[]" value="' . $category->term_id . '" ' . $checked . '>
-                                <label class="form-check-label">' . $category->name . '</label>
-                            </div>';
-                        }
-                        ?>
-                    </div>
-
-                    <?php $tags = get_tags(); if (!empty($tags)) : ?>
-                    <div class="mb-4">
-                        <div class="filter-section-header">
-                            <i class="fas fa-tags filter-icon"></i>
-                            <label class="form-label enhanced-label">Tags</label>
-                        </div>
-                        <?php
-                        foreach ($tags as $tag) {
-                            $checked = (isset($_GET['tag']) && in_array($tag->term_id, $_GET['tag'])) ? 'checked' : '';
-                            echo '<div class="form-check">
-                                <input class="form-check-input filter-checkbox" type="checkbox" name="tag[]" value="' . $tag->term_id . '" ' . $checked . '>
-                                <label class="form-check-label">' . $tag->name . '</label>
-                            </div>';
-                        }
-                        ?>
-                    </div>
-
-                    <?php endif; ?>
-                </form>
-            </div>
-
-        </div>
-
     </div>
 </main>
 
-<!-- Newsletter Subscription Modal -->
-<div class="modal fade newsletter-modal" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0 position-relative">
-                <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="modal-header-content text-center w-100">
-                    <div class="modal-icon">
-                        <i class="fas fa-envelope-open-text"></i>
-                    </div>
-                    <h5 class="modal-title" id="newsletterModalLabel">Stay Ahead of the Tech Curve</h5>
-                    <p class="modal-subtitle">Get exclusive insights delivered to your inbox</p>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="newsletter-benefits">
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Weekly tech deep dives</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Exclusive industry insights</span>
-                    </div>
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Early access to new content</span>
-                    </div>
-                </div>
-                
-                <form class="newsletter-form" id="newsletterForm">
-                    <div class="form-group-custom">
-                        <div class="input-group-custom">
-                            <i class="fas fa-user input-icon"></i>
-                            <input type="text" class="form-control-custom" id="subscriberName" placeholder="Your Name" required>
-                        </div>
-                    </div>
-                    <div class="form-group-custom">
-                        <div class="input-group-custom">
-                            <i class="fas fa-envelope input-icon"></i>
-                            <input type="email" class="form-control-custom" id="subscriberEmail" placeholder="Your Email Address" required>
-                        </div>
-                    </div>
-                    <div class="form-group-custom">
-                        <div class="form-check-custom">
-                            <input class="form-check-input-custom" type="checkbox" id="newsletterConsent" required>
-                            <label class="form-check-label-custom" for="newsletterConsent">
-                                I agree to receive newsletter emails and updates
-                            </label>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-subscribe w-100">
-                        <span class="btn-text">Subscribe Now</span>
-                        <span class="btn-loading d-none">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            Subscribing...
-                        </span>
-                    </button>
-                </form>
-                
-                <div class="success-message d-none" id="successMessage">
-                    <div class="success-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h6>Welcome to the Community!</h6>
-                    <p>You've successfully subscribed to our newsletter. Get ready for amazing content!</p>
-                </div>
-            </div>
-            <div class="modal-footer border-0 justify-content-center">
-                <small class="text-muted">
-                    <i class="fas fa-shield-alt"></i>
-                    We respect your privacy. Unsubscribe at any time.
-                </small>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        document.getElementById('blog-filter-form').submit();
+    });
+});
+</script>
 
 <?php get_footer(); ?>

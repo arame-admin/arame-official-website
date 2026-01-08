@@ -14,7 +14,7 @@ body {
 
 /*HERO SECTION*/
 #service-hero {
-  background: linear-gradient(135deg, rgba(37, 37, 60, 0.9), rgba(60, 50, 90, 0.8)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop');
+  background: linear-gradient(135deg, rgba(37, 37, 60, 0.9), rgba(60, 50, 90, 0.8)), url('/wp-content/themes/arame/assets/images/servicepage/headimg.jpg');
   background-size: cover;
   background-position: center;
   padding: 8rem 0;
@@ -78,7 +78,7 @@ body {
 
 /*DETAILED SERVICE BLOCKS*/
 #detail-blocks {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .service-block {
@@ -239,129 +239,6 @@ body {
   }
 }
 
-/* TABLET 768px */
-@media (max-width: 768px) {
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .core-card {
-    text-align: center;
-  }
-
-  .text-content h2 {
-    font-size: 1.6rem;
-  }
-
-  .text-content p {
-    font-size: 0.95rem;
-  }
-
-  .action-button {
-    padding: 0.7rem 1.2rem;
-    font-size: 0.95rem;
-  }
-
-  .service-image {
-    min-height: 260px;
-  }
-}
-
-/* MOBILE 576px*/
-@media (max-width: 576px) {
-
-  #service-hero {
-    padding: 4.5rem 1rem;
-  }
-
-  .hero-title {
-    font-size: 1.75rem;
-    line-height: 1.3;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-  }
-
-  /* CARDS */
-  .core-card {
-    padding: 1.2rem;
-    border-radius: 10px;
-  }
-
-  .core-icon {
-    font-size: 1.7rem;
-  }
-
-  /* DETAIL BLOCKS */
-  .service-block {
-    padding: 2rem 0;
-  }
-
-  .text-content h2 {
-    font-size: 1.4rem;
-  }
-
-  .text-content p {
-    font-size: 0.9rem;
-  }
-
-  .action-button {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  /* Images */
-  .service-image {
-    min-height: 220px;
-  }
-}
-
-/* SMALL MOBILE 450px & below */
-@media (max-width: 450px) {
-
-  #service-hero {
-    padding: 4rem 0.5rem;
-  }
-
-  .hero-title {
-    font-size: 1.55rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.88rem;
-  }
-
-  .text-content h2 {
-    font-size: 1.25rem;
-  }
-
-  .service-image {
-    min-height: 200px;
-  }
-}
-
-/* EXTRA SMALL 360px & below */
-@media (max-width: 360px) {
-
-  .hero-title {
-    font-size: 1.35rem;
-  }
-
-  .core-card {
-    padding: 1rem;
-  }
-
-  .action-button {
-    padding: 0.55rem 0.9rem;
-  }
-
-  .text-content h2 {
-    font-size: 1.15rem;
-  }
-}
-
 #service-navigation {
   padding: 60px 15px; 
   background: #f8fafc;
@@ -408,74 +285,248 @@ body {
 }
 
 
-/* Buttons */
-#service-navigation .btn {
-  flex: 0 0 auto; 
-  white-space: nowrap; 
-  display: inline-flex;
-  align-items: center;
+.service-navigation-wrapper {
+  width: 100vw;
+  padding: 20px 10px;
+  background: #f8f9fa;
+}
+
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
+}
+
+.service-buttons .btn {
+  flex: 1 1 180px;
+  max-width: 250px;
+  white-space: normal;
+  text-align: center;
   font-weight: 600;
   font-size: 14px;
-  padding: 10px 10px;
+  padding: 10px 15px;
   border-radius: 10px;
-  border: 2px solid #ffffff;
+  border: 2px solid #2563eb;
   background: #ffffff;
   color: #2563eb;
   transition: all 0.3s ease;
-  min-width: 130px; 
 }
 
-/* Hover Effect and Active/Focus (No change needed) */
-#service-navigation .btn:hover {
+.service-buttons .btn:hover {
   background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: #ffffff;
+  color: #fff;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
 }
 
-#service-navigation .btn:active,
-#service-navigation .btn:focus {
-  color: #ffffff;
+.service-buttons .btn:active,
+.service-buttons .btn:focus {
+  color: #fff;
   background: #1e40af;
   border-color: #1e40af;
 }
 
-/* Scrollbar styling */
-.service-buttons-container::-webkit-scrollbar {
-  height: 6px;
+html, body {
+  overflow-x: hidden;
 }
 
-.service-buttons-container::-webkit-scrollbar-thumb {
-  background-color: rgba(37, 99, 235, 0.6);
-  border-radius: 3px;
-}
-
-.service-buttons-container::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  #service-navigation .btn {
-    min-width: 120px;
-    font-size: 13px;
-    padding: 9px 16px;
+/*GLOBAL MOBILE PADDING*/
+@media (max-width: 768px) {
+  body, #service-hero, .service-block, .text-content, .core-card, .service-nav-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
+/*HERO TEXT FLUID SCALING*/
+.hero-title {
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(0.95rem, 2.5vw, 1.35rem);
+}
+
+/*SERVICE HERO MOBILE*/
+@media (max-width: 768px) {
+  #service-hero {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    text-align: center;
+  }
+
+  .hero-title,
+  .hero-subtitle {
+    max-width: 100%;
+  }
+}
+
+/*CORE SERVICES CARDS*/
+@media (max-width: 768px) {
+  .core-card {
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .core-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/*DETAIL SERVICE BLOCKS*/
+@media (max-width: 768px) {
+  .service-block {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .image-container {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .service-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .text-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+/*MOBILE TYPOGRAPHY*/
 @media (max-width: 576px) {
+  .text-content h2 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/*BUTTON COMFORT*/
+@media (max-width: 576px) {
+  .action-button {
+    width: auto;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.1rem;
+  }
+}
+
+/*SERVICE NAVIGATION*/
+@media (max-width: 768px) {
+  .service-nav-wrapper {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 16px;
+  }
+
   .service-nav-wrapper h4 {
-    padding: 0 15px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .service-buttons-container {
-    padding: 0 15px 10px 15px;
-  }
-  
-  #service-navigation .btn {
-    min-width: 100px;
-    font-size: 12px;
-    padding: 8px 14px;
+    padding-bottom: 10px;
+    gap: 12px;
   }
 }
+
+/*SERVICE BUTTONS*/
+@media (max-width: 576px) {
+  .service-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 5px;
+  }
+
+  .service-buttons .btn {
+    flex: 0 0 auto;
+    font-size: 13px;
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+
+  /* optional: hide scrollbar nicely */
+  .service-buttons::-webkit-scrollbar {
+    height: 6px;
+  }
+  .service-buttons::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+  }
+}
+
+/*EXTRA SMALL PHONES*/
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.35rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .service-image {
+    max-height: 220px;
+  }
+
+  .service-buttons .btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Extra padding for tiny phones */
+     .core-card {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+  }
+}
+
+/* SERVICE DETAIL ANIMATION */
+/* Initial state */
+.animate-section .image-animate,
+.animate-section .content-animate {
+  opacity: 0;
+  transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Image animation */
+.animate-section .image-animate {
+  transform: translateX(-60px);
+}
+
+/* Text animation */
+.animate-section .content-animate {
+  transform: translateX(40px);
+}
+
+/* Active state */
+.animate-section.animate-in .image-animate,
+.animate-section.animate-in .content-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Subtle image zoom */
+.animate-section .service-image {
+  transform: scale(1.06);
+  transition: transform 1.6s ease;
+}
+
+.animate-section.animate-in .service-image {
+  transform: scale(1);
+}
+
