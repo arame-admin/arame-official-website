@@ -23,6 +23,34 @@ body {
   padding: 0 20px;
 }
 
+/* HERO SECTION */
+#service-hero {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background: linear-gradient(135deg, rgba(40,40,70,0.9), rgba(60,50,110,0.85)),
+        url("/wp-content/themes/arame/assets/images/careers/headimg.jpg") center/cover no-repeat;
+    padding: 6rem 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: white;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 800;
+    max-width: 850px;
+    line-height: 1.25;
+    margin: auto;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    color: #fff;
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+
 /*HERO SECTION*/
 .hero-section {
   display: flex;

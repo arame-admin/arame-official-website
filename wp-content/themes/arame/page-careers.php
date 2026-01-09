@@ -25,7 +25,7 @@ get_header();
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@arameglobal.com" target="_blank" class="apply-button">Apply Now</a>
             </div>
             <div class="hero-image">
-                <img src="https://media.istockphoto.com/id/1477334129/photo/online-business-contract-electronic-signature-e-signing-digital-document-management-paperless.jpg?s=612x612&w=0&k=20&c=IVNrDVI5qUdbxIg0j4dn3CeJsNwOYRYbaDhu9K6hx5M="
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/careers/careerhero.jpg"
                     alt="Two skilled people collaborating on a tablet">
             </div>
         </section>
@@ -152,7 +152,7 @@ get_header();
                 <div class="job-left">
                 <div class="job-icon">⚙️</div>
                 <div>
-                    <h4>Full stack developer</h4>
+                    <h4>Full Stack Developer</h4>
                     <p>We are looking for enthusiastic freshers or interns eager to learn and build real-world applications. You’ll work across frontend and backend technologies, collaborate with experienced developers, and gain hands-on exposure to live projects.</p>
                     <div class="job-meta">
                     <span>Fresher / Experienced</span>
@@ -260,7 +260,7 @@ get_header();
             </div>
 
             <div class="modal-actions">
-            <button class="primary-btn" id="applyFromDetails">Apply for this job</button>
+            <button class="primary-btn " id="applyFromDetails">Apply for this job</button>
             </div>
         </div>
         </div>
@@ -273,29 +273,32 @@ get_header();
 
                 <h2>Job Application</h2>
 
-                <form class="apply-form" id="applyForm">
-                    <label>Job Title</label>
-                    <input type="text" id="applyJobTitle" readonly>
+            <form class="apply-form" id="applyForm" enctype="multipart/form-data">
 
-                    <label>Full Name</label>
-                    <input type="text" id="fullName" required>
+                <label>Job Title</label>
+                <input type="text" id="applyJobTitle" name="jobTitle" readonly>
 
-                    <label>Email Address</label>
-                    <input type="email" id="email" required>
+                <label>Full Name</label>
+                <input type="text" id="fullName" name="name" required>
 
-                    <label>Phone Number</label>
-                    <input type="tel" id="phone">
+                <label>Email Address</label>
+                <input type="email" id="email" name="email" required>
 
-                    <label>Upload Resume</label>
-                    <input type="file" id="resume" accept=".pdf,.doc,.docx">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" name="phone">
 
-                    <label>Why should we hire you?</label>
-                    <textarea rows="4" id="message"></textarea>
+                <label>Upload Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
 
-                    <button type="submit" class="primary-btn full-btn">
-                        Submit Application
-                    </button>
-                </form>
+                <label>Why should we hire you?</label>
+                <textarea rows="4" id="message" name="message" required></textarea>
+
+                <button type="submit" class="primary-btn full-btn">
+                    Submit Application
+                </button>
+
+            </form>
+
             </div>
         </div>
 

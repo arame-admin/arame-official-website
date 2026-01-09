@@ -149,6 +149,26 @@
   });
 </script>
 <script>
+function initSlider() {
+
+  const slideContentInner = document.getElementById("slide-content-inner");
+  const slideDotsContainer = document.getElementById("slide-dots");
+  const mainImage = document.getElementById("mainImage");
+  const secondaryImage = document.getElementById("secondaryImage");
+  const mainImageContainer = document.getElementById("mainImageContainer");
+  const secondaryImageContainer = document.getElementById("secondaryImageContainer");
+
+  if (
+    !slideContentInner ||
+    !slideDotsContainer ||
+    !mainImage ||
+    !secondaryImage ||
+    !mainImageContainer ||
+    !secondaryImageContainer
+  ) {
+    return;
+  }
+
   const slides = [
     {
       title: "Visionary Strategy",
@@ -174,83 +194,75 @@
   ];
 
   let currentSlide = 0;
-  const slideContentInner = document.getElementById("slide-content-inner");
-  const slideDotsContainer = document.getElementById("slide-dots");
-  const mainImage = document.getElementById("mainImage");
-  const secondaryImage = document.getElementById("secondaryImage");
-  const mainImageContainer = document.getElementById("mainImageContainer");
-  const secondaryImageContainer = document.getElementById(
-    "secondaryImageContainer"
-  );
+  let isAnimating = false;
 
-  //HTML Template for Content
   const getContentHTML = (slide) => `
-        <p class="fw-bold mb-2 text-uppercase" style="letter-spacing: 0.1em; color: #3B82F6;">${slide.subtitle}</p>
-        <h2 class="display-4 fw-bold mb-4 text-gray-800" style="   font-family: 'Oswald', sans-serif; letter-spacing: 1px;">${slide.title}</h2>
-        <p class="fs-5 text-secondary">${slide.text}</p>
-        <a href="<?php echo get_permalink(get_page_by_path('about')); ?>" class="btn btn-opti-blue mt-4 py-3 px-5 fw-bold" style="border-radius: 2rem;">Read Our Story <i class="fas fa-arrow-right ms-2"></i></a>
-    `;
+    <p class="fw-bold text-uppercase mb-2" style="color:#3B82F6;">${slide.subtitle}</p>
+    <h2 class="display-4 fw-bold mb-3">${slide.title}</h2>
+    <p class="fs-5 text-secondary">${slide.text}</p>
+  `;
 
-  //Animation Logic
-  const applyCenterState = () => {
-    const slide = slides[currentSlide];
-    slideContentInner.innerHTML = getContentHTML(slide);
-    mainImage.src = slide.mainImage;
-    secondaryImage.src = slide.secondaryImage;
-
-    setTimeout(() => {
-      slideContentInner.className = "slide-center";
-      mainImageContainer.className = "image-box image-center";
-      secondaryImageContainer.className = "image-box image-center";
-    }, 50);
-
-    updateDots();
-  };
-
-  const switchSlide = (newIndex) => {
-    if (newIndex === currentSlide) return;
-
-    slideContentInner.className = "slide-exit";
-    mainImageContainer.className = "image-box image-enter";
-    secondaryImageContainer.className = "image-box image-enter";
-
-    setTimeout(() => {
-      currentSlide = newIndex;
-      applyCenterState();
-    }, parseFloat(getComputedStyle(slideContentInner).transitionDuration) * 1000);
-  };
-
-  //Navigation Dots Logic
   const createDots = () => {
     slideDotsContainer.innerHTML = "";
     slides.forEach((_, index) => {
       const dot = document.createElement("div");
-      dot.classList.add("slide-dot");
-      if (index === currentSlide) {
-        dot.classList.add("active");
-      }
-      dot.addEventListener("click", () => switchSlide(index));
+      dot.className = "slide-dot";
+      if (index === currentSlide) dot.classList.add("active");
+      dot.onclick = () => switchSlide(index);
       slideDotsContainer.appendChild(dot);
     });
   };
 
   const updateDots = () => {
-    document.querySelectorAll(".slide-dot").forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentSlide);
-    });
+    [...slideDotsContainer.children].forEach((dot, i) =>
+      dot.classList.toggle("active", i === currentSlide)
+    );
   };
 
-  //Initialization
-  document.addEventListener("DOMContentLoaded", () => {
-    createDots();
-    applyCenterState();
+  const applyCenterState = () => {
+    const slide = slides[currentSlide];
 
-    setInterval(() => {
-      let nextSlide = (currentSlide + 1) % slides.length;
-      switchSlide(nextSlide);
-    }, 7000);
-  });
+    slideContentInner.innerHTML = getContentHTML(slide);
+    mainImage.src = slide.mainImage;
+    secondaryImage.src = slide.secondaryImage;
+
+    requestAnimationFrame(() => {
+      slideContentInner.className = "slide-center";
+      mainImageContainer.className = "image-box image-center";
+      secondaryImageContainer.className = "image-box image-center";
+    });
+
+    updateDots();
+    isAnimating = false;
+  };
+
+  const switchSlide = (index) => {
+    if (isAnimating || index === currentSlide) return;
+    isAnimating = true;
+
+    slideContentInner.className = "slide-exit";
+    mainImageContainer.className = "image-box image-exit";
+    secondaryImageContainer.className = "image-box image-exit";
+
+    setTimeout(() => {
+      currentSlide = index;
+      applyCenterState();
+    }, 600);
+  };
+
+  // INIT
+  createDots();
+  applyCenterState();
+
+  setInterval(() => {
+    switchSlide((currentSlide + 1) % slides.length);
+  }, 7000);
+}
+
+document.addEventListener("DOMContentLoaded", initSlider);
+document.addEventListener("componentsLoaded", initSlider);
 </script>
+
 
 <script>
   const cards = document.querySelectorAll(".animate-card");
@@ -298,14 +310,16 @@ document.addEventListener("DOMContentLoaded", function () {
 </html>
 
 <!-- about-details page animation -->
- <script>
-document.addEventListener("DOMContentLoaded", () => {
+<script>
+document.addEventListener("componentsLoaded", () => {
   const hero = document.querySelector(".animate-hero");
+
+  if (!hero) return;
 
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
-        setTimeout(() => hero.classList.add("animate-in"), 50); // 50ms delay
+        setTimeout(() => hero.classList.add("animate-in"), 50);
         observer.disconnect();
       }
     },
@@ -315,3 +329,102 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(hero);
 });
 </script>
+
+<!-- contact submission -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+
+    // 🔒 PREVENT DOUBLE BINDING
+    if (form.dataset.bound === "true") return;
+    form.dataset.bound = "true";
+
+    const nameInput = document.getElementById("contactName");
+    const emailInput = document.getElementById("contactEmail");
+    const messageInput = document.getElementById("contactMessage");
+
+    const nameError = document.getElementById("error-name");
+    const emailError = document.getElementById("error-email");
+    const messageError = document.getElementById("error-message");
+    const generalError = document.getElementById("error-general");
+    const successMsg = document.getElementById("success-msg");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Clear previous messages
+        nameError.textContent = '';
+        emailError.textContent = '';
+        messageError.textContent = '';
+        generalError.textContent = '';
+        successMsg.textContent = '';
+
+        let hasError = false;
+
+        // FRONT-END VALIDATION
+        const nameVal = nameInput.value.trim();
+        const emailVal = emailInput.value.trim();
+        const messageVal = messageInput.value.trim();
+
+        if (nameVal.length < 3) {
+            nameError.textContent = "Please enter your full name (min 3 characters).";
+            hasError = true;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailVal)) {
+            emailError.textContent = "Please enter a valid email address.";
+            hasError = true;
+        }
+
+        if (messageVal.length < 10) {
+            messageError.textContent = "Message should be at least 10 characters.";
+            hasError = true;
+        }
+
+        if (hasError) return;
+
+        // AJAX submission
+        const submitBtn = form.querySelector("button[type='submit']");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+        const formData = new FormData(form);
+        formData.append("action", "submit_contact_form");
+        formData.append("security", CONTACT_AJAX.nonce);
+
+        try {
+            const res = await fetch(CONTACT_AJAX.ajax_url, {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await res.json();
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit";
+
+            if (data.success) {
+                successMsg.textContent = data.data;
+                form.reset();
+            } else {
+                const errors = data.data || {};
+                if (errors.general) generalError.textContent = errors.general;
+                if (errors.name) nameError.textContent = errors.name;
+                if (errors.email) emailError.textContent = errors.email;
+                if (errors.message) messageError.textContent = errors.message;
+            }
+        } catch (err) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit";
+            generalError.textContent = "Network error. Please try again.";
+            console.error("Fetch error:", err);
+        }
+    });
+});
+</script>
+
+
+

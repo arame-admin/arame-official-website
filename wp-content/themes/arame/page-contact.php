@@ -30,12 +30,12 @@ get_header();
 
 <main>
     <section id="service-hero">
-        <h1 class="hero-title">
-            Ownership-Driven Technology Services
-        </h1>
-        <p class="hero-subtitle">
-            We don’t just deliver services — we take responsibility. Backed by structured processes, disciplined execution, and high quality standards, we partner with you to strengthen outcomes and elevate performance.
-        </p>
+        <div class="container-xl">
+            <h1 class="hero-title">Ownership-Driven Technology Services</h1>
+            <p class="hero-subtitle">
+                We don’t just deliver services — we take responsibility. Backed by structured processes, disciplined execution, and high quality standards, we partner with you to strengthen outcomes and elevate performance.
+            </p>
+        </div>
     </section>
 
     <!-- MAIN CONTACT CARD -->
@@ -48,25 +48,33 @@ get_header();
                 <p>We’re here for you! Reach out to discuss your ideas, projects, or any questions — we’d love to collaborate.</p>
             </div>
 
-            <form method="post">
-                <?php wp_nonce_field('contact_form_submit', 'contact_nonce'); ?>
+<div id="success-msg" class="form-success"></div>
+<div id="error-general" class="form-error"></div>
 
-                <div class="input-group">
-                    <input type="text" name="name" class="custom-input" placeholder="Enter your name" required />
-                </div>
+<form id="contactForm" enctype="multipart/form-data">
 
-                <div class="input-group">
-                    <input type="email" name="email" class="custom-input" placeholder="Enter your email address" required />
-                </div>
+    <?php wp_nonce_field('contact_form_submit', 'contact_nonce'); ?>
 
-                <div class="input-group">
-                    <textarea name="message" class="custom-input" placeholder="Type your message or project details" required></textarea>
-                </div>
+    <div class="input-group">
+        <input type="text" id="contactName" name="name" class="custom-input" placeholder="Enter your name" required>
+        <span class="form-error" id="error-name"></span>
+    </div>
 
-                <button type="submit" name="contact_submit" class="submit-button">
-                    Submit
-                </button>
-            </form>
+    <div class="input-group">
+        <input type="email" id="contactEmail" name="email" class="custom-input" placeholder="Enter your email address" required>
+        <span class="form-error" id="error-email"></span>
+    </div>
+
+    <div class="input-group">
+        <textarea id="contactMessage" name="message" class="custom-input" placeholder="Type your message or project details" required></textarea>
+        <span class="form-error" id="error-message"></span>
+    </div>
+
+    <button type="submit" class="submit-button">Submit</button>
+</form>
+
+
+
         </div>
 
         <!-- RIGHT INFORMATION SECTION -->

@@ -5,15 +5,13 @@ Template Name: Blog
 get_header();
 ?>
 
-<section id="blog-hero">
+<section id="service-hero">
     <div class="container-xl">
-        <div class="hero-content">
-            <h1 class="hero-title">A Blog for Passionate People and Website Lovers</h1>
-            <p class="hero-text">
-                We'll share everything we learn about growth, scaling, and the inner workings of building
-                amazing digital experiences.
-            </p>
-        </div>
+        <h1 class="hero-title">A Blog for Passionate People and Website Lovers</h1>
+        <p class="hero-subtitle">
+            We'll share everything we learn about growth, scaling, and the inner workings of building
+            amazing digital experiences.
+        </p>
     </div>
 </section>
 

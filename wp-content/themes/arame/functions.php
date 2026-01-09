@@ -105,105 +105,186 @@ if (is_page_template('page-careers.php') || is_page('careers')) {
         wp_enqueue_script(
             'arame-careers-js',
             get_template_directory_uri() . '/assets/js/careers.js',
-            array(),       // dependencies
+            array(),
             null,
-            true           // load in footer
+            true
         );
     }
-
-// if (is_page_template('page-careers.php') || is_page('careers')) {
-//     wp_enqueue_script(
-//         'arame-careers-js',
-//         get_template_directory_uri() . '/assets/js/careers.js',
-//         array('jquery'), // add jquery as dependency if needed
-//         null,
-//         true
-//     );
-
-//     // Localize the AJAX URL for careers.js
-//     wp_localize_script('arame-careers-js', 'career_ajax', array(
-//         'ajaxurl' => admin_url('admin-ajax.php'),
-//         'nonce' => wp_create_nonce('career_form_nonce')
-//     ));
-// }
-
-
-if (is_front_page()) {
-    wp_enqueue_script(
-        'about-slider-js',
-        get_template_directory_uri() . '/assets/js/about-slider.js',
-        array(),
-        null,
-        true
-    );
-}
 
 
 }
 add_action('wp_enqueue_scripts', 'arame_enqueue_scripts');
 
 // Handle Careers Form Submission
-// function arame_handle_career_form() {
-//     // Check nonce
-//     $nonce = isset($_POST['nonce']) ? $_POST['nonce'] : '';
-//     if (!wp_verify_nonce($nonce, 'career_form_nonce')) {
-//         wp_send_json_error('Invalid request. Please try again.');
-//     }
+add_action('wp_enqueue_scripts', function () {
 
-//     // Sanitize input
-//     $fullName = sanitize_text_field($_POST['fullName'] ?? '');
-//     $email = sanitize_email($_POST['email'] ?? '');
-//     $phone = sanitize_text_field($_POST['phone'] ?? '');
-//     $jobTitle = sanitize_text_field($_POST['applyJobTitle'] ?? '');
-//     $message = sanitize_textarea_field($_POST['message'] ?? '');
-//     $resume = $_FILES['resume'] ?? null;
+    wp_enqueue_script(
+        'careers-js',
+        get_stylesheet_directory_uri() . '/assets/js/careers.js',
+        [],
+        time(),
+        true
+    );
 
-//     // Basic validation
-//     if (strlen($fullName) < 3 || !is_email($email) || !$resume || strlen($message) < 10) {
-//         wp_send_json_error('Please fill all required fields correctly.');
-//     }
-
-//     // Allowed file types
-//     $allowed_types = array('application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-//     if (!in_array($resume['type'], $allowed_types)) {
-//         wp_send_json_error('Resume must be PDF or Word.');
-//     }
-
-//     // Handle file upload using WordPress functions
-//     require_once(ABSPATH . 'wp-admin/includes/file.php');
-//     $uploaded = wp_handle_upload($resume, array('test_form' => false));
-
-//     if (isset($uploaded['error'])) {
-//         wp_send_json_error('Failed to upload resume: ' . $uploaded['error']);
-//     }
-
-//     $resume_url = $uploaded['url'];
-
-//     // Save application as a custom post type or send email
-//     // Example: sending email to HR
-//     $to = 'info@arameglobal.com';
-//     $subject = "Job Application: $jobTitle";
-//     $headers = array('Content-Type: text/html; charset=UTF-8');
-//     $body = "
-//         <h2>New Job Application</h2>
-//         <p><strong>Name:</strong> $fullName</p>
-//         <p><strong>Email:</strong> $email</p>
-//         <p><strong>Phone:</strong> $phone</p>
-//         <p><strong>Job Title:</strong> $jobTitle</p>
-//         <p><strong>Message:</strong><br>$message</p>
-//         <p><strong>Resume:</strong> <a href='$resume_url' target='_blank'>Download</a></p>
-//     ";
-
-//     if (wp_mail($to, $subject, $body, $headers)) {
-//         wp_send_json_success('Your application has been submitted successfully!');
-//     } else {
-//         wp_send_json_error('Failed to send your application. Please try again later.');
-//     }
-// }
-// add_action('wp_ajax_submit_career_form', 'arame_handle_career_form');
-// add_action('wp_ajax_nopriv_submit_career_form', 'arame_handle_career_form');
+    wp_localize_script('careers-js', 'CAREERS_AJAX', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('careers_nonce')
+    ]);
+});
 
 
+// AJAX Hooks
+add_action('wp_ajax_submit_job_application', 'handle_job_application');
+add_action('wp_ajax_nopriv_submit_job_application', 'handle_job_application');
+
+function handle_job_application() {
+
+    // Security check
+    check_ajax_referer('careers_nonce', 'security');
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        wp_send_json_error(['general' => 'Invalid request']);
+    }
+
+    // Sanitize fields
+    $name     = sanitize_text_field($_POST['name'] ?? '');
+    $email    = sanitize_email($_POST['email'] ?? '');
+    $phone    = sanitize_text_field($_POST['phone'] ?? '');
+    $jobTitle = sanitize_text_field($_POST['jobTitle'] ?? '');
+    $message  = sanitize_textarea_field($_POST['message'] ?? '');
+
+    // Backend validation
+    $errors = [];
+
+    if (!$name || strlen($name) < 3) {
+        $errors['name'] = 'Please enter your full name.';
+    }
+
+    if (!$email || !is_email($email)) {
+        $errors['email'] = 'Please enter a valid email address.';
+    }
+
+    if (!$jobTitle) {
+        $errors['jobTitle'] = 'Job title is missing.';
+    }
+
+    if (empty($_FILES['resume'])) {
+        $errors['resume'] = 'Resume file is required.';
+    }
+
+    if ($errors) {
+        wp_send_json_error($errors);
+    }
+
+    // Resume validation
+    $allowed_ext = ['pdf', 'doc', 'docx'];
+    $file_ext = strtolower(pathinfo($_FILES['resume']['name'], PATHINFO_EXTENSION));
+
+    if (!in_array($file_ext, $allowed_ext)) {
+        wp_send_json_error(['resume' => 'Only PDF, DOC, or DOCX files allowed']);
+    }
+
+    if ($_FILES['resume']['size'] > 2 * 1024 * 1024) {
+        wp_send_json_error(['resume' => 'Resume must be under 2MB']);
+    }
+
+    // Upload resume
+    require_once ABSPATH . 'wp-admin/includes/file.php';
+
+    $upload = wp_handle_upload($_FILES['resume'], ['test_form' => false]);
+
+    if (isset($upload['error'])) {
+        wp_send_json_error(['resume' => $upload['error']]);
+    }
+
+    // IMPORTANT: absolute file path for attachment
+    $resume_path = $upload['file'];
+
+    // Email setup
+    $to      = 'aswintk@arameglobal.com';
+    $subject = "Job Application – {$jobTitle}";
+
+    $headers = [
+        'Content-Type: text/html; charset=UTF-8',
+        "From: {$name} <{$email}>",
+        "Reply-To: {$email}"
+    ];
+
+    $body = "
+        <h2>New Job Application</h2>
+        <p><strong>Job:</strong> {$jobTitle}</p>
+        <p><strong>Name:</strong> {$name}</p>
+        <p><strong>Email:</strong> {$email}</p>
+        <p><strong>Phone:</strong> {$phone}</p>
+        <p><strong>Message:</strong><br>{$message}</p>
+    ";
+
+    $attachments = [$resume_path];
+
+    if (!wp_mail($to, $subject, $body, $headers, $attachments)) {
+        wp_send_json_error(['general' => 'Mail sending failed']);
+    }
+
+    wp_send_json_success('Application submitted successfully!');
+}
+
+// contact form submission
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_script(
+        'contact-js',
+        get_stylesheet_directory_uri() . '/assets/js/contact.js',
+        ['jquery'],
+        time(),
+        true
+    );
+
+    wp_localize_script('contact-js', 'CONTACT_AJAX', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('contact_nonce')
+    ]);
+});
+
+// AJAX Hooks
+add_action('wp_ajax_submit_contact_form', 'handle_contact_form');
+add_action('wp_ajax_nopriv_submit_contact_form', 'handle_contact_form');
+
+function handle_contact_form() {
+    check_ajax_referer('contact_nonce', 'security');
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        wp_send_json_error(['general' => 'Invalid request']);
+    }
+
+    $name    = sanitize_text_field($_POST['name'] ?? '');
+    $email   = sanitize_email($_POST['email'] ?? '');
+    $message = sanitize_textarea_field($_POST['message'] ?? '');
+
+    // Backend validation
+    $errors = [];
+    if (!$name || strlen($name) < 3) $errors['name'] = 'Please enter your full name.';
+    if (!$email || !is_email($email)) $errors['email'] = 'Please enter a valid email address.';
+    if (!$message || strlen($message) < 10) $errors['message'] = 'Message should be at least 10 characters.';
+
+    if ($errors) wp_send_json_error($errors);
+
+    $to      = 'aswintk@arameglobal.com';
+    $subject = 'New Contact Message';
+    $headers = [
+        'Content-Type: text/plain; charset=UTF-8',
+        "From: {$name} <{$email}>",
+        "Reply-To: {$email}"
+    ];
+    $body = "Name: {$name}\nEmail: {$email}\n\nMessage:\n{$message}";
+
+    if (!wp_mail($to, $subject, $body, $headers)) {
+        wp_send_json_error(['general' => 'Unable to send message. Please try later.']);
+    }
+
+    wp_send_json_success('Your message has been sent successfully!');
+}
+
+
+// font for index page
 function arame_enqueue_google_fonts() {
     wp_enqueue_style(
         'arame-google-fonts',
