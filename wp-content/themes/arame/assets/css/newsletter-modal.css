@@ -1,0 +1,385 @@
+/* Newsletter Modal Styling */
+:root {
+    --modal-primary: #5a54e9;
+    --modal-primary-dark: #3a369e;
+    --modal-primary-light: #7b73f0;
+    --modal-success: #10b981;
+    --modal-danger: #ef4444;
+    --modal-bg: #ffffff;
+    --modal-text: #1f2937;
+    --modal-gray: #6b7280;
+    --modal-border: #e5e7eb;
+    --modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --modal-gradient: linear-gradient(135deg, var(--modal-primary) 0%, var(--modal-primary-light) 100%);
+}
+
+/* Modal Container */
+.newsletter-modal .modal-dialog {
+    max-width: 450px;
+    margin: 1.75rem auto;
+}
+
+.newsletter-modal .modal-content {
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--modal-shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.newsletter-modal .modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--modal-gradient);
+}
+
+/* Modal Header */
+.newsletter-modal .modal-header {
+    background: linear-gradient(135deg, #fafbff 0%, #f8f9ff 100%);
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+}
+
+.newsletter-modal .modal-header-content {
+    padding-right: 2.5rem;
+}
+
+.newsletter-modal .modal-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--modal-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 10px 25px rgba(90, 84, 233, 0.3);
+}
+
+.newsletter-modal .modal-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.newsletter-modal .modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--modal-text);
+    margin-bottom: 0.5rem;
+    background: var(--modal-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.newsletter-modal .modal-subtitle {
+    color: var(--modal-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Custom Close Button */
+.btn-close-custom {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 35px;
+    height: 35px;
+    background: rgba(90, 84, 233, 0.1);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--modal-primary);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.btn-close-custom:hover {
+    background: var(--modal-primary);
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.newsletter-modal .modal-body {
+    padding: 1.5rem 2rem 2rem;
+}
+
+/* Benefits Section */
+.newsletter-benefits {
+    margin-bottom: 2rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0;
+}
+
+.benefit-item:last-child {
+    margin-bottom: 0;
+}
+
+.benefit-item i {
+    color: var(--modal-success);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.benefit-item span {
+    color: var(--modal-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Form Styling */
+.newsletter-form {
+    margin-bottom: 1rem;
+}
+
+.form-group-custom {
+    margin-bottom: 1.25rem;
+}
+
+.input-group-custom {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--modal-gray);
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+.form-control-custom {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.5rem;
+    border: 2px solid var(--modal-border);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: #fafbfc;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-control-custom:focus {
+    border-color: var(--modal-primary);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(90, 84, 233, 0.1);
+}
+
+.form-control-custom::placeholder {
+    color: var(--modal-gray);
+}
+
+/* Checkbox Styling */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.form-check-input-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--modal-border);
+    border-radius: 4px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.form-check-input-custom:checked {
+    background: var(--modal-gradient);
+    border-color: var(--modal-primary);
+}
+
+.form-check-label-custom {
+    font-size: 0.85rem;
+    color: var(--modal-gray);
+    line-height: 1.4;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+/* Submit Button */
+.btn-subscribe {
+    background: var(--modal-gradient);
+    border: none;
+    border-radius: 12px;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-subscribe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(90, 84, 233, 0.4);
+    color: white;
+}
+
+.btn-subscribe:active {
+    transform: translateY(0);
+}
+
+.btn-subscribe:disabled {
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--modal-success) 0%, #34d399 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    animation: successPulse 0.6s ease-out;
+}
+
+.success-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.success-message h6 {
+    color: var(--modal-text);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.success-message p {
+    color: var(--modal-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Modal Footer */
+.newsletter-modal .modal-footer {
+    background: #fafbfc;
+    padding: 1rem 2rem 1.5rem;
+    text-align: center;
+}
+
+.newsletter-modal .modal-footer small {
+    font-size: 0.8rem;
+    color: var(--modal-gray);
+}
+
+.newsletter-modal .modal-footer i {
+    color: var(--modal-primary);
+    margin-right: 0.25rem;
+}
+
+/* Animations */
+@keyframes successPulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.newsletter-modal .modal-content {
+    animation: slideInUp 0.4s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .newsletter-modal .modal-dialog {
+        margin: 0.5rem;
+        max-width: none;
+    }
+    
+    .newsletter-modal .modal-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
+    .newsletter-modal .modal-body {
+        padding: 1rem 1.5rem 1.5rem;
+    }
+    
+    .newsletter-modal .modal-footer {
+        padding: 0.75rem 1.5rem 1rem;
+    }
+    
+    .newsletter-modal .modal-title {
+        font-size: 1.25rem;
+    }
+    
+    .modal-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .modal-icon i {
+        font-size: 1.25rem;
+    }
+}
+
+/* Loading States */
+.btn-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-loading i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

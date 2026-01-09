@@ -1,0 +1,142 @@
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  position: relative;
+  background: #f5fbff;
+  padding: 100px 0;
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+/* KEEP SIDE-BY-SIDE LAYOUT ALWAYS */
+.hero-section .row {
+  display: flex;
+  flex-wrap: nowrap !important;
+  align-items: center;
+}
+
+.hero-section .col-lg-6 {
+  width: 50% !important;
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+}
+
+/* BLUE SHAPE (UNCHANGED DESIGN) */
+.hero-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: #3f6ad8;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 1;
+}
+
+/* IMAGE */
+.hero-image-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-wrapper .main-img {
+  width: clamp(260px, 40vw, 520px);
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* TEXT */
+.hero-title {
+  font-size: clamp(1.6rem, 4vw, 3.5rem);
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.text-blue {
+  color: #3f6ad8 !important;
+}
+
+.hero-para {
+  font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* PROPORTIONAL SCALING ONLY*/
+@media (max-width: 1200px) {
+  .hero-section {
+    transform: scale(1);
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    transform: scale(1);
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    transform: scale(1);
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    transform: scale(1);
+    padding: 7px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-section {
+    transform: scale(1);
+    padding: 10px 0;
+  }
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* HERO TEXT ANIMATION */
+.hero-text-wrapper {
+  opacity: 0;
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.hero-image-wrapper {
+  opacity: 0;
+  animation: slideInFromRight 1s ease-out 0.3s forwards;
+}
+

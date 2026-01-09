@@ -1,0 +1,271 @@
+:root {
+  --opti-blue: #3695e9;
+  --opti-dark: #1a1a2e;
+  --opti-light-gray: #ffffff;
+  --opti-accent: #038eff;
+  --transition-duration: 0.55s;
+}
+
+/* UTILITY*/
+.text-opti-blue {
+  color: var(--opti-blue) !important;
+}
+
+.text-gray-800 {
+  color: var(--opti-dark) !important;
+}
+
+.bg-opti-blue {
+  background-color: var(--opti-blue) !important;
+}
+
+/* MAIN WRAPPER*/
+.same-layout-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* ABOUT SECTION*/
+.about-section {
+  position: relative;
+  background: #f5fbff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.about-section .row {
+  display: flex;
+  flex-wrap: nowrap !important;
+}
+
+.about-section .col-lg-6 {
+  width: 50% !important;
+  max-width: 50% !important;
+  flex: 0 0 50% !important;
+}
+
+/* IMAGE AREA*/
+.image-wrapper {
+  position: relative;
+  height: 650px;
+}
+
+/* Decorative blue shape */
+#shapeContainer {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 15%;
+  left: 15%;
+  background-color: var(--opti-accent);
+  border-radius: 40% 60% 70% 30% / 50% 50% 50% 50%;
+  z-index: 1;
+}
+
+/* Image containers */
+.image-box {
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main image */
+#mainImageContainer {
+  width: 80%;
+  height: 85%;
+  top: 0;
+  left: 0;
+  border-radius: 1.5rem 4rem 1.5rem 4rem;
+  z-index: 2;
+}
+
+/* Secondary image */
+#secondaryImageContainer {
+  width: 45%;
+  height: 35%;
+  bottom: 5%;
+  right: 0;
+  border-radius: 1rem 3rem 1rem 3rem;
+  border: 6px solid #fff;
+  z-index: 3;
+}
+
+/* TEXT CONTENT*/
+#slide-content-inner {
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.5s ease;
+}
+
+#slide-content-inner h2 {
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  font-weight: 700;
+  max-width: 90%;
+  margin-bottom: 1rem;
+}
+
+#slide-content-inner p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+
+/* ANIMATIONS*/
+.slide-center {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.slide-exit {
+  opacity: 0 !important;
+  transform: translateY(-20px) !important;
+}
+
+.slide-enter {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+}
+
+.image-box.image-enter {
+  opacity: 0 !important;
+  transform: scale(0.95) !important;
+}
+
+.image-box.image-center {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* DOTS*/
+.slide-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #dee2e6;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.slide-dot.active {
+  background-color: rgb(0, 140, 255);
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* BUTTON*/
+.btn-opti-blue {
+  background-color: rgb(0, 140, 255);
+  border-color: rgb(0, 140, 255);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.8rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+.btn-opti-blue:hover {
+  background-color: #1664b4;
+  border-color: #1664b4;
+}
+
+/* RESPONSIVE – TABLET & MOBILE */
+
+@media (max-width: 992px) {
+  .image-wrapper {
+    height: 520px;
+  }
+}
+
+/* MOBILE DESIGN RESET*/
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-section .row {
+    flex-wrap: wrap !important;
+  }
+
+  .about-section .col-lg-6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Remove decorative clutter */
+  #shapeContainer,
+  #secondaryImageContainer {
+    display: none !important;
+  }
+
+  /* Clean image card */
+  .image-wrapper {
+    height: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #mainImageContainer {
+    position: relative;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: 1.2rem;
+  }
+
+  #mainImageContainer img {
+    border-radius: 1.2rem;
+  }
+
+  /* Centered text */
+  #slide-content-inner {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #slide-content-inner h2 {
+    max-width: 100%;
+  }
+
+  #slide-content-inner p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+/* EXTRA SMALL DEVICES*/
+@media (max-width: 420px) {
+
+  .about-section {
+    padding: 40px 0;
+  }
+
+  #mainImageContainer {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
+  #slide-content-inner p {
+    font-size: 0.8rem;
+  }
+
+  .btn-opti-blue {
+    width: 100%;
+  }
+}

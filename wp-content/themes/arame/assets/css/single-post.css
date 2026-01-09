@@ -1,0 +1,244 @@
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f8fafc;
+    color: #1f2937;
+}
+
+.container-xl {
+    max-width: 1100px;
+}
+
+/* BREADCRUMB */
+.breadcrumb-nav {
+    margin-bottom: 32px;
+}
+
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: none;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #64748b;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #2563eb;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    margin: 0 10px;
+    color: #94a3b8;
+}
+
+/* BLOG CARD */
+.blog-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+/* FEATURED IMAGE */
+.featured-image-wrapper img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.post-image-placeholder {
+    height: 320px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #94a3b8;
+    position: relative;
+}
+
+.placeholder-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 0 0 14px 14px;
+}
+
+/* POST HEADER */
+.post-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: #0f172a;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: #64748b;
+    display: flex;
+    gap: 18px;
+}
+
+.post-meta-item i {
+    color: #2563eb;
+}
+
+/* CATEGORIES */
+.post-categories {
+    margin: 20px 0 30px;
+}
+
+.badge-category {
+    background: #eef2ff;
+    color: #3730a3;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+    text-decoration: none;
+    transition: all .25s ease;
+}
+
+.badge-category:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* CONTENT*/
+.content-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #334155;
+}
+
+.content-text p {
+    margin-bottom: 1.5rem;
+}
+
+.content-text h2,
+.content-text h3 {
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* TAGS*/
+.post-tags {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 20px;
+}
+
+.tag-link {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.tag-link:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* AUTHOR BIO */
+.author-bio {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 28px;
+    margin-top: 50px;
+}
+
+.author-bio h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.author-info {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.author-avatar {
+    width: 64px;
+    height: 64px;
+}
+
+.author-details h5 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.author-details p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* POST NAVIGATION*/
+.post-navigation {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.post-navigation a {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.post-navigation a:hover {
+    text-decoration: underline;
+}
+
+/* ANIMATION*/
+.fade-in-up {
+    animation: fadeInUp .6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE*/
+@media (max-width: 768px) {
+    .blog-card {
+        padding: 24px;
+    }
+
+    .post-title {
+        font-size: 1.6rem;
+    }
+
+    .content-text {
+        font-size: 0.98rem;
+    }
+
+    .post-meta {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
