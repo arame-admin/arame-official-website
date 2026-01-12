@@ -22,7 +22,7 @@ get_header();
                 <p>
                     Join AraMe Global and be part of a team shaping meaningful solutions worldwide
                 </p>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@arameglobal.com" target="_blank" class="apply-button">Apply Now</a>
+                <a href="mailto:info@arameglobal.com" target="_blank" class="apply-button">Apply Now</a>
             </div>
             <div class="hero-image">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/careers/careerhero.jpg"

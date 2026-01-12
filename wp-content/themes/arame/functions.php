@@ -228,6 +228,59 @@ function handle_job_application() {
     wp_send_json_success('Application submitted successfully!');
 }
 
+//home about slider
+add_action('wp_enqueue_scripts', function () {
+    if (is_front_page()) {
+        wp_enqueue_script(
+            'home-slider',
+            get_stylesheet_directory_uri() . '/assets/js/about-section-slider.js',
+            [],
+            filemtime(get_stylesheet_directory() . '/assets/js/about-section-slider.js'),
+            true
+        );
+    }
+});
+
+//home service section card animation
+add_action('wp_enqueue_scripts', function () {
+    if (is_front_page()) {
+        wp_enqueue_script(
+            'index-cards-js',
+            get_stylesheet_directory_uri() . '/assets/js/index-cards.js',
+            [],
+            filemtime(get_stylesheet_directory() . '/assets/js/index-cards.js'),
+            true 
+        );
+    }
+});
+
+// services-details animation
+add_action('wp_enqueue_scripts', function () {
+    if (is_page_template('page-services-details.php')) {
+        wp_enqueue_script(
+            'services-animation-js',
+            get_stylesheet_directory_uri() . '/assets/js/services-animation.js',
+            [],
+            filemtime(get_stylesheet_directory() . '/assets/js/services-animation.js'),
+            true
+        );
+    }
+});
+
+//about-details page animation
+add_action('wp_enqueue_scripts', function () {
+    if (is_page('about')) {
+        wp_enqueue_script(
+            'about-animation-js',
+            get_stylesheet_directory_uri() . '/assets/js/about-animation.js',
+            [],
+            filemtime(get_stylesheet_directory() . '/assets/js/about-animation.js'),
+            true
+        );
+    }
+});
+
+
 // contact form submission
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script(

@@ -1,4 +1,3 @@
-// Newsletter Modal JavaScript Functionality
 jQuery(document).ready(function($) {
     'use strict';
     
